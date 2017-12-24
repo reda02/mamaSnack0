@@ -1,0 +1,8 @@
+[ERROR] 2017-12-16 01:27:18.062 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-16 01:27:18.668 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-16 21:49:01.489 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 10096 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-16 21:49:01.497 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-16 21:49:10.075 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.44 seconds (JVM running for 10.837)
+[ERROR] 2017-12-16 21:49:11.692 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-16 21:49:11.859 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-16 21:49:37.461 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !

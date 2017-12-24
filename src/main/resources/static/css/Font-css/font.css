@@ -1,0 +1,37 @@
+
+@font-face{
+    font-family: "Amatic";
+    src: url("AmaticSC-Regular.ttf")
+}
+@font-face{
+    font-family: "Gelio";
+    src: url("Gelio Fasolada.ttf");
+}
+@font-face{
+    font-family: "Gravity";
+    src: url("Gravity-Light.otf");
+}
+@font-face{
+    font-family: "Quicksand";
+    src: url("Quicksand-Light.otf");
+}
+@font-face{
+    font-family: "Swaby";
+    src: url("SwabbyRegular.ttf");
+}
+@font-face{
+    font-family: "Tradizionel";
+    src: url("tradizional DEMO.otf");
+}
+@font-face{
+    font-family: "Casual";
+    src: url("Casual Softcore.otf");
+}
+@font-face{
+    font-family: "Roboto";
+    src: url("roboto.light.ttf");
+}
+@font-face{
+    font-family: "Ubuntu";
+    src: url("Ubuntu-L.ttf");
+}

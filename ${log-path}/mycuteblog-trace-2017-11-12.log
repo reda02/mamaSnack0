@@ -1,0 +1,207 @@
+[INFO ] 2017-11-12 12:30:35.586 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3324 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-12 12:30:35.687 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-12 12:30:47.060 [main] MamasnackWsApplication - Started MamasnackWsApplication in 12.256 seconds (JVM running for 13.725)
+[ERROR] 2017-11-12 12:35:15.467 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:46:19.236 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:46:44.128 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:50:44.406 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:51:18.974 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:51:39.417 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:52:13.027 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:53:37.068 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:54:45.054 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:54:47.753 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:55:09.438 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:55:53.639 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 12:56:21.017 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:01:39.700 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:01:50.047 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:02:14.045 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:03:29.691 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:03:45.512 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:04:26.364 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:04:28.783 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:08:30.782 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:08:33.874 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:09:08.770 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:09:34.259 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:15:15.776 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:16:17.357 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 13:54:33.379 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:05:01.870 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:05:51.320 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:06:18.517 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:06:37.717 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:06:55.065 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:06:59.449 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:07:33.318 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:08:12.821 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:13:50.839 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:15:03.521 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:15:22.232 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:15:43.868 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:16:58.237 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:38:09.394 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:40:08.562 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:40:28.576 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:40:33.284 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:42:50.359 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:43:22.819 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:43:46.266 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:45:20.740 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:46:32.943 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:47:18.057 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+[ERROR] 2017-11-12 14:47:44.209 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]

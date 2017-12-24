@@ -1,0 +1,138 @@
+[INFO ] 2017-11-26 00:40:34.093 [http-nio-8080-exec-5] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:37.415 [http-nio-8080-exec-4] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:38.511 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 00:40:38.511 [http-nio-8080-exec-10] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 00:40:38.512 [http-nio-8080-exec-10] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 00:40:38.663 [http-nio-8080-exec-6] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 00:40:38.665 [http-nio-8080-exec-6] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 00:40:38.665 [http-nio-8080-exec-6] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 00:40:39.843 [http-nio-8080-exec-3] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 00:40:39.843 [http-nio-8080-exec-3] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 00:40:39.843 [http-nio-8080-exec-3] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 00:40:40.006 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 00:40:40.006 [http-nio-8080-exec-7] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 00:40:40.006 [http-nio-8080-exec-7] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 00:40:48.235 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:48.997 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:49.264 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:49.512 [http-nio-8080-exec-5] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:50.037 [http-nio-8080-exec-4] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:50.598 [http-nio-8080-exec-10] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:50.792 [http-nio-8080-exec-6] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:50.986 [http-nio-8080-exec-3] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:51.153 [http-nio-8080-exec-8] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:51.307 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:51.477 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 00:40:53.857 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 01:55:20.671 [http-nio-8080-exec-6] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 11:42:48.360 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3984 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 11:42:48.367 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 11:42:54.454 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.468 seconds (JVM running for 8.043)
+[INFO ] 2017-11-26 11:46:59.958 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 11:47:03.338 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[ERROR] 2017-11-26 11:49:23.521 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service deleteuser : null
+[INFO ] 2017-11-26 11:50:17.767 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:12:24.030 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7708 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 12:12:24.038 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 12:12:32.307 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.972 seconds (JVM running for 10.327)
+[ERROR] 2017-11-26 12:13:52.476 [http-nio-8080-exec-2] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCategorie : 
+[ERROR] 2017-11-26 12:13:59.627 [http-nio-8080-exec-3] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCategorie : 
+[ERROR] 2017-11-26 12:14:34.277 [http-nio-8080-exec-5] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCategorie : 
+[ERROR] 2017-11-26 12:17:19.490 [http-nio-8080-exec-9] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCuisine : 
+[ERROR] 2017-11-26 12:17:28.467 [http-nio-8080-exec-10] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCuisine : 
+[ERROR] 2017-11-26 12:17:36.646 [http-nio-8080-exec-1] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCuisine : 
+[ERROR] 2017-11-26 12:17:38.164 [http-nio-8080-exec-2] ProduitMetierImpl - com.mamasnack.metier.ProduitMetierImplune erreur est produite lors de l'exécution du web service modifierCuisine : 
+[ERROR] 2017-11-26 12:19:36.156 [http-nio-8080-exec-4] ProduitRestService - com.mamasnack.service.ProduitRestServiceune erreur est produite lors de l'exécution du web service supprimerCuisine : could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2017-11-26 12:27:25.966 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:29:16.351 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:29:17.991 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:29:19.864 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:29:21.188 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:29:21.189 [http-nio-8080-exec-9] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:29:21.189 [http-nio-8080-exec-9] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:29:56.803 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:29:56.803 [http-nio-8080-exec-10] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:29:56.803 [http-nio-8080-exec-10] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:31:56.020 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:47:47.498 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:49:11.303 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:49:12.235 [http-nio-8080-exec-3] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:49:14.948 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:49:17.169 [http-nio-8080-exec-8] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:49:20.583 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:49:20.584 [http-nio-8080-exec-4] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:49:20.584 [http-nio-8080-exec-4] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:49:22.022 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:49:22.022 [http-nio-8080-exec-10] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:49:22.022 [http-nio-8080-exec-10] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:49:57.820 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 12:50:05.375 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 12:50:13.791 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:50:13.791 [http-nio-8080-exec-1] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:50:13.791 [http-nio-8080-exec-1] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:50:15.614 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 12:50:15.615 [http-nio-8080-exec-4] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 12:50:15.615 [http-nio-8080-exec-4] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 12:50:18.538 [http-nio-8080-exec-6] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:12:57.077 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9536 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:12:57.091 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:13:00.965 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7864 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:13:00.979 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:13:09.877 [main] MamasnackWsApplication - Started MamasnackWsApplication in 13.76 seconds (JVM running for 18.807)
+[INFO ] 2017-11-26 21:13:45.536 [http-nio-8080-exec-6] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:13:47.802 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:13:49.159 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:13:49.756 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:24:19.764 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9192 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:24:19.776 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:24:27.866 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.664 seconds (JVM running for 10.195)
+[INFO ] 2017-11-26 21:26:31.890 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:26:52.893 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:26:56.750 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:26:56.751 [http-nio-8080-exec-10] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:26:56.751 [http-nio-8080-exec-10] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:27:01.729 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:27:01.730 [http-nio-8080-exec-4] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:27:01.730 [http-nio-8080-exec-4] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:27:06.676 [http-nio-8080-exec-5] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:27:33.842 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:32:35.947 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:32:37.477 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:32:37.477 [http-nio-8080-exec-10] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:32:37.478 [http-nio-8080-exec-10] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:32:40.116 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:32:40.116 [http-nio-8080-exec-1] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:32:40.116 [http-nio-8080-exec-1] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:32:41.519 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:32:41.519 [http-nio-8080-exec-4] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:32:41.519 [http-nio-8080-exec-4] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:32:42.817 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[WARN ] 2017-11-26 21:32:42.817 [http-nio-8080-exec-5] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-26 21:32:42.817 [http-nio-8080-exec-5] CommandeMetierImpl - Error message
+[INFO ] 2017-11-26 21:41:02.098 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4508 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:41:02.108 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:41:54.387 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 532 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:41:54.394 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:42:00.353 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.319 seconds (JVM running for 7.479)
+[INFO ] 2017-11-26 21:42:15.411 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:45:23.424 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 6956 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:45:23.435 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:45:33.126 [main] MamasnackWsApplication - Started MamasnackWsApplication in 10.45 seconds (JVM running for 12.936)
+[INFO ] 2017-11-26 21:45:48.917 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 21:54:07.704 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 21:59:45.255 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12136 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 21:59:45.261 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 21:59:51.886 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.048 seconds (JVM running for 8.186)
+[INFO ] 2017-11-26 22:00:00.145 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-11-26 22:01:01.325 [http-nio-8080-exec-4] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 22:04:28.543 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9640 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 22:04:28.550 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 22:04:35.699 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.598 seconds (JVM running for 11.415)
+[INFO ] 2017-11-26 22:04:36.888 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 22:04:53.004 [http-nio-8080-exec-3] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 22:05:28.559 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 1292 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-26 22:05:28.565 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-26 22:05:34.959 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.789 seconds (JVM running for 7.998)
+[INFO ] 2017-11-26 22:05:37.971 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 22:06:21.295 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-26 22:17:17.670 [http-nio-8080-exec-9] CommandeMetierImpl - Info message

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+ 
+<script src="https://code.angularjs.org/1.4.8/angular.js"></script>
+<script data-require="angular-animate@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
+ <script src="https://rawgit.com/michaelbromley/angularUtils-pagination/master/dirPagination.js"></script>
+ <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.0.3.js"></script>
+  <link rel="stylesheet" href="style.css" />
+ <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body class="container container-table" ng-app="mamaSnackApp" ng-controller="myController">
+   <label>Search:  </label><input type="text" class="form-control" placeholder="Filter..." ng-model="filterText">
+   <label>Role :</label> 
+      <select ng-model="selectedRole" ng-change="search2(selectedRole)" class="form-control">
+        <option ng-repeat="role in roles.users " value="{{role.idRole}}" >
+         {{role.roleName}}
+        </option>
+      </select>
+       <label>Afficher ALL c :</label> 
+       <button  type="button" class="btn btn-primary" ng-click="AfficherAll()">AfficherAll</button>
+   <table>
+     <thead>
+     <tr>
+     <th>ID</th><th>nom User</th><th>email</th><th>adresse</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr ng-repeat="u in filterData = (pageUsers.users | filter :filterText) | limitTo:5:5*(page-1)">
+     <td>{{u.idUser}}</td>
+     <td>{{u.nomUser}}</td>
+     <td>{{u.email}}</td>
+     <td>{{u.adresse}}</td>
+     </tr>
+     </tbody>
+   </table>
+  
+    <p ng-hide="filterData.length" class="alert alert-danger">Aucun information disponible!</p>
+
+   <uib-pagination class="pagination-sm pagination" total-items="filterData.length" ng-model="page"
+			ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=5></uib-pagination>
+    
+</body>
+</html>

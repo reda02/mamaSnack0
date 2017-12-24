@@ -1,0 +1,53 @@
+<div class="container-fluid">
+	<div class="header">
+	    <h3 class="col-sm-4">{{langue.order}}</h3>
+	    <button class="btn btn-success col-sm-8 add-Commande" style="margin-top:20px;width:120px;float:right">{{langue.add}}</button>
+	</div>
+	<div class="row commande">
+		<div class="col-sm-3 commande-form user-table">
+			<ul>
+				<li><span>Tous les Commande</span></li>
+				<li ng-repeat="c in pageCommandes">
+					<img src="../img/arrow-right.png" id="arrow" ng-click="showLigne(c.idCommande)">
+					<span ng-click="displayLigne(c.idCommande)"> Com {{c.idCommande}}</span>
+					<ul style="padding-left:30px;">
+						<li ng-repeat="l in ligneCommande">
+							<span ng-click="getLigne(c.idCommande,l.idLigneCommande)">{{l.idLigneCommande}}</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 display-form user-table">
+			<div id="setting">
+				<img src="../img/setting.png">
+			</div>
+			<div id="commandeInfo" style="display:none;width:auto;">
+				<div class="table-body">
+					<table class="table table-striped">
+						<thead>
+							<th>#</th>
+							<th>Prix</th>
+							<th>Quantite</th>
+							<th>Produit</th>
+							<th>Nom User</th>
+							<th></th>
+							<th></th>
+						</thead>
+						<tbody >
+							<tr ng-repeat="c in commandeData">
+								<td>{{c.idLigneCommande}}</td>
+								<td>{{c.prix}}</td>
+								<td>{{c.quantite}}</td>
+								<td>{{c.produit.description}}</td>
+								<td>{{cmd.user.nomUser}} {{cmd.user.prenomUser}}</td>
+				                <td><button class="btn btn-info btn-sm" ng-click="selectProduct(u.idProduit)" update>{{langue.edit}}</button></td>
+				                <td><button class="btn btn-danger btn-sm" ng-click="selectProduct(u.idProduit)" remove>{{langue.delete}}</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

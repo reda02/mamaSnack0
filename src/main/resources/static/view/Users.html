@@ -1,0 +1,190 @@
+<div class="container-fluid">
+	<div class="header">
+	    <h3 class="col-xs-4">{{langue.users}}</h3>
+	    <div class="search-modal col-xs-6">
+	        <input type="text" class="search" placeholder="{{langue.search}}" ng-model="search">
+	    </div>
+	    <div class="col-xs-1 num">
+	        <span>{{pageUsers.users.length}}</span>
+	        <img src="../img/user.png" />
+	    </div>
+	</div>
+	<div class="user-table">
+		<table class="table table-striped">
+	        <thead>
+	            <th>#</th>
+	            <th>{{langue.name}}</th>
+	            <th>{{langue.lastName}}</th>
+	            <th>Email</th>
+	            <th>{{langue.city}}</th>
+	            <th>{{langue.address}}</th>
+	            <th></th>
+	            <th></th>
+	            <th></th>
+	        </thead>
+	        <tbody>
+	            <tr class="ligne" ng-repeat="u in filterData = (pageUsers.users | filter : search) | limitTo:5:5*(page-1)" >
+	                <td>{{u.idUser}}</td>
+	                <td>{{u.nomUser}}</td>
+	                <td>{{u.prenomUser}}</td>
+	                <td>{{u.email}}</td>
+	                <td>{{u.ville}}</td>
+	                <td>{{u.adresse}}</td>
+	                <td><button class="btn btn-info btn-sm" ng-click="selectUser(u.idUser)" update>{{langue.edit}}</button></td>
+	                <td><button class="btn btn-danger btn-sm" ng-click="selectUser(u.idUser)" remove>{{langue.delete}}</button></td>
+	                <td><button class="btn btn-success btn-sm" ng-click="getUserRoles(u.idUser)" key="role" roles>{{langue.role}}</button></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    <p ng-hide="filterData.length" class="alert alert-danger">{{langue.vide}}</p>
+	    <div class="page">
+		    <ul class="pagination pagination-sm ">
+		    	<li><a href="javascript:void(0)" ng-click="previous();">&lsaquo;</a></li>
+		    	<li ng-repeat="p in UserPages"><a href="javascript:void(0)" ng-click="changePage(p)">{{p}}</a></li>
+		    	<li><a href="javascript:void(0)" ng-click="next()">&rsaquo;</a></li>
+		    </ul>
+	    </div>
+	</div>
+	<!-- Role form -->
+	<div id="roleTable">
+		<div class="modal-header row">
+	    	<h4 class="modal-title col-xs-8">{{clickedRoleUser.nomUser}} Role's</h4>
+	    	<button class="btn btn-success add-role col-xs-4">{{langue.addRole}}</button>
+	    </div>
+	    <div class="table-body">
+	    	<table class="table table-striped">
+	    		<thead>
+	    			<th>#</th>
+	    			<th>{{langue.name}}</th>
+	    			<th></th>
+	    		</thead>
+	    		<tbody>
+	    			<tr ng-repeat="r in rolesByUser.users">
+	    				<td>{{r.idRole}}</td>
+	    				<td>{{r.roleName}}</td>
+	    				<td><span class="delete" ng-click="removeRole(r.idRole)">&times;</span></td>
+	    			</tr>
+	    		</tbody>
+	    	</table>
+	    	<p ng-hide="rolesByUser.users.length" class="alert alert-danger">{{langue.vide}}!</p>
+	    </div>
+	    <hr>
+	    <button class="col-sm-offset-10 btn btn-default btn-close" >{{langue.close}}</button>
+	</div>
+</div>
+<!-- Edit User -->
+<div id="edit-form" class="shadow-form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span id="close">&times;</span>
+			<h4 class="modal-title">{{langue.edit}} {{clickedUser.nomUser}}</h4>
+		</div>
+		<form class="form-horizontal">
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.name}}</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="{{langue.name}}" ng-model="clickedUser.nomUser">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.lastName}}</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="{{langue.lastName}}" ng-model="clickedUser.prenomUser">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Email" ng-model="clickedUser.email">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.address}}</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="{{langue.address}}" ng-model="clickedUser.adresse">
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="button" class="btn btn-default save" ng-click="saveUser();">{{langue.save}}</button>
+			    </div>
+		  </div>
+		</form>
+	</div>
+</div>
+<!-- Delete form -->
+<div id="delete-form" class="shadow-form">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="close">&times;</span>
+        <h4 class="modal-title">{{langue.deleteQuestion}}</h4>
+      </div>
+      <div class="modal-body">
+        <h5 style="color: red">{{langue.ConfirmationMesssage}}</h5>
+        <br/>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-default pull-left save" ng-click="deleteUser(clickedUser.idUser)">{{langue.yes}}</button>	      	
+        <button type="button" class="btn btn-default pull-right save">{{langue.no}}</button>
+      </div>
+    </div>
+</div>
+<!-- Role Form -->
+<div class="shadow-form" id="roleUser">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">{{langue.addRole}}</h4>
+			<span id="close" style="margin-top:-30px">&times;</span>
+		</div>
+		<div class="table-body">
+			<table class="table table-striped">
+				<thead>
+					<th>#</th>
+					<th>{{langue.name}}</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="p in addRoles track by $index">
+						<td>{{p.idRole}}</td>
+						<td>{{p.roleName}}</td>
+						<td><img src="../img/plus.png" class="plus" ng-click="roleToUser(p.idRole)" plus></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".search").focusin(function(){
+        $(this).css({"background": "#fff", "text-align": "left"});
+    });
+    $(".search").focusout(function(){
+        $(this).css({"background": "rgba(0,0,0,0.02)", "text-align": "center"});
+    });
+	$(".save,#close").click(function(){
+		animate();
+		setTimeout(() => {
+			$(".shadow-form").css("display","none");
+		}, 350);
+	});
+	$(".add-role").click(function(){
+		$("#roleUser").css("display","block");
+	});
+	$(".btn-close").click(function(){
+		$("#roleTable").addClass("closeRole");
+		setTimeout(() => {
+			$("#roleTable").removeClass("closeRole");
+		}, 955);
+		setTimeout(() => {
+			$("#roleTable").css("display","none");
+		}, 950);
+	});
+	function animate(){
+		$(".modal-content").addClass("modal-close");
+		setTimeout(() => {
+			$(".modal-content").removeClass("modal-close");
+		}, 355);
+   	}
+});
+</script>

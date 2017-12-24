@@ -1,0 +1,116 @@
+
+.header{
+    background: white;
+    height: auto;
+    min-height: 80px;
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.search{
+    height: 25px;
+    width: 180px;
+    border:0;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 3px;
+    background: rgba(0,0,0,0.01);
+    text-align: center;
+    font-size: 13px;
+    color: dimgray;
+    margin-top: 20px;
+    padding-left:5px;
+}
+.num{
+	width:auto;
+    background-color: skyblue;
+    min-width: 50px;
+    height: 40px;
+    padding: 7px 0;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.num{
+    text-align: right;
+    font-size: 19px;
+}
+.user-table{
+    width: 90%;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.page{
+	width:auto;
+	min-width: 100px;
+	margin: 0 auto;
+}
+#roleTable,.user-table{
+	background: white;
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius: 3px;
+	margin: auto;
+	margin-top: 50px;
+}
+#roleTable{
+	width: 40%;
+	display: none;
+	animation-name: rolein;
+	animation-duration: 1s;
+}
+.closeRole{
+	animation-name: roleout;
+	animation-duration: 1s;
+}
+@keyframes rolein{
+	from{opacity:0}
+	to{opacity:1}
+}
+@keyframes roleout{
+	from{opacity:0}
+	to{opacity:1}
+}
+.add-role{
+	width:120px;
+	float:right;
+	margin-right:10px;
+}
+.btn-close{
+	margin-bottom:15px;
+}
+.delete{
+	font-size:30px;
+	font-weight:bold;
+	color: red;
+	cursor:pointer;
+	opacity: 0.6;
+}
+.delete:hover{
+	opacity:1;
+}
+.table-body{
+	margin: 20px;
+	height:auto;
+	max-height:330px;
+	overflow-y: auto;
+}
+.table-body::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.table-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+.plus{
+	cursor:pointer;
+	opacity:0.6;
+}
+.plus:hover{
+	opacity:1;
+}
+ 
+/* Handle */
+.table-body::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}

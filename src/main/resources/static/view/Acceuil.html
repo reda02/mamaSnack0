@@ -1,0 +1,42 @@
+<div class="search-form">
+	<p style="font-size: 30px;">Trouver un certain plat</p>
+	<form class="form-horizontal">
+	    <div class="col-sm-12 group">
+	        <label>OÙ</label>
+	        <input type="text" placeholder="Ville,adresse" style="height:40px;font-size: 16px" class="form-control search-city" ng-model="search.ville" />
+	        <div class="search-data">
+	        	<p ng-repeat="u in pageUsers.users | filter : search | limitTo:5 | unique:'ville'">{{u.ville}}</p>
+	        </div>
+	    </div>
+	    <!--<div class="form-group" style="padding: 10px 0;">
+	        <div class="col-sm-6 ">
+	            <label>Categorie</label>
+	            <select class="form-control" ng-options="c.idCategorie as c.nomCategorie for c in pageCategories track by c.idCategorie" ng-model="selectedCat">
+					<option value="" disabled selected>Categorie</option>
+				</select>
+	        </div>
+	        <div class="col-sm-6">
+	            <label>Cuisine</label>
+	            <select class="form-control" ng-options="c.idCuisine as c.nameCuisine for c in pageCuisines track by c.idCuisine" ng-model="selectedCui">
+					<option value="" disabled selected>Cuisine</option>
+				</select>
+	        </div>
+	    </div>-->
+	    <div style="padding-top: 20px;">
+	        <button class="btn btn-search">Rechercher</button>
+	    </div>
+	</form>
+</div>
+<script>
+$(document).ready(function(){
+	$(".search-city").on("input",function(){
+		if($(this).val()!="")
+			$(".search-data").css("display","block");
+		else
+			$(".search-data").css("display","none");
+	});
+	$(".btn-search").click(function(){
+		location.href="#!Users/"+$(".search-city").val();
+	});
+});
+</script>
