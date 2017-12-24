@@ -78,7 +78,8 @@ public class UserMetierImpl implements UserMetier{
 		if(u.getPassword()!=null){
 			u.setPassword(passwordEncoder.encode(u.getPassword()));
 			}
-		userRepository.save(u);
+		userRepository.update(u.getIdUser(),u.getNomUser(),u.getPrenomUser(),u.getAdresse()
+				,u.getCodePostale(),u.getDateNaissonce(),u.getPhoto(),u.getEmail(),u.getTel());
 		return "OK";
 	}
 
