@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MamasnackWsApplicationTests {
 
 	
-	// ici un comm
+	// commentaire reda 
 	@Test
 	public void contextLoads() {
 	}
