@@ -26,9 +26,20 @@ public class UserMetierImpl implements UserMetier{
 	@Override
 	public String addUser(User u) {
 		
-		if (u.getIdUser() != null && !userRepository.existsById(u.getIdUser())) {
+		User user =userRepository.findOnebyemail(u.getEmail()) ;
+		
+		
+		
+		if( user!= null){
+			
+			logger.error(getClass().getName()+
+				    "email n'est pas unique lors de l'exécution du web service addUser : ");
+
+			return "NOK:EmailNONUnique";
+			
+		} else if (u.getIdUser() != null && !userRepository.existsById(u.getIdUser())) {
 				logger.error(getClass().getName()+
-					    "idUser est null de l'exécution du web service addUser : ");
+					    "idUser est null ou email n'est pas unique lors de l'exécution du web service addUser : ");
 
 				return "NOK";
 		}

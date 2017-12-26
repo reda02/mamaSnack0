@@ -136,12 +136,12 @@ public class CommandeMetierImpl implements CommandeMetier{
             Collection<LigneCommande> ligneDeCommandes =  commande.getItems();
             LigneCommande ligneCmdExiste = getLigneDeCommandeById(commandeId, ligneDeCommandeId);
             
-           for(LigneCommande ligneCommande : ligneDeCommandes){
+              for(LigneCommande ligneCommande : ligneDeCommandes){
         	   
         	   
         	   if(ligneDeCommandes.contains(ligneCmdExiste) ){
         		   
-	           commande.setTotal(commande.getTotal() - (ligneCommande.getPrix() * ligneCommande.getQuantite()));
+	           //commande.setTotal(commande.getTotal() - (ligneCommande.getPrix() * ligneCommande.getQuantite()));
 	           ligneDeCommandes.remove(ligneDeCommandeId);
 	           commandeRepository.save(commande);
         	   }

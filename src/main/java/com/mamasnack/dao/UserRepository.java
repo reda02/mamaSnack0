@@ -48,5 +48,6 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	    		,@Param("xadress")  String nadress,@Param("xcodePostal")  int codePostal,@Param("xdatenaiss")  Date datenaiss
 	    		,@Param("xphoto")  String photo,@Param("xemail")  String email,@Param("xtel")  int tel);
 	    
-		
+	    @Query("SELECT o FROM User o WHERE  o.email like :x")
+     	public User findOnebyemail(@Param("x") String email);
 }

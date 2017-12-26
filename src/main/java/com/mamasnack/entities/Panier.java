@@ -24,7 +24,7 @@ public class Panier implements Serializable {
 			LigneCommande ligneCommande = new LigneCommande();
 			ligneCommande.setProduit(p);
 			ligneCommande.setQuantite(quantite);
-			ligneCommande.setPrix(p.getPrix());
+			//ligneCommande.setPrix(p.getPrix());
 		}
 		
 	}
@@ -39,9 +39,12 @@ public class Panier implements Serializable {
 	{
 		double total = 0 ;
 		for ( LigneCommande l : items.values())
-			total += l.getPrix() + l.getQuantite() ;
+		//	total += l.getPrix() + l.getQuantite() ;
 		
 		return total;
+		return total;
+
+
 	}
 	
 	public int getSize()

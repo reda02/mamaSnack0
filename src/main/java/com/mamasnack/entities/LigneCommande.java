@@ -29,7 +29,6 @@ public class LigneCommande   implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idLigneCommande;
-	private Double prix;
 	private int quantite;
 	
 	//@JsonBackReference("produit")
@@ -48,12 +47,8 @@ public class LigneCommande   implements Serializable{
 	public void setIdLigneCommande(Long idLigneCommande) {
 		this.idLigneCommande = idLigneCommande;
 	}
-	public Double getPrix() {
-		return prix;
-	}
-	public void setPrix(Double prix) {
-		this.prix = prix;
-	}
+	
+	
 	public int getQuantite() {
 		return quantite;
 	}
@@ -83,7 +78,7 @@ public class LigneCommande   implements Serializable{
 	}
 	public LigneCommande(Double prix, int quantite, Commande commande) {
 		super();
-		this.prix = prix;
+	
 		this.quantite = quantite;
 		this.commande = commande;
 	}
