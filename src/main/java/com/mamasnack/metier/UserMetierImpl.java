@@ -207,7 +207,7 @@ public class UserMetierImpl implements UserMetier{
 		
 		
 		User user = findUsesbyEmail(u.getEmail());
-		
+        if(user!=null){
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
 		if (passwordEncoder.matches(u.getPassword(), user.getPassword())) {
@@ -216,10 +216,9 @@ public class UserMetierImpl implements UserMetier{
 		} else {
 		    // Report error 
 			return "NOK";
-		}
-
-		
-		
+		}}else{
+		return "NOK";
+		}		
 	}
 
 
