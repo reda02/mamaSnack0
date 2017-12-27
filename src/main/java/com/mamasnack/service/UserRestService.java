@@ -33,12 +33,14 @@ public class UserRestService {
 	@RequestMapping(value="/checkLogin",method=RequestMethod.POST)
 	public String checkLogin(@RequestBody User u) throws JSONException {
 		String Add = null;
+		User user =null;
 		List<Role> roles = new ArrayList<>();
 		JSONObject resultat = new JSONObject();
 		JSONArray tab = new JSONArray();
 		try {
 			Add =  userMetier.checkLogin(u);
 			roles= userMetier.findRolebyUserEmail(u.getEmail());
+			user = userMetier.findUsesbyEmail(u.getEmail());
 			ObjectMapper mapper = new ObjectMapper(); 
 			if (roles != null && !roles.isEmpty() && Add =="OK" ) {
 				tab = new JSONArray(mapper.writeValueAsString(roles).toString());
@@ -46,7 +48,9 @@ public class UserRestService {
 			}else{
 				resultat.put("role", "");
 			}
+			resultat.put("id", user.getIdUser());
 			resultat.put("Msg", Add);
+			
 			
 		} catch (Exception e) {
 			resultat.put("errMess", e.getMessage());
