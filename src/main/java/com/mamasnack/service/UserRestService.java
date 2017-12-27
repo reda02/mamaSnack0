@@ -33,11 +33,21 @@ public class UserRestService {
 	@RequestMapping(value="/checkLogin",method=RequestMethod.POST)
 	public String checkLogin(@RequestBody User u) throws JSONException {
 		String Add = null;
+		List<Role> roles = new ArrayList<>();
 		JSONObject resultat = new JSONObject();
+		JSONArray tab = new JSONArray();
 		try {
-
 			Add =  userMetier.checkLogin(u);
-			resultat.put("errMess", Add);
+			roles= userMetier.findRolebyUserEmail(u.getEmail());
+			ObjectMapper mapper = new ObjectMapper(); 
+			if (roles != null && !roles.isEmpty() && Add =="OK" ) {
+				tab = new JSONArray(mapper.writeValueAsString(roles).toString());
+				resultat.put("role", tab);
+			}else{
+				resultat.put("role", "");
+			}
+			resultat.put("Msg", Add);
+			
 		} catch (Exception e) {
 			resultat.put("errMess", e.getMessage());
 			logger.error(getClass().getName()+

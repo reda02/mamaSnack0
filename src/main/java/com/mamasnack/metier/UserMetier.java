@@ -22,6 +22,7 @@ public interface UserMetier {
 	public String addRole(Role e);
 	public List<User> findUsersbyRole(Long idRole);
 	public List<Role> findRolebyUser(Long iduser);
+	public List<Role> findRolebyUserEmail(String email);
 	public String retirerRole(Long idUser, Long idRole);
 	public String checkLogin(User u);
 	public User findUsesbyEmail(String email);

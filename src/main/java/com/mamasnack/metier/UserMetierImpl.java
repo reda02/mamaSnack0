@@ -77,6 +77,19 @@ public class UserMetierImpl implements UserMetier{
 
 	@Override
 	public String modifierUser(User u) {
+		
+       User user =userRepository.findOnebyemail(u.getEmail()) ;
+		
+		
+		
+		if( user!= null){
+			
+			logger.error(getClass().getName()+
+				    "email n'est pas unique lors de l'exécution du web service addUser : ");
+
+			return "NOK:EmailNONUnique";
+			
+		}
 		if (u.getIdUser() != null && !userRepository.existsById(u.getIdUser())) {
 		//	throw new EntityExistsException("There is already existing entity with such ID in the database.");
 			logger.error(getClass().getName()+
@@ -86,6 +99,8 @@ public class UserMetierImpl implements UserMetier{
 		}
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 	
+		
+		
 		if(u.getPassword()!=null){
 			u.setPassword(passwordEncoder.encode(u.getPassword()));
 			}
@@ -116,6 +131,7 @@ public class UserMetierImpl implements UserMetier{
 	
 		return userRepository.findUserByName(nameUser);
 	}
+	
 	@Override
 	public List<User> findUsersbyCity(String ville) {
 	
@@ -249,6 +265,12 @@ public class UserMetierImpl implements UserMetier{
 		 roleRepository.deleteById(idRole);
 		 return "OK";
 			// TODO Auto-generated method stub
+		}
+
+		@Override
+		public List<Role> findRolebyUserEmail(String email) {
+			// TODO Auto-generated method stub
+			return roleRepository.findRolebyUser(email);
 		}
 
 }

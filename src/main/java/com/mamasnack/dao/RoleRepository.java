@@ -18,7 +18,10 @@ public interface RoleRepository extends JpaRepository<Role, Long>{
 	   public Role findOne(@Param("x") Long idRole);
 	  
 	   @Query("SELECT o FROM Role o INNER JOIN o.User u WHERE u.idUser like :x")
-	   public List<Role> findRolebyUser(@Param("x") Long iduser); 
+	   public List<Role> findRolebyUser(@Param("x") Long iduser);
+
+	   @Query("SELECT o FROM Role o INNER JOIN o.User u WHERE u.email like :x")
+	   public List<Role> findRolebyUser(@Param("x")  String email); 
 
 
 }
