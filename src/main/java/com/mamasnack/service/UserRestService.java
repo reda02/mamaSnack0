@@ -45,10 +45,11 @@ public class UserRestService {
 			if (roles != null && !roles.isEmpty() && Add =="OK" ) {
 				tab = new JSONArray(mapper.writeValueAsString(roles).toString());
 				resultat.put("role", tab);
+				resultat.put("id", user.getIdUser());
 			}else{
 				resultat.put("role", "");
 			}
-			resultat.put("id", user.getIdUser());
+			
 			resultat.put("Msg", Add);
 			
 			
