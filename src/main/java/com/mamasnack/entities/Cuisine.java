@@ -3,6 +3,7 @@ package com.mamasnack.entities;
 import java.io.Serializable;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -35,8 +36,8 @@ public class Cuisine  implements Serializable{
 	private String langue ;
 	
 	//@JsonManagedReference("cuisine")
-	@OneToMany(mappedBy="cuisine", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
-	private Collection<Produit>produit ;
+	@OneToMany(mappedBy="cuisine" , fetch = FetchType.EAGER, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
+	private List<Produit>produit ;
 	
 	public Long getIdCuisine() {
 		return idCuisine;
@@ -56,12 +57,12 @@ public class Cuisine  implements Serializable{
 	public void setLangue(String langue) {
 		this.langue = langue;
 	}
-    @JsonIgnore
-	public Collection<Produit> getProduit() {
+	@JsonIgnore
+	public List<Produit> getProduit() {
 		return produit;
 	}
 	@JsonSetter
-	public void setProduit(Collection<Produit> produit) {
+	public void setProduit(List<Produit> produit) {
 		this.produit = produit;
 	}
 	public Cuisine() {

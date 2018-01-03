@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Size;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,12 +30,13 @@ public class Produit implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idProduit;
-	@Size(min=1,max=4)
+	//@Size(min=1,max=4)
 	private String designation;
 	private String description;
 	private Double prix;
 	private boolean steleted;
-	private String photo;
+	private String photoName;
+	private byte[] file;
 	private int quantite;
 	
     @JsonFormat(pattern="dd-MM-yyyy")
@@ -117,12 +116,7 @@ public class Produit implements Serializable {
 	public void setSteleted(boolean steleted) {
 		this.steleted = steleted;
 	}
-	public String getPhoto() {
-		return photo;
-	}
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
+
 	public int getQuantite() {
 		return quantite;
 	}
@@ -143,31 +137,28 @@ public class Produit implements Serializable {
 		this.dateAjout = dateAjout;
 	}
 
-	public Produit(@Size(min = 1, max = 4) String designation, String description, Double prix, boolean steleted,
-			String photo, int quantite, Date dateAjout, Categorie categorie, Cuisine cuisine,User user) {
-		super();
-		this.designation = designation;
-		this.description = description;
-		this.prix = prix;
-		this.steleted = steleted;
-		this.photo = photo;
-		this.quantite = quantite;
-		this.dateAjout = dateAjout;
-		this.categorie = categorie;
-		this.cuisine = cuisine;
-		this.user=user;
-	}
-	@Override
-	public String toString() {
-		return "Produit [idProduit=" + idProduit + ", designation=" + designation + ", description=" + description
-				+ ", prix=" + prix + ", steleted=" + steleted + ", photo=" + photo + ", quantite=" + quantite
-				+ ", dateAjout=" + dateAjout + ", categorie=" + categorie + ", cuisine=" + cuisine + "]";
-	}
+
 
 	//@JsonIgnore
 	public Collection<LigneCommande> getItems() {
 		return items;
 	}
+	public String getPhotoName() {
+		return photoName;
+	}
+
+	public void setPhotoName(String photoName) {
+		this.photoName = photoName;
+	}
+
+	public byte[] getFile() {
+		return file;
+	}
+
+	public void setFile(byte[] file) {
+		this.file = file;
+	}
+
 	@JsonSetter
 	public void setItems(Collection<LigneCommande> items) {
 		this.items = items;

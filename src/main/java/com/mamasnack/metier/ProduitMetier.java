@@ -1,10 +1,15 @@
 package com.mamasnack.metier;
 
+import java.io.IOException;
 import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
 
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
+import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
+import com.mamasnack.entities.ResponseMetadata;
 
 public interface ProduitMetier {
 	// CRUD Produit
@@ -20,6 +25,11 @@ public interface ProduitMetier {
 	public List<Produit> listProduitsParCategorie(Long idCat) ;
 	public List<Produit> listProduitsParCuisine(Long idCuisine) ;
 	public List<Produit> listProduitsSelectionne() ;
+	
+	
+	 ResponseMetadata ajouterImage(MultipartFile multipartFile, Long idProduit) throws IOException;
+     byte[] getImageFile(Long idProduit);
+     List<Produit> findAll();
 	
 	// CRUD Categorie
 	public Long ajouterCategorie(Categorie c);

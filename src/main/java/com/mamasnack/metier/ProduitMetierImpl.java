@@ -1,6 +1,9 @@
 package com.mamasnack.metier;
 
+import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.EntityExistsException;
 
@@ -8,13 +11,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.mamasnack.dao.CategorieRepository;
 import com.mamasnack.dao.CuisineRepository;
+import com.mamasnack.dao.DocumentDao;
 import com.mamasnack.dao.ProduitRepository;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
+import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
+import com.mamasnack.entities.ResponseMetadata;
 
 @Service
 public class ProduitMetierImpl implements ProduitMetier {
@@ -149,7 +156,18 @@ public class ProduitMetierImpl implements ProduitMetier {
 					    "id Categorie non existe dans BD ;erreur est produite lors de l'exécution du web service supprimerCategorie : ");
 				return "NOK";
 			}
-		categorieRepository.deleteById(idCat);
+		
+		    if(Objects.nonNull(categorie)){
+		        List<Produit> posts = listProduitsParCategorie(idCat);
+		        for (Iterator<Produit> iterator = posts.iterator(); iterator.hasNext();) {
+		            Produit post = iterator.next();
+		            post.setCategorie(null);
+		          //iterator.remove(); //remove the child first
+		            produitRepository.save(post);
+		        }
+		        categorieRepository.deleteById(idCat);
+		    }
+		
 		return "OK";
 		
 	}
@@ -205,7 +223,17 @@ public class ProduitMetierImpl implements ProduitMetier {
 					    "id Categorie non existe dans BD ;erreur est produite lors de l'exécution du web service supprimerCuisine : ");
 				return "NOK";
 			}
-		cuisineRepository.deleteById(idCuis);
+		 if(Objects.nonNull(cuisine)){
+		        List<Produit> posts = listProduitsParCuisine(idCuis);
+		        for (Iterator<Produit> iterator = posts.iterator(); iterator.hasNext();) {
+		            Produit post = iterator.next();
+		            post.setCuisine(null);
+		           // iterator.remove(); //remove the child first
+		            produitRepository.save(post);
+		        }
+		        cuisineRepository.deleteById(idCuis);
+		    }
+		
 		return "OK";
 		
 	}
@@ -226,6 +254,28 @@ public class ProduitMetierImpl implements ProduitMetier {
 		return cuisineRepository.findAll();
 	}
 
-	
+
+	    @Override
+	    public ResponseMetadata ajouterImage(MultipartFile file,Long idProduit) throws IOException {
+
+	        Produit doc = getProduit(idProduit);
+	        doc.setPhotoName(file.getOriginalFilename());
+	        doc.setFile(file.getBytes());
+	        produitRepository.save(doc);
+	        ResponseMetadata metadata = new ResponseMetadata();
+	        metadata.setMessage("success");
+	        metadata.setStatus(200);
+	        return metadata;
+	    }
+
+	    @Override
+	    public byte[]  getImageFile(Long id) {
+	      return produitRepository.findOne(id).getFile();
+	    }
+
+	    @Override
+	    public List<Produit> findAll() {
+	        return (List<Produit>) produitRepository.findAll();
+	    }
 
 }

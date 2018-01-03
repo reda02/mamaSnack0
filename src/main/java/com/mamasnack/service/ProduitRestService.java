@@ -1,5 +1,6 @@
 package com.mamasnack.service;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,17 +10,26 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
+import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
+import com.mamasnack.entities.ResponseMetadata;
 import com.mamasnack.metier.ProduitMetier;
 
 @RestController
@@ -396,6 +406,22 @@ public class ProduitRestService {
 		return toJSON(produitMetier.listCuisines());
 	}
 
+	   @RequestMapping(value = "/upload/{idProduit}", method = RequestMethod.POST)
+	    public @ResponseBody ResponseMetadata handleFileUpload(@RequestParam(value="file") MultipartFile file,@PathVariable Long idProduit) throws IOException {
+	        return produitMetier.ajouterImage(file,idProduit);
+	    }
+
+	    @RequestMapping(value = "/getImagebyProd/{idProduit}", method = RequestMethod.GET)
+	    public HttpEntity<byte[]> getImage(@PathVariable Long idProduit) {
+	        HttpHeaders httpHeaders = new HttpHeaders();
+	        httpHeaders.setContentType(MediaType.IMAGE_JPEG);
+	        return new ResponseEntity<byte[]>(produitMetier.getImageFile(idProduit), httpHeaders, HttpStatus.OK);
+	    }
+
+	    @RequestMapping(value = "/getAllImagByProd/{idProduit}",method = RequestMethod.GET)
+	    public @ResponseBody List<Produit> getAllImagByProd(@PathVariable Long idProduit) {
+	        return produitMetier.findAll();
+	    }
 	
 	public static String toJSON(Object object) 
     { 

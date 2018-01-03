@@ -13,6 +13,7 @@ import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -36,7 +37,7 @@ public class Categorie implements Serializable {
 	private byte[] photo;
 	private String nomPhoto;
 	//@JsonManagedReference("cat")@OneToMany(mappedBy="user")
-	@OneToMany(mappedBy="categorie", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="categorie" , fetch = FetchType.EAGER, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
 	private List<Produit>produit ;
 	
 	
