@@ -406,7 +406,7 @@ public class ProduitRestService {
 		return toJSON(produitMetier.listCuisines());
 	}
 
-	   @RequestMapping(value = "/upload/{idProduit}", method = RequestMethod.POST)
+	 /* @RequestMapping(value = "/upload/{idProduit}", method = RequestMethod.POST)
 	    public @ResponseBody ResponseMetadata handleFileUpload(@RequestParam(value="file") MultipartFile file,@PathVariable Long idProduit) throws IOException {
 	        return produitMetier.ajouterImage(file,idProduit);
 	    }
@@ -421,7 +421,7 @@ public class ProduitRestService {
 	    @RequestMapping(value = "/getAllImagByProd/{idProduit}",method = RequestMethod.GET)
 	    public @ResponseBody List<Produit> getAllImagByProd(@PathVariable Long idProduit) {
 	        return produitMetier.findAll();
-	    }
+	    }*/
 	
 	public static String toJSON(Object object) 
     { 

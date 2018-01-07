@@ -95,6 +95,10 @@ public class User implements Serializable{
 	//	inverseJoinColumns=@JoinColumn( name="idMsg"))
 	private Collection<User>users;
 	
+	
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+	private Collection<Commentaire>commentaire;
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -244,4 +248,18 @@ public class User implements Serializable{
 		this.role = role;
 	}
 
+
+
+	public Collection<Commentaire> getCommentaire() {
+		return commentaire;
+	}
+
+
+
+	public void setCommentaire(Collection<Commentaire> commentaire) {
+		this.commentaire = commentaire;
+	}
+
+	
+	
 }

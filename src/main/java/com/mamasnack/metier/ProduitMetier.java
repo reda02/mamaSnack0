@@ -27,9 +27,9 @@ public interface ProduitMetier {
 	public List<Produit> listProduitsSelectionne() ;
 	
 	
-	 ResponseMetadata ajouterImage(MultipartFile multipartFile, Long idProduit) throws IOException;
+	/* ResponseMetadata ajouterImage(MultipartFile multipartFile, Long idProduit) throws IOException;
      byte[] getImageFile(Long idProduit);
-     List<Produit> findAll();
+     List<Produit> findAll();*/
 	
 	// CRUD Categorie
 	public Long ajouterCategorie(Categorie c);
