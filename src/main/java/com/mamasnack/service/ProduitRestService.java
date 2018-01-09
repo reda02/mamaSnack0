@@ -1,8 +1,13 @@
 package com.mamasnack.service;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +29,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
@@ -37,8 +44,22 @@ public class ProduitRestService {
 	@Autowired
 	private ProduitMetier produitMetier ;
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	@RequestMapping(value="/addProduit",method=RequestMethod.POST , consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public String ajouterProduit(@RequestBody Produit p, Long IdCat) throws JSONException {
+	
+	
+	@RequestMapping(value="/addProduit",method=RequestMethod.POST)
+	public @ResponseBody String ajouterProduit(@RequestParam(value="file") MultipartFile file,
+    		@RequestParam(value="ad") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
+		
+		ObjectMapper mapper = new ObjectMapper(); 
+    	Produit p = mapper.readValue(json, Produit.class); ;
+    	  if (!file.isEmpty()) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  int randomNum = (int)(Math.random()*100); 
+			  String nomImg = "ImgProduit"+randomNum ;
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  ImageIO.write(src, "png", destination);
+			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
+			  }
 		String Add = null;
 		JSONObject resultat = new JSONObject();
 		try {
@@ -406,11 +427,13 @@ public class ProduitRestService {
 		return toJSON(produitMetier.listCuisines());
 	}
 
-	 /* @RequestMapping(value = "/upload/{idProduit}", method = RequestMethod.POST)
+	   /* @RequestMapping(value = "/upload/{idProduit}", method = RequestMethod.POST)
 	    public @ResponseBody ResponseMetadata handleFileUpload(@RequestParam(value="file") MultipartFile file,@PathVariable Long idProduit) throws IOException {
-	        return produitMetier.ajouterImage(file,idProduit);
+	        //return produitMetier.ajouterImage(file,idProduit);
+		  
+		  
 	    }
-
+     /*
 	    @RequestMapping(value = "/getImagebyProd/{idProduit}", method = RequestMethod.GET)
 	    public HttpEntity<byte[]> getImage(@PathVariable Long idProduit) {
 	        HttpHeaders httpHeaders = new HttpHeaders();
