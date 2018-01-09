@@ -47,15 +47,15 @@ public class ProduitRestService {
 	
 	
 	@RequestMapping(value="/addProduit",method=RequestMethod.POST)
-	public @ResponseBody String ajouterProduit(@RequestParam(value="file") MultipartFile file,
+	public @ResponseBody String ajouterProduit(@RequestParam(value="file", defaultValue="") MultipartFile file,
     		@RequestParam(value="ad") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
-		
+		String nomImg = null ;
 		ObjectMapper mapper = new ObjectMapper(); 
     	Produit p = mapper.readValue(json, Produit.class); ;
     	  if (!file.isEmpty()) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  int randomNum = (int)(Math.random()*100); 
-			  String nomImg = "ImgProduit"+randomNum ;
+			   nomImg = "ImgProduit"+randomNum ;
 			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
@@ -63,6 +63,7 @@ public class ProduitRestService {
 		String Add = null;
 		JSONObject resultat = new JSONObject();
 		try {
+			p.setPhoto1(nomImg);
 			Add =  produitMetier.ajouterProduit(p, IdCat);
 			resultat.put("errMess", Add);
 		    } catch (Exception e) {
