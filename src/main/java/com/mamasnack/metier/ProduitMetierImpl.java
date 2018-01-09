@@ -255,7 +255,7 @@ public class ProduitMetierImpl implements ProduitMetier {
 	}
 
 
-	    @Override
+	  /*  @Override
 	    public ResponseMetadata ajouterImage(MultipartFile file,Long idProduit) throws IOException {
 
 	        Produit doc = getProduit(idProduit);
@@ -271,11 +271,11 @@ public class ProduitMetierImpl implements ProduitMetier {
 	    @Override
 	    public byte[]  getImageFile(Long id) {
 	      return produitRepository.findOne(id).getFile();
-	    }
+	    } 
 
 	    @Override
 	    public List<Produit> findAll() {
 	        return (List<Produit>) produitRepository.findAll();
-	    }
+	    }*/
 
 }
