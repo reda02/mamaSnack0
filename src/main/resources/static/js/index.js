@@ -1,5 +1,5 @@
 
-var app=angular.module("User",["ngRoute","angular.filter"]);
+var app=angular.module("User",["ngRoute","angular.filter","ngCookies"]);
 app.config(["$routeProvider",function($routeProvider){
     $routeProvider
     .when("/Acceuil",{

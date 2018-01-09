@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
-import com.mamasnack.entities.Document;
+//import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.ResponseMetadata;
 

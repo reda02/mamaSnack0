@@ -9,7 +9,7 @@ import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
-
+//commit ayoub 
 @SpringBootApplication(exclude = org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class)
 public class MamasnackWsApplication extends SpringBootServletInitializer {
 	@Override

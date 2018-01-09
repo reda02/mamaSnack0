@@ -171,7 +171,7 @@ app.controller("AdminController",["$scope","$http",function($scope,$http){
 			adresse: $scope.clickedUser.adresse
 		};
 		var res=$http({
-			method: 'PUT',
+			method: 'POST',
 			url: 'http://localhost:8080/updateuser',
 			data: JSON.stringify(dataObj),
 			headers: {'Content-Type': 'application/json; charset=utf-8'}

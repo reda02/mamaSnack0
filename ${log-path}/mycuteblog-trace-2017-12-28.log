@@ -1,0 +1,9 @@
+[ERROR] 2017-12-28 00:30:33.730 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-28 00:37:57.632 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 6344 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-28 00:37:57.642 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-28 00:38:06.615 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.461 seconds (JVM running for 10.589)
+[INFO ] 2017-12-28 00:49:58.263 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7752 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-28 00:49:58.268 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-28 00:53:16.424 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8652 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-28 00:53:16.429 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-28 00:53:22.662 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.565 seconds (JVM running for 7.6)

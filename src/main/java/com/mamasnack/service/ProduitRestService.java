@@ -27,7 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
-import com.mamasnack.entities.Document;
+//import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.ResponseMetadata;
 import com.mamasnack.metier.ProduitMetier;

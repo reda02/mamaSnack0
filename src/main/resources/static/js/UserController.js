@@ -44,18 +44,44 @@ app.directive('prev', function(){
     }
 });
 
-app.controller("UserController",["$scope","$http","$routeParams",function($scope,$http,$routeParams){
+app.controller("UserController",["$scope","$http","$routeParams","$cookies",function($scope,$http,$routeParams,$cookies){
 	$scope.selectUser=null;
 	$scope.pageUsers=null;
 	$scope.nomComplet=null;
 	$scope.produit=null;
-	$scope.bl="ou";
-	$http.get("http://localhost:8080/getuser/52")
+	$http.get("http://localhost:8080/getuser/"+$cookies.get("idUser"))
 	.then(function(res){
 		$scope.selectUser=res.data.user;
 		$scope.nomComplet=$scope.selectUser.prenomUser+" "+$scope.selectUser.nomUser;
 	});
 	
+	
+	$scope.logIn=function(){
+		var dataObj={
+			email: document.getElementById("email").value,
+			password: document.getElementById("password").value
+		};
+		var res=$http({
+			method: 'POST',
+			url:'http://localhost:8080/checkLogin',
+			data: JSON.stringify(dataObj),
+			headers: {'Content-Type': 'application/json; charset=utf-8'}
+		})
+		res.then(function(res){
+			if(res.data.Msg=="OK"){
+				$cookies.put("idUser",res.data.id);
+				if(res.data.role[0].roleName == "user")
+					location.href="/index.html";
+				else{
+					if(res.data.role[0].roleName == "admin")
+						location.href="/app.html";
+					else{
+						//mama role page
+					}
+				}
+			}
+		});
+	};
 	$http.get("http://localhost:8080/getProduit/"+$routeParams.id)
 	.then(function(res){
 		$scope.produit=res.data.produit;

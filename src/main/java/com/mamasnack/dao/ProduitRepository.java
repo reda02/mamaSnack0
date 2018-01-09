@@ -30,7 +30,7 @@ public interface ProduitRepository extends JpaRepository<Produit, Long>{
 	public Produit findOne(@Param("x") Long idPro);
 	
 	@Query("SELECT p FROM Produit p WHERE  p.idProduit like :x")
-	public boolean existsProduit(Long idProduit);
+	public boolean existsProduit(@Param("x") Long idProduit);
 	 
 	@Query("SELECT p FROM Produit p WHERE  p.description like %:mc%")
 	 public List<Produit> findproduitParMotCle(@Param("mc") String mc); 

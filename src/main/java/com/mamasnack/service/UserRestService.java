@@ -44,8 +44,8 @@ public class UserRestService {
 			ObjectMapper mapper = new ObjectMapper(); 
 			if (roles != null && !roles.isEmpty() && Add =="OK" ) {
 				tab = new JSONArray(mapper.writeValueAsString(roles).toString());
-				resultat.put("role", tab);
 				resultat.put("id", user.getIdUser());
+				resultat.put("role", tab);
 			}else{
 				resultat.put("role", "");
 			}

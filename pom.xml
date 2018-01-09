@@ -121,6 +121,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		
 	</build>
 	<repositories>
 		<repository>
@@ -159,6 +160,4 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
-
 </project>

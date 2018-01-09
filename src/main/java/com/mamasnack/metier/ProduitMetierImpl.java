@@ -15,11 +15,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mamasnack.dao.CategorieRepository;
 import com.mamasnack.dao.CuisineRepository;
-import com.mamasnack.dao.DocumentDao;
+//import com.mamasnack.dao.DocumentDao;
 import com.mamasnack.dao.ProduitRepository;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
-import com.mamasnack.entities.Document;
+//import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.ResponseMetadata;
 

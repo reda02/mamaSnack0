@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    padding-top: 0.1px;
+}
+body{
+    background: rgba(0,0,0,0.02);
+}
+.login-modal{
+    width: 350px;
+    margin: auto;
+    margin-top: 150px;
+}
+h1{
+    text-align: center;
+    padding: 10px 0;
+}
+.login-form{
+    background: white;
+    padding: 15px 22px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 3px;
+}
+#email,#password{
+    width: 100%;
+    border: 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 5px;
+    height: 30px;
+    background: rgba(0,0,0,0.02);
+}
+#password{
+    margin-top: 8px;
+}
+#connect{
+    width: 100%;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    background-color: deepskyblue;
+    height: 30px;
+    font-weight: bold;
+}

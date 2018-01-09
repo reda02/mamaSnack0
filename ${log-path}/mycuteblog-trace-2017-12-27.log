@@ -1,0 +1,169 @@
+[INFO ] 2017-12-27 11:59:17.554 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2976 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 11:59:17.570 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 11:59:23.785 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.616 seconds (JVM running for 7.879)
+[ERROR] 2017-12-27 12:02:44.531 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 12:02:45.004 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 12:03:01.532 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 12:03:02.152 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 12:09:13.602 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 13:44:04.735 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 14:27:45.306 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4292 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 14:27:45.317 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 14:27:53.691 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.977 seconds (JVM running for 13.665)
+[INFO ] 2017-12-27 14:27:57.542 [http-nio-8080-exec-3] CommandeMetierImpl - Info message
+[INFO ] 2017-12-27 14:27:59.422 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-12-27 14:28:06.823 [http-nio-8080-exec-6] CommandeMetierImpl - Info message
+[INFO ] 2017-12-27 14:29:31.430 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 1400 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 14:29:31.440 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 14:29:38.418 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.447 seconds (JVM running for 9.152)
+[INFO ] 2017-12-27 14:29:47.004 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-12-27 14:29:58.857 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[ERROR] 2017-12-27 14:31:14.248 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 14:31:46.078 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 14:31:47.158 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 14:36:43.325 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 14:37:01.859 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[INFO ] 2017-12-27 14:39:47.022 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7940 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 14:39:47.027 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 14:39:52.466 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.79 seconds (JVM running for 6.804)
+[INFO ] 2017-12-27 14:45:41.813 [http-nio-8080-exec-6] CommandeMetierImpl - Info message
+[ERROR] 2017-12-27 14:45:57.448 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service updateuser : could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[INFO ] 2017-12-27 15:02:11.354 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4028 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 15:02:11.365 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 15:02:18.699 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.867 seconds (JVM running for 9.186)
+[INFO ] 2017-12-27 15:02:51.102 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 6456 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 15:02:51.116 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[ERROR] 2017-12-27 15:07:21.344 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:07:36.753 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:10:22.130 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:10:50.188 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service adduser : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[INFO ] 2017-12-27 15:12:32.348 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11176 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 15:12:32.355 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 15:12:39.438 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.514 seconds (JVM running for 8.832)
+[ERROR] 2017-12-27 15:45:03.190 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:45:58.612 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:45:59.158 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : query did not return a unique result: 6; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 6
+[ERROR] 2017-12-27 15:53:11.192 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 15:54:05.117 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 15:54:28.053 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 17:16:08.048 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2224 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:16:08.060 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:16:15.083 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.53 seconds (JVM running for 8.782)
+[ERROR] 2017-12-27 17:16:17.847 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : A JSONObject text must begin with '{' at character 1
+[ERROR] 2017-12-27 17:19:13.480 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : A JSONObject text must begin with '{' at character 1
+[ERROR] 2017-12-27 17:19:32.434 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 17:23:15.305 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 6308 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:23:15.310 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:23:21.168 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.253 seconds (JVM running for 7.301)
+[INFO ] 2017-12-27 17:26:42.986 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8432 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:26:42.991 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:26:48.561 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.909 seconds (JVM running for 7.096)
+[INFO ] 2017-12-27 17:34:11.605 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5980 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:34:11.610 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:34:17.637 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.436 seconds (JVM running for 7.518)
+[INFO ] 2017-12-27 17:37:30.137 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 780 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:37:30.144 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:37:35.753 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.058 seconds (JVM running for 7.083)
+[ERROR] 2017-12-27 17:37:52.526 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[ERROR] 2017-12-27 17:37:54.129 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[ERROR] 2017-12-27 17:37:55.018 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[ERROR] 2017-12-27 17:37:55.873 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[INFO ] 2017-12-27 17:38:46.040 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 10444 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:38:46.046 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:38:51.741 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.053 seconds (JVM running for 7.062)
+[INFO ] 2017-12-27 17:40:27.875 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9348 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:40:27.880 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:40:33.103 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.558 seconds (JVM running for 6.607)
+[INFO ] 2017-12-27 17:41:07.447 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7304 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:41:07.452 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:41:13.004 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.897 seconds (JVM running for 6.901)
+[INFO ] 2017-12-27 17:42:10.003 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2184 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:42:10.009 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:42:15.569 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.893 seconds (JVM running for 6.924)
+[INFO ] 2017-12-27 17:46:08.033 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 820 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:46:08.038 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:46:13.203 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.51 seconds (JVM running for 6.519)
+[ERROR] 2017-12-27 17:46:22.678 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[ERROR] 2017-12-27 17:46:24.515 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[ERROR] 2017-12-27 17:46:25.490 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[ERROR] 2017-12-27 17:46:26.188 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[ERROR] 2017-12-27 17:47:28.866 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[ERROR] 2017-12-27 17:47:30.178 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : User inexistant !
+[INFO ] 2017-12-27 17:47:38.173 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 948 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:47:38.178 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:47:43.457 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.61 seconds (JVM running for 6.578)
+[INFO ] 2017-12-27 17:48:16.763 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11932 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:48:16.768 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:48:38.360 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4912 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 17:48:38.365 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 17:48:43.554 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.525 seconds (JVM running for 6.52)
+[ERROR] 2017-12-27 17:48:53.715 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[ERROR] 2017-12-27 17:48:55.261 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service checkLogin : null
+[INFO ] 2017-12-27 19:42:11.544 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[ERROR] 2017-12-27 19:42:18.870 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:42:20.736 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 19:43:38.545 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11836 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 19:43:38.565 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 19:43:45.801 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.775 seconds (JVM running for 8.977)
+[ERROR] 2017-12-27 19:43:56.785 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:43:57.968 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:44:59.550 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:45:00.252 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:45:49.932 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:45:50.744 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 19:46:08.690 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:04:21.142 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:04:38.518 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:04:42.097 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:04:54.807 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:05:10.196 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:05:17.535 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 20:05:33.683 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12892 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 20:05:33.693 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 20:05:41.868 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.666 seconds (JVM running for 9.997)
+[ERROR] 2017-12-27 20:10:07.702 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:11:05.994 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:11:06.804 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:12:03.573 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:12:04.807 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:12:33.868 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:12:34.565 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:17:44.258 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:17:45.024 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:18:04.321 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 20:19:28.644 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 220 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 20:19:28.651 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 20:19:36.296 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.039 seconds (JVM running for 9.075)
+[INFO ] 2017-12-27 20:44:37.213 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2208 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 20:44:37.224 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 20:44:45.644 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.966 seconds (JVM running for 12.539)
+[ERROR] 2017-12-27 20:45:01.093 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:45:02.309 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:45:14.432 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:45:18.405 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:47:12.920 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:47:32.212 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:48:25.764 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:48:43.212 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:49:01.125 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:49:10.778 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:49:54.653 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:50:23.484 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:50:44.063 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:59:30.602 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 20:59:33.572 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 21:01:49.205 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-27 21:02:16.262 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-27 21:51:19.880 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5380 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 21:51:19.888 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 21:51:28.085 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.685 seconds (JVM running for 10.073)
+[INFO ] 2017-12-27 22:35:58.361 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7632 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 22:35:58.374 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 22:36:07.727 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.878 seconds (JVM running for 13.667)
+[INFO ] 2017-12-27 22:37:54.556 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 700 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-27 22:37:54.566 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-27 22:38:03.120 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.093 seconds (JVM running for 10.691)
+[INFO ] 2017-12-27 22:38:04.174 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[ERROR] 2017-12-27 22:38:04.395 [http-nio-8080-exec-2] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service listCommandes() : Unable to find com.mamasnack.entities.User with id 0; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.mamasnack.entities.User with id 0
+[INFO ] 2017-12-27 22:38:06.845 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[ERROR] 2017-12-27 22:38:06.876 [http-nio-8080-exec-7] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service listCommandes() : Unable to find com.mamasnack.entities.User with id 0; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.mamasnack.entities.User with id 0
