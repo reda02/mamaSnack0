@@ -26,7 +26,7 @@ App.factory('docService', ['$http', '$q', 'urls', function ($http, $q, urls) {
             		};
                 var formData = new FormData();
                 formData.append('file', file);
-                formData.append('ad',JSON.stringify(dataObj));
+                formData.append('json',JSON.stringify(dataObj));
                 $http.post('http://localhost:8080/addProduit', formData,{
                     transformRequest : angular.identity,
                     headers : {

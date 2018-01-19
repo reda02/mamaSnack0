@@ -44,4 +44,6 @@ public interface ProduitMetier {
 	public String supprimerCuisine(Long idCat) ;
 	public String modifierCuisine(Cuisine c);
 	public List<Cuisine> listCuisines();
+	public String detacheProduit(Long idPro);
+
 }

@@ -4,8 +4,10 @@ package com.mamasnack.dao;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mamasnack.entities.Produit;
 
@@ -34,4 +36,10 @@ public interface ProduitRepository extends JpaRepository<Produit, Long>{
 	 
 	@Query("SELECT p FROM Produit p WHERE  p.description like %:mc%")
 	 public List<Produit> findproduitParMotCle(@Param("mc") String mc); 
+	
+
+	  @Transactional
+	  @Modifying
+	  @Query("delete from Produit c where c.idProduit = ?1")
+	public void deleteByIdProd(@Param("mc") Long id);
 }

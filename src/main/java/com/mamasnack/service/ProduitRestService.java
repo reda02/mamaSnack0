@@ -8,18 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +31,6 @@ import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
 //import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
-import com.mamasnack.entities.ResponseMetadata;
 import com.mamasnack.metier.ProduitMetier;
 
 @RestController
@@ -46,13 +40,13 @@ public class ProduitRestService {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	
-	@RequestMapping(value="/addProduit",method=RequestMethod.POST)
-	public @ResponseBody String ajouterProduit(@RequestParam(value="file", defaultValue="") MultipartFile file,
-    		@RequestParam(value="ad") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
+	@RequestMapping(value="/addProduit",produces = "application/json",method=RequestMethod.POST)
+	public @ResponseBody String ajouterProduit(@RequestParam(value="file", required = false) MultipartFile file,
+    		@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
 		String nomImg = null ;
 		ObjectMapper mapper = new ObjectMapper(); 
     	Produit p = mapper.readValue(json, Produit.class); ;
-    	  if (!file.isEmpty()) {
+    	  if (file!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  int randomNum = (int)(Math.random()*100); 
 			   nomImg = "ImgProduit"+randomNum ;
@@ -100,8 +94,24 @@ public class ProduitRestService {
 		String delete = null;
 		JSONObject resultat = new JSONObject();
 		try {
-
+			
 			delete =  produitMetier.supprimerProduit(idPro);
+			resultat.put("errMess", delete);
+		} catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service deleteProduit : " + e.getMessage());
+		}
+		return resultat.toString();
+	}
+	
+	@RequestMapping(value="/deletachProduit/{idPro}",method=RequestMethod.GET)
+	public String deletach(@PathVariable Long idPro) throws JSONException {
+		String delete = null;
+		JSONObject resultat = new JSONObject();
+		try {
+			
+			delete = produitMetier.detacheProduit(idPro);
 			resultat.put("errMess", delete);
 		} catch (Exception e) {
 			resultat.put("errMess", e.getMessage());

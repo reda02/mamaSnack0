@@ -60,6 +60,23 @@ public class ProduitMetierImpl implements ProduitMetier {
 		if (produit==null)throw new RuntimeException("produit inexistant !");
 		return produit;
 	}
+	
+	@Override
+	public String detacheProduit(Long idPro) {
+		    Produit produit	= getProduit(idPro) ;
+		    if(Objects.nonNull(produit)){
+		    produit.setCategorie(null);
+			produit.setCuisine(null);
+			produit.setUser(null);
+			produitRepository.saveAndFlush(produit);
+		    }else{
+				logger.error(getClass().getName()+
+					    "idUser est null de l'exécution du web service supprimerUser : ");
+
+				return "NOK";
+			}
+			return "OK";
+		}
 
 	@Override
 	public String supprimerProduit(Long idPro) {
@@ -78,11 +95,16 @@ public class ProduitMetierImpl implements ProduitMetier {
 				return "NOK";
 			}
 		
-	
-	 produitRepository.deleteById(idPro);
+		  
+			  // detacheProduit(produit);
+				
+			  	
+				produitRepository.deleteByIdProd(idPro);
 	 return "OK";
 	}
+	
 
+	
 	@Override
 	public String modifierProduit(Produit p) {
 		if (p.getIdProduit() != null && !produitRepository.existsById(p.getIdProduit())) {
