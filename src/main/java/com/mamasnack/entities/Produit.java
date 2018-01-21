@@ -73,7 +73,8 @@ public class Produit implements Serializable {
 	@JoinColumn(name="idCuisine")
 	private Cuisine cuisine ;
 
-	@JsonBackReference("produit")
+	//@JsonBackReference("produit")
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@OneToMany(mappedBy="produit" , fetch = FetchType.LAZY)
 	private Collection<LigneCommande> items ;
 	
