@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    padding-top: 0.1px;
+}
+.row{
+	width:100%;
+	margin:auto;
+}
+input:focus,button:focus{
+    outline: 0;
+}
+
+header{
+	height:65px;
+	background:#ff8080;
+	width:100%;
+    padding: 9px 20px;
+    z-index: 1000;
+}
+.compte{
+    cursor: pointer;
+	width:82px;
+	height:45px;
+    padding: 5px 8px;
+    border-radius: 2px;
+    background: transparent;
+    transition: 0.35s;
+}
+.compte .person{
+    width: 35px;
+}
+.arrow{
+    visibility: hidden;
+	width: 27px;
+}
+.compte:hover{
+    background:#f7f7f7;
+    box-shadow: 1px 1px 10px gray;
+}
+.compte:hover .arrow{
+    visibility: visible
+}
+.panier-icon{
+    float: right;
+    
+}
+.compte-form{
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 10%;
+    left: 2.9%;
+    z-index: 9999;
+    padding: 10px 20px; 
+    box-shadow: 0 0 6px gray;
+    background: #f2f2f2;
+}
+.compte-form img{
+    width: 66px;
+}
+.compte-form .nom{
+    padding: 10px 0;
+    text-align: center;
+}
+.search-form{
+    margin: auto;
+    margin-top: 100px;
+    width: 400px;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 20px 20px; 
+}
+.search-form label{
+    width: 100%;
+    font-size: 12px;
+}
+.form-control{
+    border-radius: 2px;
+}
+.group{
+    width: 100%;
+    padding: 0;
+}
+.btn-search{
+    background: #ff8080;
+    width: 100%;
+    color: white;
+}
+
+
+.srch{
+    height: 25px;
+    width: 230px;
+    margin: auto;
+    border:0;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 3px;
+    background: #f7f7f7;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+    color: dimgray;
+}
+.search-data{
+	width:100%;
+	background:white;
+	position:absolute;
+	z-index:10;
+	border:1px solid rgba(0,0,0,0.1);
+	height:auto;
+	max-height:172px;
+	display:none;
+}
+.search-data p{
+	cursor:pointer;
+	width:100%;
+	padding: 5px 15px;
+	font-size: 17px;
+	font-weight: bold;
+	margin:0;
+}
+.search-data p:hover{
+	background: rgba(0,0,0,0.1);
+}
+
+.edit-compte{
+    margin: auto;
+    margin-top: 100px;
+	width: 500px;
+	background: white;
+	border:1px solid rgba(0,0,0,0.1);
+    padding: 20px;
+}
+.group-form{
+    padding-top: 20px;
+}
+.userCity{
+    height: auto;
+    padding: 40px 56px;
+}
+#map{
+    width: 100%;
+    height: 550px;
+    position: fixed;
+    border-radius: 5px;
+}
+.userPlat{
+    margin-top: 5px;
+}
+#listPlat{
+    padding-bottom: 20px;
+    width: 99%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    transition: 3s;
+}
+.plat{
+	cursor:pointer;
+    width: 250px;
+    height: auto;
+    display: inline-table;
+    margin-left: 10px;
+}
+.plat img{
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+}
+.nom-plat{
+    padding-top: 8px;
+    font-weight: bold;
+}
+.pag{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-shadow: 0px 5px 20px lightgray;
+    border-radius: 50%;
+    padding: 0 20px;
+    display: inline-block;
+    position: absolute;
+    margin: 60px 0;
+    margin-left: -20px;
+}
+#pag-left{
+    float: left;
+    visibility:hidden;
+}
+#pag-right{
+    float: right;
+}
+.pag span{
+    font-size: 40px;
+    position: relative;
+    top: -5px;
+}
+.userDef{
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.userDef img{
+    padding: 0;
+    width: 30px;
+}
+.userDef p{
+    margin: 0;
+    padding: 6px 10px;
+}
+.gm-style-iw {
+ 	width: 300px !important;
+   top: 15px !important;
+   left: 0 !important;
+   background-color: #fff;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border-radius: 2px 2px 0 0;
+}
+.modalMap{
+}
+.modalMap h4{
+	text-align:center;
+}
+.modalMap h5{
+	text-align:center;
+}
+.userMap{
+}
+.userMap .formMap:NTH-CHILD(1){
+	display:block;
+}
+.push{
+	color:white;
+	font-size:60px;
+	position:absolute;
+	top: 80px;
+	cursor:pointer;
+}
+.push-left{
+	float:left;
+}
+.push-right{
+	float:right;
+	right:0;
+	
+}
+.formMap{
+	width:100%;
+	display:none;
+}
+.formMap p{
+	text-align:center;
+	padding: 10px 0;
+	font-weight:bold;
+}
+.imgMap{
+	width:100%;
+	height:160px;
+}
+.imgMap img{
+	width:100%;
+	height:100%;
+}
+.choice{
+    margin-top: 10px;
+    
+}
+.choice img{
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+}
+.userMama{
+    width: 40px;
+    position: absolute;
+    right: 0;
+}
+.userMama img{
+    width: 100%;
+}
+.showImg{
+    padding-right: 0;
+}
+.choiceImg{
+    padding-right: 0;
+    //height: 400px;
+}
+.choiceImg img{
+    width: 100%;
+    height: 500px;
+}
+.desc{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.addProduit{
+    padding: 0 200px;
+    margin: auto;
+    margin-top: 50px;
+}
+.prix{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.btn-panier{
+    border: 0;
+    text-align: center;
+    width:  100%;
+    height: 35px;
+    background: white;
+    border: 3px solid lightgray;
+    color: dimgray;
+}

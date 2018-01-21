@@ -1,0 +1,9 @@
+[INFO ] 2017-11-30 12:11:52.625 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8748 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-30 12:11:52.642 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-30 12:11:59.210 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.144 seconds (JVM running for 8.431)
+[INFO ] 2017-11-30 12:42:04.046 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3596 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-30 12:42:04.056 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-30 12:42:11.094 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.522 seconds (JVM running for 8.782)
+[INFO ] 2017-11-30 13:43:38.833 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-11-30 17:48:35.551 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[INFO ] 2017-11-30 17:48:36.597 [http-nio-8080-exec-6] CommandeMetierImpl - Info message

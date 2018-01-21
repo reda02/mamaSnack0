@@ -1,0 +1,20 @@
+[INFO ] 2017-11-23 09:39:10.957 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9252 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-23 09:39:10.976 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-23 09:39:17.449 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.017 seconds (JVM running for 8.351)
+[ERROR] 2017-11-23 09:58:32.368 [http-nio-8080-exec-3] ProduitRestService - com.mamasnack.service.ProduitRestServiceune erreur est produite lors de l'exécution du web service ajouterProduit : Validation failed for classes [com.mamasnack.entities.Produit] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='la taille doit être comprise entre 1 et 4', propertyPath=designation, rootBeanClass=class com.mamasnack.entities.Produit, messageTemplate='{javax.validation.constraints.Size.message}'}
+]
+[INFO ] 2017-11-23 11:18:58.626 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11480 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-23 11:18:58.641 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-23 11:19:04.960 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.789 seconds (JVM running for 7.874)
+[INFO ] 2017-11-23 11:21:18.061 [http-nio-8080-exec-3] CommandeMetierImpl - Info message
+[INFO ] 2017-11-23 11:21:53.427 [http-nio-8080-exec-6] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-11-23 11:22:28.834 [http-nio-8080-exec-4] CommandeRestService - getAllLigneDeCommande message
+[ERROR] 2017-11-23 11:22:49.927 [http-nio-8080-exec-7] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service getLigneDeCommandeById : Commande inexistant !
+[ERROR] 2017-11-23 11:23:00.633 [http-nio-8080-exec-5] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service getLigneDeCommandeById : Commande inexistant !
+[INFO ] 2017-11-23 11:23:09.031 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[WARN ] 2017-11-23 11:23:09.032 [http-nio-8080-exec-9] CommandeMetierImpl - Warn message
+[ERROR] 2017-11-23 11:23:09.032 [http-nio-8080-exec-9] CommandeMetierImpl - Error message
+[ERROR] 2017-11-23 11:23:09.049 [http-nio-8080-exec-9] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service getLigneDeCommandeById : A JSONObject text must begin with '{' at character 1
+[INFO ] 2017-11-23 11:49:20.097 [http-nio-8080-exec-1] CommandeRestService - getAllLigneDeCommande message

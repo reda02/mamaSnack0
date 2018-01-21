@@ -1,0 +1,85 @@
+<div class="container" style="padding:50px 0;">
+            <div class="col-sm-3 left-bars">
+                <div class="bar">
+                    <h4>Verifications</h4>
+                    <div>
+                        <p>Telephone Verifié</p>
+                        <p>Email Verifié</p>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h4>Activités</h4>
+                    <div>
+                        <p>nbr de produit: </p>
+                        <p>nbr de commande: </p>
+                        <p>membre depuis: </p>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h4>A propos de moi</h4>
+                    <div>
+                        <p>Age: 18</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 profil">
+                <div class="profil-intro row">
+                    <div class="col-sm-3 profil-img">
+                        <img src="img/x.jpg" class="img-circle">
+                    </div>
+                    <div class="col-sm-9 profil-info">
+                        <p class="profil-name">{{nomComplet}}</p>
+                        <button class="profil-modifier">Modifier profil</button>
+                        <button class="profil-modifier">Contacter</button>
+                        <p class="profil-status">Working</p>
+                    </div>
+                </div>
+                <div class="profil-desc">
+                    <p>Hello my name is Pedro, I'm a True Foodie and a YouTuber. My biggest passion in life is to create new unique recipes, film and photograph them and watch all the awesome reactions. 
+						Besides being really busy working on my Food Studio in Lisbon, The Tasty Studio, I loveeeee to Travel, most of all hitchinking in remote places with different cultures, histories and food! 
+						I can't live without music and beach, I kinda need my vitamin sea while listening to my favorite artists. 
+						My latest passion was to create Lisbon For Foodies! An amazing Experience that is exclusive on airbnb and has been giving me the most amazing moments in my life.</p>
+                </div>
+                <div class="row">
+                    <div style="margin: auto;width: 200px;">
+                 <div class="col-sm-6">
+                     <p style="font-size: 30px;text-align: center;margin: 0;">3,5</p>
+                     <p style="text-align: center;">Avis moyenne</p>
+                 </div>
+                 <div><img src="img/star.png"></div>
+             </div>
+         </div>
+         <div class="row" style="padding-left: 10px;">
+             <p class="col-sm-6" style="font-weight: bold">Plat</p>
+             <a href="#" class="col-sm-6 affiche-tous">Afficher tous</a>
+             <div class="userPlat">
+                 <div id="listPlat" style="display: inline-block;">
+                     <div class="plat">
+                         <img src="img/plat.jpg">
+                         <p class="nom-plat">Plat Tajine</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="">
+             <h4 style="font-size: 32px;padding-bottom: 20px;">Commentaires</h4>
+             <div class="row">
+                 <div class="col-sm-3" style="padding-left: 40px;">
+                     <div style="width: 80px;height: 80px;margin:auto"><img src="img/x.jpg" style="width: 100%;" class="img-circle"></div>
+                     <p style="text-align: center">Ayoub Boukhrisse</p>
+                 </div>
+                 <div class="col-sm-9 commentaire">
+                     <p style="padding-bottom: 15px;">Christine and her family were great guests. Very enthusiastic and respectful of the space - they treated my apartment as if it was their own!</p>
+                     <p>Samedi 22 Decembre 2017</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <script>
+ 	$(document).ready(function(){
+ 		$(".profil-modifier").click(function(){
+ 			location.href="#!editProfil";
+ 		});
+ 	});
+ </script>

@@ -1,0 +1,56 @@
+<div class="container" style="padding-top: 50px;">
+            <div class="row" style="height: auto;">
+                <div class="col-sm-5 showImg">
+                    <div class="col-sm-2" style="padding: 0;width: 60px;">
+                        <div class="choice" style="margin: 0;">
+                            <img src="img/t.jpg">
+                        </div>
+                        <div class="choice">
+                            <img src="img/r.jpg">
+                        </div>
+                        <div class="choice">
+                            <img src="img/y.jpg">
+                        </div>
+                    </div>
+                    <div class="col-sm-10 choiceImg">
+                        <img />
+                    </div>
+                </div>
+                <div class="col-sm-7" style="padding:0;">
+                    <div class="userMama">
+                        <img src="img/x.jpg" class="img-circle"/>
+                    </div>
+                    <h4 class="desc">{{produit.description}}</h4>
+                    <hr>
+                    <div class="addProduit">
+                        <p class="prix">{{produit.prix | currency: '$' :  2}}</p>
+                        <div class="row form-group" style="margin-top: 20px;">
+                            <label class="col-sm-3 control-label">Quantite</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" style="border-radius: 0" min="0" max="{{produit.quantite}}" value="0">
+                            </div>
+                         </div>
+                        <div class="form-group" style="margin-top:10px;">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button class="btn-panier">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12" style="margin-top: 30px;">
+                <h4 style="font-size: 22px;">Designation</h4>
+                <hr>
+                <p>{{prouit.designation}}</p>
+            </div>
+ </div>
+ <script>
+     $(document).ready(function(){
+         $(".choiceImg img").attr("src",$(".choice:nth-child(1) img").attr("src"));
+         $(".choice") .click(function(){
+             //alert();
+             $(".choiceImg img").attr("src",$("img",this).attr("src"));
+         });
+     });
+</script>

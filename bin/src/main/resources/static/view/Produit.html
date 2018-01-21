@@ -1,0 +1,206 @@
+<div class="container-fluid">
+	<div class="header">
+	    <h3 class="col-xs-4">{{langue.product}}</h3>
+	    <div class="search-modal col-xs-6">
+	        <input type="text" class="search" placeholder="{{langue.search}}" ng-model="search">
+	    </div>
+	    <button class="btn btn-success add-product" style="margin-top:20px;">{{langue.newProduct}}</button>
+	</div>
+	<div class="user-table">
+		<table class="table table-striped">
+	        <thead>
+	            <th>#</th>
+	            <th>Description</th>
+	            <th>{{langue.price}}</th>
+	            <th>{{langue.amount}}</th>
+	            <th>Designation</th>
+	            <th>{{langue.picture}}</th>
+	            <th></th>
+	            <th></th>
+	        </thead>
+	        <tbody>
+	            <tr class="ligne" ng-repeat="u in filterData = (pageProducts | filter : search) | limitTo:5:5*(page-1)" >
+	                <td>{{u.idProduit}}</td>
+	                <td>{{u.description}}</td>
+	                <td>{{u.prix}}</td>
+	                <td>{{u.quantite}}</td>
+	                <td>{{u.designation}}</td>
+	                <td></td>
+	                <td><button class="btn btn-info btn-sm" ng-click="selectProduct(u.idProduit)" update>{{langue.edit}}</button></td>
+	                <td><button class="btn btn-danger btn-sm" ng-click="selectProduct(u.idProduit)" remove>{{langue.delete}}</button></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	    <p ng-hide="filterData.length" class="alert alert-danger">{{langue.vide}}</p>
+	    <div class="page">
+		    <ul class="pagination pagination-sm ">
+		    	<li><a href="javascript:void(0)" ng-click="previous();">&lsaquo;</a></li>
+		    	<li ng-repeat="p in ProductPages"><a href="javascript:void(0)" ng-click="changePage(p)">{{p}}</a></li>
+		    	<li><a href="javascript:void(0)" ng-click="next()">&rsaquo;</a></li>
+		    </ul>
+	    </div>
+	</div>
+</div>
+<!-- Ajout Form -->
+<div id="add-form" class="shadow-form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span id="close">&times;</span>
+			<h4 class="modal-title">{{langue.newProduct}}</h4>
+		</div>
+		<form class="form-horizontal">
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">Description</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Description" ng-model="newProduct.description">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.price}}</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="{{langue.price}}" ng-model="newProduct.prix">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.amount}}</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="{{langue.amount}}" ng-model="newProduct.quantite">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">Designation</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Designation" ng-model="newProduct.designation">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.picture}}</label>
+				<div class="col-sm-10">
+					<input type="file" id="imageInput" name="imageInput" accept="image/*"/>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.cat}}</label>
+				<div class="col-sm-10">
+					<select class="form-control" ng-model="selectedCat">
+						<option value="" disabled selected>{{langue.cat}}</option>
+						<option ng-repeat="c in pageCategories" value="{{c.idCategorie}}" >{{c.nomCategorie}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.cui}}</label>
+				<div class="col-sm-10">
+					<select class="form-control" ng-model="selectedCui">
+						<option value="" disabled selected>{{langue.cui}}</option>
+						<option ng-repeat="c in pageCuisines" value="{{c.idCuisine}}" >{{c.nameCuisine}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="button" class="btn btn-default save" ng-click="addProduct()">{{langue.add}}</button>
+			    </div>
+		  </div>
+		</form>
+	</div>
+</div>
+<!-- Edit form -->
+<div id="edit-form" class="shadow-form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span id="close">&times;</span>
+			<h4 class="modal-title">{{langue.edit}}</h4>
+		</div>
+		<form class="form-horizontal">
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">Description</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Description" ng-model="selectedProduct.description">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.price}}</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="{{langue.price}}" ng-model="selectedProduct.prix">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.amount}}</label>
+				<div class="col-sm-10">
+					<input type="number" class="form-control" placeholder="{{langue.amount}}" ng-model="selectedProduct.quantite">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">Designation</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Designation" ng-model="selectedProduct.designation">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.picture}}</label>
+				<div class="col-sm-10">
+					<input type="file" class="" placeholder="{{langue.picture}}" ng-model="newProduct.photo">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.cat}}</label>
+				<div class="col-sm-10">
+					<select class="form-control" ng-options="c.idCategorie as c.nomCategorie for c in pageCategories track by c.idCategorie" ng-model="selectedCat">
+						<option value="" disabled selected>{{langue.cat}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-2 control-label">{{langue.cui}}</label>
+				<div class="col-sm-10">
+					<select class="form-control" ng-options="c.idCuisine as c.nameCuisine for c in pageCuisines track by c.idCuisine" ng-model="selectedCui">
+						<option value="" disabled selected>{{langue.cui}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="button" class="btn btn-default save" ng-click="saveProduct()">{{langue.save}}</button>
+			    </div>
+		  </div>
+		</form>
+	</div>
+</div>
+<script>
+$(document).ready(function(){
+	$(".search").focusin(function(){
+        $(this).css({"background": "#fff", "text-align": "left"});
+    });
+    $(".search").focusout(function(){
+        $(this).css({"background": "rgba(0,0,0,0.02)", "text-align": "center"});
+    });
+    $(".save,#close").click(function(){
+		animate();
+		setTimeout(() => {
+			$(".shadow-form").css("display","none");
+		}, 350);
+	});
+	$(".add-product").click(function(){
+		$("#add-form").css("display","block");
+	});
+    function animate(){
+		$(".modal-content").addClass("modal-close");
+		setTimeout(() => {
+			$(".modal-content").removeClass("modal-close");
+		}, 355);
+   	}
+    $('#imageInput').change(function(){
+        var frm = new FormData();
+        frm.append('imageInput', input.files[0]);
+        $.ajax({
+            method: 'POST',
+            address: 'url/to/save/image',
+            data: frm,
+            contentType: false,
+            processData: false,
+            cache: false
+        });
+    });
+});
+</script>

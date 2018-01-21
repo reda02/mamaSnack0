@@ -1,0 +1,26 @@
+[INFO ] 2017-11-18 13:25:52.884 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5720 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-18 13:25:52.898 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-18 13:25:59.155 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.704 seconds (JVM running for 7.877)
+[INFO ] 2017-11-18 13:36:47.949 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9152 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-18 13:36:47.956 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-18 17:13:41.985 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8824 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-18 17:13:42.001 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-18 18:15:46.239 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 10572 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-18 18:15:46.239 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-18 18:15:57.355 [main] MamasnackWsApplication - Started MamasnackWsApplication in 11.547 seconds (JVM running for 14.749)
+[INFO ] 2017-11-18 18:15:58.626 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5848 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-18 18:15:58.691 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-19 12:15:02.675 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 1936 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-19 12:15:02.690 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-19 12:15:14.212 [main] MamasnackWsApplication - Started MamasnackWsApplication in 12.401 seconds (JVM running for 15.664)
+[ERROR] 2017-11-19 12:21:56.530 [http-nio-8080-exec-1] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 1
+[INFO ] 2017-11-19 12:27:02.914 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 14288 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-19 12:27:02.920 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-19 12:30:37.384 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11972 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-19 12:30:37.390 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-19 12:30:43.525 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.489 seconds (JVM running for 7.581)
+[ERROR] 2017-11-19 12:44:20.736 [http-nio-8080-exec-7] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 1
+[ERROR] 2017-11-19 12:57:34.767 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service updateuser : Validation failed for classes [com.mamasnack.entities.User] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être nul', propertyPath=nomUser, rootBeanClass=class com.mamasnack.entities.User, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]

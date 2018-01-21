@@ -14,6 +14,12 @@ app.config(["$routeProvider",function($routeProvider){
     }).when("/Produit/:id",{
     	templateUrl: "view/oneProduct.html",
         controller: "UserController"
+    }).when("/mamaProfil",{
+    	templateUrl: "view/mamaProfil.html",
+        controller: "UserController"
+    }).when("/editProfil",{
+    	templateUrl: "view/editProfil.html",
+        controller: "UserController"
     }).otherwise({
         redirectTo: "/Acceuil"
     });

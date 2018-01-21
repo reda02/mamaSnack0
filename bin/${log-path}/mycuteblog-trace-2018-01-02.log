@@ -1,0 +1,17 @@
+[INFO ] 2018-01-02 19:07:46.890 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2548 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:07:46.907 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:07:55.664 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.261 seconds (JVM running for 10.761)
+[INFO ] 2018-01-02 19:17:26.186 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7776 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:17:26.202 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:20:59.822 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11904 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:20:59.829 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:21:18.087 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7300 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:21:18.092 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:21:48.650 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[ERROR] 2018-01-02 19:21:48.755 [http-nio-8080-exec-4] CommandeRestService - com.mamasnack.service.CommandeRestServiceune erreur est produite lors de l'exécution du web service listCommandes() : Unable to find com.mamasnack.entities.User with id 0; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.mamasnack.entities.User with id 0
+[INFO ] 2018-01-02 19:36:41.263 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11516 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:36:41.279 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:36:48.567 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.639 seconds (JVM running for 10.976)
+[INFO ] 2018-01-02 19:53:10.552 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11400 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2018-01-02 19:53:10.559 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-02 19:53:17.175 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.01 seconds (JVM running for 8.135)

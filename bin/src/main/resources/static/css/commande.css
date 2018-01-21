@@ -1,0 +1,38 @@
+.commande{
+	padding:0 30px;
+	padding-bottom: 30px;
+}
+.commande-form{
+	width:240px;
+	height:400px;;
+}
+ul{
+  list-style-type: none;
+}
+.commande-form ul{
+	width:100%;
+}
+.commande-form li span{
+	cursor:default;
+}
+.commande-form li span:hover{
+	background:#b3e6ff;
+}
+#arrow{
+	opacity:0.4;
+}
+#arrow:hover{
+	opacity:1;	
+}
+.display-form{
+	height:auto;
+	min-height:200px;
+	width: 75%;
+	margin-left:30px;
+}
+#setting{
+	width:100px;
+	margin:auto;
+	opacity:0.5;
+	padding:55px 0;
+}

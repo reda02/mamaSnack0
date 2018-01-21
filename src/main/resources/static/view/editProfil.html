@@ -1,0 +1,130 @@
+<div class="container" style="padding: 50px 0;">
+             <div class="col-sm-3 left-bars">
+                <div class="profil-img" style="margin: auto;padding-bottom: 10px;"><img src="img/x.jpg" class="img-circle"></div> 
+                <div class="bar">
+                    <h4>Verifications</h4>
+                    <div>
+                        <p>Telephone Verifié</p>
+                        <p>Email Verifié</p>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h4>Activités</h4>
+                    <div>
+                        <p>nbr de produit: </p>
+                        <p>nbr de commande: </p>
+                        <p>membre depuis: </p>
+                    </div>
+                </div>
+                <div class="bar">
+                    <h4>A propos de moi</h4>
+                    <div>
+                        <p>Age: 18</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="row editp-intro">
+                    <h4 class="editp-name">{{nomComplet}}</h4>
+                    <p class="editp-ville">Berkane, Oriental, Morocco</p>
+                </div>
+                <div class="row edit-profil">
+                    <div style="">
+                        <div class="edit-link link-active" id="propos"><p>À propos de</p></div>
+                        <div class="edit-link" id="plats"><p>Mes plats</p></div>
+                    </div>
+                    <div class="apropos">
+                        <div class="row form-box" style="border-bottom: 1px dotted rgba(0,0,0,0.3);padding-bottom: 15px;">
+                            <label class="col-sm-3">Disponilité</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="dispo">
+                                	<option value="oui">Accepte les commandes</option>
+                                	<option value="non">N'accepte pas les commandes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-box">
+                            <label class="col-sm-3">Ville</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="city">
+                                	<option>Berkane</option>
+                                	<option>Rabat</option>
+                                	<option>Casablanca</option>
+                                	<option>Dakhla</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-box" style="border-bottom: 1px dotted rgba(0,0,0,0.3);padding-bottom: 15px;">
+                            <label class="col-sm-3">Adresse</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="adresse" class="form-control" placeholder="Adresse..">
+                            </div>
+                        </div>
+                        <div class="row form-box">
+                            <label class="col-sm-3">À propos de moi</label>
+                            <div class="col-sm-12" style="padding: 0;">
+                                <textarea class="form-control" style="resize: vertical;min-height: 120px;max-height: 250px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-box" style="border-top: 3px solid lightgray;margin-top: 15px;padding-top: 5px;">
+                            <button class="btn btn-success" style="font-weight: bold;" ng-click="editInfo()">Enregistrer</button>
+                            <button class="btn" style="color: white; font-weight: bold;">Annuler</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mesPlats">
+                        <div class="row" style="margin: 0 10px;margin-top: 20px;">
+                            <div class="col-sm-7 checkbox">
+                              <label style="font-weight: bold;"><input type="checkbox" class="check-all" value="" />Selectionne tous</label>
+                            </div>
+                            <div class="col-sm-5" style="padding-right: 0;">
+                                <div style="float: right;">
+                                    <button class="btn btn-plat"><img src="img/trash.png"/></button>
+                                    <button class="btn btn-plat"><img src="img/plus.png"/></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row get-plat" ng-repeat="p in selectUser.produit">
+                            <div class="check-modal">
+                               <div class="check-box"><input type="checkbox" name="checkPlat" value="" ></div>
+                            </div>
+                            <div class="plat-img"><img src="img/plat.jpg" /></div>
+                            <div class="plat-info">
+                                <h4 class="plat-name">{{p.description}}</h4>
+                                <p class="plat-prix">{{p.prix}} DH</p>
+                                <p class="plat-etat">Desactiver</p>
+                            </div>
+                            <div class="plat-edit">
+                                <button class="btn btn-success">Modifier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("body").css("background","rgba(0,0,0,0.1)")
+                $(".check-all").click(function(){
+                    if($(this).is(':checked'))
+                    {
+                        $("input[name='checkPlat']").prop("checked",true);
+                    }else{
+                        $("input[name='checkPlat']").prop("checked",false);
+                    }
+                    
+                });
+                $("#propos").click(function(){
+                    $(this).addClass("link-active");
+                    $("#plats").removeClass("link-active");
+                    $(".apropos").css("display","block");
+                    $(".mesPlats").css("display","none");
+                });
+                $("#plats").click(function(){
+                    $(this).addClass("link-active");
+                    $("#propos").removeClass("link-active");
+                    $(".apropos").css("display","none");
+                    $(".mesPlats").css("display","block");
+                });
+            });
+        </script>

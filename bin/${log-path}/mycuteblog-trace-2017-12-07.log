@@ -1,0 +1,28 @@
+[INFO ] 2017-12-07 00:10:49.118 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:10:50.956 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:11:27.555 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:20:41.974 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2248 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-07 00:20:41.982 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-07 00:20:48.350 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.807 seconds (JVM running for 7.908)
+[INFO ] 2017-12-07 00:22:26.959 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:22:29.124 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:23:12.132 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:24:20.426 [http-nio-8080-exec-3] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:25:13.063 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:25:32.411 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:26:14.151 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:26:49.917 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:28:35.712 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8844 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-07 00:28:35.712 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-07 00:28:42.602 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.316 seconds (JVM running for 8.576)
+[INFO ] 2017-12-07 00:31:30.442 [http-nio-8080-exec-8] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:31:32.105 [http-nio-8080-exec-4] CommandeMetierImpl - Info message
+[INFO ] 2017-12-07 00:33:50.016 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8340 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-07 00:33:50.023 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-07 00:33:56.322 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.743 seconds (JVM running for 7.828)
+[INFO ] 2017-12-07 00:34:21.475 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[ERROR] 2017-12-07 00:35:08.970 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-07 00:35:09.031 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-07 00:35:18.456 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-07 00:35:18.511 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-07 00:35:20.838 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !

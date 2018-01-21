@@ -1,0 +1,43 @@
+[INFO ] 2017-12-24 13:30:09.254 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7700 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-24 13:30:09.277 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-24 13:30:17.889 [main] MamasnackWsApplication - Started MamasnackWsApplication in 9.187 seconds (JVM running for 11.05)
+[ERROR] 2017-12-24 13:33:29.841 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service delete Role : role inexistant !
+[ERROR] 2017-12-24 13:38:24.076 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service delete Role : role inexistant !
+[ERROR] 2017-12-24 13:52:12.509 [http-nio-8080-exec-6] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 3
+[INFO ] 2017-12-24 13:56:03.568 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 13:56:32.126 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 13:57:15.019 [http-nio-8080-exec-3] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-12-24 14:03:54.367 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[WARN ] 2017-12-24 14:03:54.367 [http-nio-8080-exec-7] CommandeMetierImpl - Warn message
+[ERROR] 2017-12-24 14:03:54.367 [http-nio-8080-exec-7] CommandeMetierImpl - Error message
+[INFO ] 2017-12-24 14:05:31.416 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 14:06:18.455 [http-nio-8080-exec-6] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 14:09:06.208 [http-nio-8080-exec-1] CommandeMetierImpl - Info message
+[WARN ] 2017-12-24 14:09:06.208 [http-nio-8080-exec-1] CommandeMetierImpl - Warn message
+[ERROR] 2017-12-24 14:09:06.208 [http-nio-8080-exec-1] CommandeMetierImpl - Error message
+[INFO ] 2017-12-24 14:09:17.182 [http-nio-8080-exec-2] CommandeRestService - getAllLigneDeCommande message
+[INFO ] 2017-12-24 19:33:22.653 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 10556 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-12-24 19:33:22.666 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-24 19:33:29.872 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.732 seconds (JVM running for 8.984)
+[INFO ] 2017-12-24 19:33:48.314 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 2592 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-24 19:33:48.324 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-24 19:33:55.940 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.075 seconds (JVM running for 9.269)
+[ERROR] 2017-12-24 19:33:58.643 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:33:58.731 [http-nio-8080-exec-7] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:34:04.042 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:34:07.764 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:34:16.591 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-24 19:34:41.044 [http-nio-8080-exec-7] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 19:34:45.360 [http-nio-8080-exec-9] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 19:38:16.311 [http-nio-8080-exec-5] CommandeMetierImpl - Info message
+[INFO ] 2017-12-24 19:38:24.535 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[ERROR] 2017-12-24 19:42:32.258 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:42:32.416 [http-nio-8080-exec-4] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:44:04.423 [http-nio-8080-exec-9] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:46:13.137 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:46:17.488 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:47:32.608 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:47:40.948 [http-nio-8080-exec-6] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:47:46.164 [http-nio-8080-exec-2] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[ERROR] 2017-12-24 19:47:46.268 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getuser : User inexistant !
+[INFO ] 2017-12-24 19:51:04.614 [http-nio-8080-exec-9] CommandeRestService - getAllLigneDeCommande message

@@ -1,0 +1,38 @@
+[INFO ] 2017-11-16 12:33:30.974 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3204 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 12:33:30.990 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 12:33:38.644 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.102 seconds (JVM running for 9.18)
+[INFO ] 2017-11-16 13:26:41.714 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8740 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 13:26:41.720 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 16:06:05.172 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 9312 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 16:06:05.172 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 16:19:36.302 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5564 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 16:19:36.307 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 16:19:42.640 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.699 seconds (JVM running for 8.011)
+[ERROR] 2017-11-16 17:44:11.868 [http-nio-8080-exec-4] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 5
+[ERROR] 2017-11-16 17:44:14.887 [http-nio-8080-exec-6] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 5
+[INFO ] 2017-11-16 19:08:31.630 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8228 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 19:08:31.638 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 20:57:57.720 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5696 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 20:57:57.731 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 20:58:04.358 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.143 seconds (JVM running for 9.1)
+[INFO ] 2017-11-16 21:02:16.183 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11136 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 21:02:16.188 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 21:05:33.148 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 556 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 21:05:33.153 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 21:05:38.944 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.169 seconds (JVM running for 7.671)
+[INFO ] 2017-11-16 22:00:50.282 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5056 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 22:00:50.287 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-16 22:13:54.113 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 1760 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-16 22:13:54.123 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-17 01:39:26.133 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 11116 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-17 01:39:26.139 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-17 01:39:31.870 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.118 seconds (JVM running for 7.171)
+[INFO ] 2017-11-17 02:27:26.793 [http-nio-8080-exec-2] CommandeMetierImpl - Info message
+[INFO ] 2017-11-17 11:48:16.465 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8820 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-17 11:48:16.478 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-17 11:48:23.404 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.382 seconds (JVM running for 8.734)
+[INFO ] 2017-11-17 15:31:27.218 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12200 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-17 15:31:27.228 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-17 15:50:58.685 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 6948 (C:\Users\aybbk\git\mamasnack\mamasnackWS\target\classes started by aybbk in C:\Users\aybbk\git\mamasnack\mamasnackWS)
+[INFO ] 2017-11-17 15:50:58.691 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-11-17 15:51:09.852 [main] MamasnackWsApplication - Started MamasnackWsApplication in 11.543 seconds (JVM running for 15.737)

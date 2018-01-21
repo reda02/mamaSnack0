@@ -1,0 +1,26 @@
+[INFO ] 2017-12-26 13:40:49.370 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12084 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 13:40:49.392 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 13:40:57.534 [main] MamasnackWsApplication - Started MamasnackWsApplication in 8.678 seconds (JVM running for 10.653)
+[ERROR] 2017-12-26 19:10:54.345 [http-nio-8080-exec-7] UserMetierImpl - com.mamasnack.metier.UserMetierImplle role existe deja 3
+[INFO ] 2017-12-26 19:40:48.865 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12228 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 19:40:48.872 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 19:40:55.478 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.073 seconds (JVM running for 8.23)
+[INFO ] 2017-12-26 19:53:58.890 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5204 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 19:53:58.899 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 19:54:04.893 [main] MamasnackWsApplication - Started MamasnackWsApplication in 6.405 seconds (JVM running for 7.45)
+[ERROR] 2017-12-26 19:54:10.400 [http-nio-8080-exec-1] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service findUserByEmail : A JSONObject text must begin with '{' at character 1
+[INFO ] 2017-12-26 19:57:29.732 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8888 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 19:57:29.738 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 19:57:35.265 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.885 seconds (JVM running for 6.93)
+[INFO ] 2017-12-26 20:00:47.360 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4808 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 20:00:47.367 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 20:00:52.923 [main] MamasnackWsApplication - Started MamasnackWsApplication in 5.9 seconds (JVM running for 6.933)
+[INFO ] 2017-12-26 20:19:04.882 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3484 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 20:19:04.889 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 20:19:11.666 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.178 seconds (JVM running for 8.344)
+[ERROR] 2017-12-26 20:19:14.311 [http-nio-8080-exec-3] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service findUserbyEmail : User inexistant !
+[ERROR] 2017-12-26 20:20:33.839 [http-nio-8080-exec-5] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service findUserbyEmail : User inexistant !
+[INFO ] 2017-12-26 20:38:55.730 [http-nio-8080-exec-10] CommandeMetierImpl - Info message
+[INFO ] 2017-12-26 21:25:06.219 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 12628 (C:\Users\aybbk\git\mamaSnack0\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack0)
+[INFO ] 2017-12-26 21:25:06.232 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2017-12-26 21:25:13.585 [main] MamasnackWsApplication - Started MamasnackWsApplication in 7.837 seconds (JVM running for 8.938)

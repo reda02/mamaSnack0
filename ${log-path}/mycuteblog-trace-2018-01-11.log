@@ -1,0 +1,21 @@
+[INFO ] 2018-01-11 20:47:04.588 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 7688 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 20:47:04.612 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 20:47:58.842 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8864 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 20:47:58.855 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 20:51:43.238 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4400 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 20:51:43.247 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 20:58:40.046 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 8640 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 20:58:40.071 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 20:59:42.169 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 768 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 20:59:42.193 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 21:25:10.534 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 3164 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 21:25:10.544 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 21:33:19.200 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 5764 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 21:33:19.214 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 21:45:39.113 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 956 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 21:45:39.130 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 21:47:05.156 [main] MamasnackWsApplication - Starting MamasnackWsApplication on AYOUB-PC with PID 4276 (C:\Users\aybbk\git\mamaSnack02\target\classes started by aybbk in C:\Users\aybbk\git\mamaSnack02)
+[INFO ] 2018-01-11 21:47:05.175 [main] MamasnackWsApplication - The following profiles are active: @spring.profiles.active@
+[INFO ] 2018-01-11 21:47:15.551 [main] MamasnackWsApplication - Started MamasnackWsApplication in 10.87 seconds (JVM running for 12.795)
+[ERROR] 2018-01-11 21:52:59.296 [http-nio-8080-exec-10] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getUsers() : Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+[ERROR] 2018-01-11 21:52:59.382 [http-nio-8080-exec-8] UserRestService - com.mamasnack.service.UserRestServiceune erreur est produite lors de l'exécution du web service getUsers() : Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection

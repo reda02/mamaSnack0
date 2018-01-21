@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/users.css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/angular-cookies.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/AdminController.js"></script>
+        <script type="text/javascript" src="js/UserController.js"></script>
+    </head>
+    <body ng-app="User">
+        <header class="container-fluid">
+        	<div class="row">
+	        	<div class="col-sm-3">
+	        		<div class="compte">
+	        			<img src="img/x.jpg" class="person img-circle">
+	        			<img src="img/arrow.png" class="arrow">
+        			</div>
+	        	</div>
+	        	<div class="col-sm-6">
+                    <div style="width: 230px;margin: auto;">
+	        		     <input type="text" class="srch" placeholder="Rechercher">
+                    </div>
+		        </div>
+		        <div class="col-sm-3">
+		        	<img src="img/panier.png" class="panier-icon">
+		        </div>
+	        </div>
+        </header>
+        <div class="compte-form" ng-Controller="UserController">
+            <div style="margin: auto;width: 66px;">
+                <img src="img/x.jpg" class="img-circle">
+            </div>
+            <p class="nom">{{nomComplet}}</p>
+            <div style="margin: auto; width: 115px;">
+                <button class="btn btn-primary btn-compte" style="width: 115px;" >Gérer Compte</button>
+            </div>
+        </div>
+        <div ng-view></div>
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script>
+        	var socket = window.io('http://localhost:3000');
+        	$(document).ready(function(){
+        		var compte=false;
+        		$(".compte").click(function(){
+        			if(!compte){
+        				$(".compte-form").css("display","block");
+        				compte=true;
+        			}else{
+        				$(".compte-form").css("display","none");
+        				compte=false;
+        			}
+        		});
+        		
+        		$(".btn-compte").click(function(){
+        			$(".compte-form").css("display","none");
+        			compte=false;
+        			location.href="#!Compte";
+        		});
+        		
+        	});
+          
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKJBVzsVBrDtseDNMdSBVTpdh-L5uOrHE&callback=initMap">
+        </script>
+    </body>
+</html>

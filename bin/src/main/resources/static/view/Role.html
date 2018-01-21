@@ -1,0 +1,217 @@
+<div class="container-fluid">
+	<div class="content">
+		<hr>
+		<!-- ROLE FORM -->
+		<div id="role-admin" class="col-sm-6">
+			<div class="modal-header">
+				<h4 class="modal-title">All Roles</h4>
+				<div class="search-modal" style="margin: 0;display:inline-block;">
+	               	<input type="text" class="search" placeholder="Rechercher" ng-model="searchRole">
+	         	</div>
+	         	<button class="btn btn-success addRole" style="float:right;">Add role</button>
+			</div>
+			<div class="table-body">
+				<table class="table table-striped">
+					<thead>
+						<th>#</th>
+						<th>Role name</th>
+						<th></th>
+					</thead>
+					<tbody >
+						<tr ng-repeat="p in data=(pageRoles.users | filter: searchRole)">
+							<td>{{p.idRole}}</td>
+							<td>{{p.roleName}}</td>
+		                	<td><span class="delete" ng-click="selectRole(p.idRole)">&times;</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<p ng-hide="data.length" class="alert alert-danger">Aucun information disponible!</p>
+			</div>
+		</div>
+		<!-- Cuisine form -->
+		<div id="cui-admin" class="col-sm-6">
+			<div class="modal-header">
+				<h4 class="modal-title">Cuisines</h4>
+				<div class="search-modal" style="margin: 0;display:inline-block;">
+	               	<input type="text" class="search" placeholder="Rechercher" ng-model="searchCuisine">
+	         	</div>
+	         	<button class="btn btn-success addCuisine" style="float:right;">Add Cuisine</button>
+			</div>
+			<div class="table-body">
+				<table class="table table-striped">
+					<thead>
+						<th>#</th>
+						<th>Name</th>
+						<th>Langue</th>
+						<th></th>
+					</thead>
+					<tbody >
+						<tr ng-repeat="c in data=(pageCuisines | filter: searchCuisine)">
+							<td>{{c.idCuisine}}</td>
+							<td>{{c.nameCuisine}}</td>
+							<td>{{c.langue}}</td>
+		                	<td><span class="delete" ng-click="selectCuisine(c.idCuisine)">&times;</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<p ng-hide="data.length" class="alert alert-danger">Aucun information disponible!</p>
+			</div>
+		</div>
+		<!-- Categorie form -->
+		<div id="cat-admin" >
+			<div class="modal-header row">
+				<h4 class=" col-sm-5">All Categories</h4>
+				<div class="search-modal col-sm-7" style="margin: 0;">
+	               	<input type="text" class="search" placeholder="Rechercher" ng-model="searchCategorie">
+	         	</div>
+	         	<button class="btn btn-success col-sm-2 addCategorie" style="float:right">Add Categorie</button>
+			</div>
+			<div class="table-body" style="width:600px;">
+				<table class="table table-striped">
+					<thead>
+						<th>#</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th></th>
+					</thead>
+					<tbody >
+						<tr ng-repeat="c in data=(pageCategories | filter: searchCategorie)">
+							<td>{{c.idCategorie}}</td>
+							<td>{{c.nomCategorie}}</td>
+							<td>{{c.description}}</td>
+		                	<td><span class="delete" ng-click="selectCuisine(c.idCuisine)">&times;</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<p ng-hide="data.length" class="alert alert-danger">Aucun information disponible!</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- Add Role -->
+<div class="shadow-form" id="addRole">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Add new role</h4>
+			<span class="close close-addRole">&times;</span>
+		</div>
+		<div class="modal-body" style="padding-bottom:10px;">
+			<div class="row form-group">
+				<label class="col-sm-3 control-label">Role name</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Nom" ng-model="roleName">
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-12" style="margin:auto;width: 100px;margin-top:10px;">
+			      <button type="button" class="btn btn-default save"  ng-click="addRole()">Save</button>
+			    </div>
+		  	</div>
+		</div>
+	</div>
+</div>
+<!-- Add Cuisine -->
+<div class="shadow-form" id="addCuisine">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Add new Cuisine</h4>
+			<span class="close close-addCuisine">&times;</span>
+		</div>
+		<div class="modal-body" style="padding-bottom:10px;">
+			<div class="row form-group">
+				<label class="col-sm-3 control-label">Cuisine name</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Name" ng-model="nameCuisine">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-3 control-label">Langue</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Langue" ng-model="langue">
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-12" style="margin:auto;width: 100px;margin-top:10px;">
+			      <button type="button" class="btn btn-default save"  ng-click="addCuisine()">Save</button>
+			    </div>
+		  	</div>
+		</div>
+	</div>
+</div>
+<!-- Add Categorie -->
+<div class="shadow-form" id="addCategorie">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Add new Categorie</h4>
+			<span class="close close-addCategorie">&times;</span>
+		</div>
+		<div class="modal-body" style="padding-bottom:10px;">
+			<div class="row form-group">
+				<label class="col-sm-3 control-label">Cuisine name</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Name" ng-model="nomCategorie">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-sm-3 control-label">Description</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Langue" ng-model="description">
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-12" style="margin:auto;width: 100px;margin-top:10px;">
+			      <button type="button" class="btn btn-default save"  ng-click="addCategorie()">Save</button>
+			    </div>
+		  	</div>
+		</div>
+	</div>
+</div>
+<!-- Alert -->
+<div id="info"><p>{{info}}</p></div>
+
+<script>
+
+$(document).ready(function(){
+	$(".search").focusin(function(){
+        $(this).css({"background": "#fff", "text-align": "left"});
+    });
+    $(".search").focusout(function(){
+        $(this).css({"background": "rgba(0,0,0,0.02)", "text-align": "center"});
+    });
+	$(".close-addRole,.save").click(function(){
+		animate();
+		setTimeout(() => {
+			$("#addRole").css("display","none");
+		}, 350);
+	});
+	$(".close-addCuisine,.save").click(function(){
+		animate();
+		setTimeout(() => {
+			$("#addCuisine").css("display","none");
+		}, 350);
+	});
+	$(".close-addCategorie,.save").click(function(){
+		animate();
+		setTimeout(() => {
+			$("#addCategorie").css("display","none");
+		}, 350);
+	});
+	$(".addRole").click(function(){
+		$("#addRole").css("display","block");
+	});
+	$(".addCuisine").click(function(){
+		$("#addCuisine").css("display","block");
+	});
+	$(".addCategorie").click(function(){
+		$("#addCategorie").css("display","block");
+	});
+	function animate(){
+		$(".modal-content").addClass("modal-close");
+		setTimeout(() => {
+			$(".modal-content").removeClass("modal-close");
+		}, 355);
+	}
+});
+</script>
