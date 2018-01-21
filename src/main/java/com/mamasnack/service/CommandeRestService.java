@@ -158,6 +158,32 @@ public class CommandeRestService  {
 		return resultat.toString();
 	}
 	
+	
+	@RequestMapping(value="/getAllLigneDeCommandebyIdProd/{prodId}",method=RequestMethod.GET)
+	public String getAllLigneDeCommandebyIdProd(@PathVariable  long prodId) throws JSONException {
+		logger.info("getAllLigneDeCommande message");
+
+		List<LigneCommande> ligneCommandes = new ArrayList<>();
+		JSONObject resultat = new JSONObject();
+		JSONArray tab = new JSONArray();
+		try { 
+			ligneCommandes = commandeMetier.getAllLignebyIdProd(prodId);
+			ObjectMapper mapper = new ObjectMapper(); 
+			resultat.put("errMess", "");
+			if (ligneCommandes != null && !ligneCommandes.isEmpty()) {
+				tab = new JSONArray(mapper.writeValueAsString(ligneCommandes).toString());
+				resultat.put("LigneCommande", tab);
+			}else{
+				resultat.put("LigneCommande", "tabVide");
+			}  
+		} catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service getAllLigneDeCommande() : " + e.getMessage());
+		}
+		return resultat.toString();
+	}
+	
 	@RequestMapping(value="/getLigneDeCommandeById/{commandeId}/{ligneDeCommandeId}",method=RequestMethod.GET)
 	public String getLigneDeCommandeById(@PathVariable long commandeId, @PathVariable long ligneDeCommandeId) throws JSONException {
 	

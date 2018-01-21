@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,12 +34,14 @@ public class LigneCommande   implements Serializable{
 	private int quantite;
 	
 	//@JsonBackReference("produit")
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY)
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name="idProduit")
 	private Produit produit ;
 	
 	//@JsonBackReference("commande")
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY)
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name="idCommande")
 	private Commande commande ;
 	
@@ -64,7 +68,7 @@ public class LigneCommande   implements Serializable{
 		this.produit = produit;
 	}
 	
-	@JsonIgnore
+	//@JsonIgnore
 	public Commande getCommande() {
 		return commande;
 	}
