@@ -1,6 +1,5 @@
 package com.mamasnack.metier;
 
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -11,17 +10,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import com.mamasnack.dao.CategorieRepository;
 import com.mamasnack.dao.CuisineRepository;
+import com.mamasnack.dao.LigneCommandeRepository;
 //import com.mamasnack.dao.DocumentDao;
 import com.mamasnack.dao.ProduitRepository;
 import com.mamasnack.entities.Categorie;
 import com.mamasnack.entities.Cuisine;
+import com.mamasnack.entities.LigneCommande;
 //import com.mamasnack.entities.Document;
 import com.mamasnack.entities.Produit;
-import com.mamasnack.entities.ResponseMetadata;
 
 @Service
 public class ProduitMetierImpl implements ProduitMetier {
@@ -33,6 +31,10 @@ public class ProduitMetierImpl implements ProduitMetier {
 	private CategorieRepository categorieRepository ;
 	@Autowired
 	private CuisineRepository cuisineRepository ;
+	@Autowired
+	private CommandeMetier commandeMetier ; 
+	@Autowired
+	private LigneCommandeRepository ligneCommandeRepository ;
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Override
@@ -95,12 +97,23 @@ public class ProduitMetierImpl implements ProduitMetier {
 				return "NOK";
 			}
 		
-		  
+		    
 			  // detacheProduit(produit);
-				
+		    if(Objects.nonNull(produit)){
+		        List<LigneCommande> posts = commandeMetier.getAllLignebyIdProd(produit.getIdProduit());
+		        if(posts!=null){
+		        for (Iterator<LigneCommande> iterator = posts.iterator(); iterator.hasNext();) {
+		        	LigneCommande post = iterator.next();
+		            post.setProduit(null);
+		          //iterator.remove(); //remove the child first
+		            ligneCommandeRepository.save(post);
+		        }
 			  	
-				produitRepository.deleteByIdProd(idPro);
-	 return "OK";
+		        }
+		        
+		        produitRepository.deleteByIdProd(idPro);
+		    }
+	             return "OK";
 	}
 	
 

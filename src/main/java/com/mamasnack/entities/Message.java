@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
@@ -17,8 +19,8 @@ public class Message  implements Serializable {
 	 */
 	private static final long serialVersionUID = -932642278553084089L;
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idMsg;
-	private String distinataire;
 	private String contenuMesg;
 	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date dateEnregistrement;
@@ -33,12 +35,7 @@ public class Message  implements Serializable {
 	public void setIdMsg(Long idMsg) {
 		this.idMsg = idMsg;
 	}
-	public String getDistinataire() {
-		return distinataire;
-	}
-	public void setDistinataire(String distinataire) {
-		this.distinataire = distinataire;
-	}
+
 	public String getContenuMesg() {
 		return contenuMesg;
 	}
@@ -56,9 +53,8 @@ public class Message  implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Message(String distinataire, String contenuMesg, Date dateEnregistrement) {
+	public Message( String contenuMesg, Date dateEnregistrement) {
 		super();
-		this.distinataire = distinataire;
 		this.contenuMesg = contenuMesg;
 		this.dateEnregistrement = dateEnregistrement;
 	}

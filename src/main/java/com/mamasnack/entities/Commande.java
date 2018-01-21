@@ -3,7 +3,9 @@ package com.mamasnack.entities;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -15,6 +17,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -43,8 +48,8 @@ public class Commande  implements Serializable {
 	private Date dateCommnade;
 	
 	//@JsonManagedReference("commande")
-	@OneToMany(mappedBy="commande" , fetch = FetchType.LAZY)
-	private Collection<LigneCommande> items ;
+	@OneToMany(mappedBy="commande" , fetch = FetchType.EAGER, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
+	private List<LigneCommande> items ;
 	
 	
 	@ManyToOne
@@ -73,11 +78,11 @@ public class Commande  implements Serializable {
 		this.dateCommnade = dateCommnade;
 	}
 	@JsonIgnore
-	public Collection<LigneCommande> getItems() {
+	public List<LigneCommande> getItems() {
 		return items;
 	}
 	@JsonSetter
-	public void setItems(Collection<LigneCommande> items) {
+	public void setItems(List<LigneCommande> items) {
 		this.items = items;
 	}
 	//@JsonIgnore

@@ -29,7 +29,7 @@ public class CommandeMetierImpl implements CommandeMetier{
 		
 		Commande c = new Commande();
 		c.setUser(u);
-		c.setItems(p.getCommandes());
+		//c.setItems.(p.getCommandes());
 		c.setDateCommnade(new Date());
 		for(LigneCommande lc : p.getCommandes())
 			ligneCommandeRepository.save(lc);
@@ -162,6 +162,14 @@ public class CommandeMetierImpl implements CommandeMetier{
 				commandeRepository.save(commande);
 				return "OK";
 		
+	}
+
+
+
+	@Override
+	public List<LigneCommande> getAllLignebyIdProd(long prodId) {
+		// TODO Auto-generated method stub
+		return ligneCommandeRepository.getAllLignebyIdProd(prodId);
 	}
 
 

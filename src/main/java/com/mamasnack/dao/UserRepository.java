@@ -21,7 +21,6 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	   @Query("SELECT o FROM User o  WHERE  o.nomUser like :x")
 		public List<User>  findUserByName(@Param("x") String nom);
 	 
-	 
 	   @Query("SELECT o FROM User o INNER JOIN  o.role c  WHERE  c.idRole like :x")
 		public List<User>  findUserbyRole(@Param("x") Long idRole);
 
