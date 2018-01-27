@@ -108,8 +108,19 @@ public class CommandeRestService  {
 		
 	}
 	@RequestMapping(value="/addCommande",method=RequestMethod.POST, consumes = "application/json")
-	public String addCommande(Commande commande) {
-		return null;
+	public String addCommande(@RequestBody Commande commande) throws JSONException {
+
+		String Addc = null;
+		JSONObject resultat = new JSONObject();
+		try {
+			Addc =   commandeMetier.addCommande(commande);
+			resultat.put("errMess", Addc);
+		    } catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service addCommande : " + e.getMessage());
+		}
+		return resultat.toString();
 		
 		
 	}
@@ -223,12 +234,12 @@ public class CommandeRestService  {
 		
 	}
 	
-	@RequestMapping(value="/updateLigneCommande/{idCom}",method=RequestMethod.POST)
-	public String modifierLigneCommande(@RequestBody long idCom,@RequestBody LigneCommande idLigne) throws JSONException {
+	@RequestMapping(value="/updateLigneCommande",method=RequestMethod.POST)
+	public String modifierLigneCommande(@RequestBody LigneCommande LigneCmd) throws JSONException {
 		String update = null;
 		JSONObject resultat = new JSONObject();
 		try {
-			update = commandeMetier.modifyLigneDeCommande(idCom, idLigne);
+			update = commandeMetier.modifyLigneDeCommande(LigneCmd);
 			resultat.put("updateMess", update);
 			resultat.put("errMess", "");
 		} catch (Exception e) {

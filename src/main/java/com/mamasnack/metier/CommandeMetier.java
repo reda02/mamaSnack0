@@ -23,7 +23,7 @@ public interface CommandeMetier {
 		public List<LigneCommande> getAllLigneDeCommande(long commandeId);
 	    public LigneCommande getLigneDeCommandeById(long commandeId, long ligneDeCommandeId);
 //	    /public String addLigneDeCommande(long commandeId, LigneCommande ligneDeCommande);
-	    public String modifyLigneDeCommande(long commandeId, LigneCommande ligneDeCommandeToSet);
+	    public String modifyLigneDeCommande(LigneCommande ligneDeCommandeToSet);
 	    public LigneCommande removeLigneDeCommande(long commandeId, long ligneDeCommandeId);
 
 	    public String addLigneDeCommande(LigneCommande ligneDeCommande);

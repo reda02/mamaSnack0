@@ -1,7 +1,6 @@
 package com.mamasnack.entities;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -17,9 +16,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -48,20 +44,20 @@ public class Commande  implements Serializable {
 	private Date dateCommnade;
 	
 	//@JsonManagedReference("commande")
-	@OneToMany(mappedBy="commande" , fetch = FetchType.EAGER, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
+	@OneToMany(mappedBy="commande",fetch=FetchType.LAZY)
 	private List<LigneCommande> items ;
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "iduser", referencedColumnName = "idUser", nullable = false)
+	@JoinColumn(name = "iduser", referencedColumnName = "idUser", nullable = true)
 	private User user ;
 	
 	@ManyToOne
-	@JoinColumn(name = "idmama", referencedColumnName = "idUser", nullable = false)
+	@JoinColumn(name = "idmama", referencedColumnName = "idUser", nullable = true)
 	private User mama ;
 	
 	@ManyToOne
-	@JoinColumn(name="numCarte")
+	@JoinColumn(name="idReglement")
 	private Reglement reglement;
 	
 	public Long getIdCommande() {
@@ -85,7 +81,7 @@ public class Commande  implements Serializable {
 	public void setItems(List<LigneCommande> items) {
 		this.items = items;
 	}
-	//@JsonIgnore
+	@JsonIgnore
 	public User getUser() {
 		return user;
 	}
@@ -117,6 +113,15 @@ public class Commande  implements Serializable {
 	}
 	public void setTotal(double d) {
 		this.total = d;
+	}
+	
+	@JsonIgnore
+	public User getMama() {
+		return mama;
+	}
+	@JsonSetter
+	public void setMama(User mama) {
+		this.mama = mama;
 	}
 
 	

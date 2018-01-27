@@ -27,9 +27,6 @@ public class UserMetierImpl implements UserMetier{
 	public String addUser(User u) {
 		
 		User user =userRepository.findOnebyemail(u.getEmail()) ;
-		
-		
-		
 		if( user!= null){
 			
 			logger.error(getClass().getName()+
@@ -76,11 +73,8 @@ public class UserMetierImpl implements UserMetier{
 	}
 
 	@Override
-	public String modifierUser(User u) {
-		
+	public String modifierUser(User u) {	
        User user =userRepository.findOnebyemail(u.getEmail()) ;
-		
-		
 		
 		if( user!= null){
 			

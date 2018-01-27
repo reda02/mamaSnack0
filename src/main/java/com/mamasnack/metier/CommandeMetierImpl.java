@@ -3,6 +3,8 @@ package com.mamasnack.metier;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
+
 import javax.persistence.EntityExistsException;
 
 import org.slf4j.Logger;
@@ -15,6 +17,7 @@ import com.mamasnack.dao.LigneCommandeRepository;
 import com.mamasnack.entities.Commande;
 import com.mamasnack.entities.LigneCommande;
 import com.mamasnack.entities.Panier;
+import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.User;
 
 @Service
@@ -23,6 +26,8 @@ public class CommandeMetierImpl implements CommandeMetier{
 	private CommandeRepository commandeRepository ;
 	@Autowired
 	private LigneCommandeRepository ligneCommandeRepository ;
+	@Autowired
+	private ProduitMetier produitMetier ;
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Override
 	public Commande enrigistrerCommande(Panier p, User u) {
@@ -117,10 +122,18 @@ public class CommandeMetierImpl implements CommandeMetier{
 	}
 
 	@Override
-	public String modifyLigneDeCommande(long commandeId, LigneCommande l) {
+	public String modifyLigneDeCommande( LigneCommande l) {
+		
+		
+		Produit p = produitMetier.getProduit(l.getProduit().getIdProduit());
+		 if(!Objects.nonNull(p)) {
+			logger.error(getClass().getName()+
+				    "une erreur est produite lors de l'exécution du web service modifyLigneDeCommande : ");
+			return "NOK: produit NON trouvable ";
+		}
 		if (l.getIdLigneCommande() != null && !ligneCommandeRepository.existsById(l.getIdLigneCommande())) {
 			logger.error(getClass().getName()+
-				    "une erreur est produite lors de l'exécution du web service modifierProduit : ");
+				    "une erreur est produite lors de l'exécution du web service modifyLigneDeCommande : ");
 			return "NOK";
 		}
 		ligneCommandeRepository.save(l);

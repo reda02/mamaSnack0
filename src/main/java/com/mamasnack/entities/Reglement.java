@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -17,8 +19,11 @@ public class Reglement implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 3322881123352633597L;
+	
 	@Id
-	private int numCarte;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idReglement;
+	private String numCarte;
 	private Double montant;
 	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date dateRegelement;
@@ -28,11 +33,11 @@ public class Reglement implements Serializable {
 	@OneToMany(mappedBy="reglement")
 	private Collection<Commande>commande;
 
-	public int getNumCarte() {
+	public String getNumCarte() {
 		return numCarte;
 	}
 
-	public void setNumCarte(int numCarte) {
+	public void setNumCarte(String numCarte) {
 		this.numCarte = numCarte;
 	}
 

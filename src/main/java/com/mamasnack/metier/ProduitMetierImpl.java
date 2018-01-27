@@ -1,5 +1,6 @@
 package com.mamasnack.metier;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -83,6 +84,8 @@ public class ProduitMetierImpl implements ProduitMetier {
 	@Override
 	public String supprimerProduit(Long idPro) {
 		Produit produit	= getProduit(idPro) ;
+		
+		
 		if (idPro == null ) {
 			//	throw new EntityExistsException("There is already existing entity with such ID in the database.");
 			
@@ -109,6 +112,15 @@ public class ProduitMetierImpl implements ProduitMetier {
 		            ligneCommandeRepository.save(post);
 		        }
 			  	
+		        }
+		        
+		        if(produit.getPhoto1()!=null){
+		        File file = new File("src/main/resources/images/"+produit.getPhoto1()+".png");
+	    		if(file.delete()){
+	    			System.out.println(file.getName() + " is deleted!");
+	    		}else{
+	    			System.out.println("Delete operation is failed.");
+	    		}
 		        }
 		        
 		        produitRepository.deleteByIdProd(idPro);

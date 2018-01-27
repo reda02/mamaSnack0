@@ -40,6 +40,7 @@ public class User implements Serializable{
 	@Size(min=1,max=10)
 	private String nomUser;
 	private String prenomUser;
+	private String description;
 	@Email
 	private String email;
 	private String photo;
@@ -258,6 +259,42 @@ public class User implements Serializable{
 
 	public void setCommentaire(Collection<Commentaire> commentaire) {
 		this.commentaire = commentaire;
+	}
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+
+	public Collection<Message> getMessage() {
+		return message;
+	}
+
+
+
+	public void setMessage(Collection<Message> message) {
+		this.message = message;
+	}
+
+
+
+	public Collection<User> getUsers() {
+		return users;
+	}
+
+
+
+	public void setUsers(Collection<User> users) {
+		this.users = users;
 	}
 
 	
