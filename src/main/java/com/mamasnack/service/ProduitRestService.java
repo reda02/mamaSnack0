@@ -87,7 +87,7 @@ public class ProduitRestService {
 					"une erreur est produite lors de l'exécution du web service getProduit : " + e.getMessage());
 		}
 		return resultat.toString();
-	}
+	}	
 
 	@RequestMapping(value="/deleteProduit/{idPro}",method=RequestMethod.GET)
 	public String supprimerProduit(@PathVariable Long idPro) throws JSONException {
@@ -140,6 +140,7 @@ public class ProduitRestService {
 		String update = null;
 		JSONObject resultat = new JSONObject();
 		try {
+			p.setPhoto1(nomImg);
 			update = produitMetier.modifierProduit(p);
 			resultat.put("updateMess", update);
 			resultat.put("errMess", "");

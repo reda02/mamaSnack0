@@ -1,4 +1,4 @@
-<html ng-app="uploadApp">
+<html >
 <head>
 <meta charset="utf8" />
 
@@ -9,14 +9,14 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/angular-route.min.js"></script>
-	
+	<script type="text/javascript" src="js/index.js"></script>
 	<script src="documentService.js"></script>
 	<script src="app.js"></script>
 	
 	
 </head>
-<body ng-controller="docController">
-	<div class="container">
+<body ng-app="User" >
+	<div class="container" ng-Controller="docController">
 		<div class="col-md-6">
 		<div class="row">
             <h2>Upload Document</h2>

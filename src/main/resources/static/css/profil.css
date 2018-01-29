@@ -189,3 +189,78 @@
 .mesPlats{
     display: none;
 }
+
+#yourBtn{
+   position: relative;
+   font-family: calibri;
+   width: 150px;
+   padding: 10px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border: 1px dashed #BBB; 
+   text-align: center;
+   background-color: #DDD;
+   cursor:pointer;
+  }
+.img-field{
+    width: 100%;
+    max-height:  100px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+.getImg{
+    width: 300px;
+    height: 70px;
+}
+.getImg img{
+    width: auto;
+    height: 100%;
+}
+.shadow-form{
+	display:none;
+	position: fixed;
+	left: 0;
+    top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 99999;
+	background: rgba(0,0,0,0.5);
+	padding:30px 0;
+    overflow: auto;
+}
+.modal-content{
+	position:relative;
+	margin:auto;
+	width: 600px;
+	animation-name: fadein;
+	animation-duration: 0.5s;
+}
+.modal-close{
+	animation-name: fadeout;
+	animation-duration: 0.4s;
+}
+@keyframes fadein{
+	from{top:-300px; opacity:0}
+	to{top:0; opacity:1}
+}
+@keyframes fadeout{
+	from{top: 0;opacity:1}
+	to{top:-300px;opacity:0}
+}
+.form-horizontal{
+	padding: 20px;
+}
+#close{
+	cursor:pointer;
+	font-size: 33px;
+	float:right;
+	color: lightgray;
+	margin-top:-10px;
+}
+#close:hover{
+	color: gray;
+}
+
+
+

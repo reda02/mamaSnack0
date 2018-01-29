@@ -1,3 +1,4 @@
+<div ng-Controller="docController">
 <div class="container" style="padding: 50px 0;">
              <div class="col-sm-3 left-bars">
                 <div class="profil-img" style="margin: auto;padding-bottom: 10px;"><img src="img/x.jpg" class="img-circle"></div> 
@@ -79,30 +80,179 @@
                             </div>
                             <div class="col-sm-5" style="padding-right: 0;">
                                 <div style="float: right;">
-                                    <button class="btn btn-plat"><img src="img/trash.png"/></button>
-                                    <button class="btn btn-plat"><img src="img/plus.png"/></button>
+                                    <button class="btn btn-plat" id="remove-product" ng-click="removeProduct()"><img src="img/trash.png"/></button>
+                                    <button class="btn btn-plat" id="add-product"><img src="img/plus.png"/></button>
                                 </div>
                             </div>
                         </div>
                         <div class="row get-plat" ng-repeat="p in selectUser.produit">
                             <div class="check-modal">
-                               <div class="check-box"><input type="checkbox" name="checkPlat" value="" ></div>
+                               <div class="check-box"><input type="checkbox" name="checkPlat" class="check-plat" value="{{p.idProduit}}" ></div>
                             </div>
-                            <div class="plat-img"><img src="img/plat.jpg" /></div>
+                            <div class="plat-img"><img src="images/{{p.photo1}}.png" /></div>
                             <div class="plat-info">
                                 <h4 class="plat-name">{{p.description}}</h4>
                                 <p class="plat-prix">{{p.prix}} DH</p>
                                 <p class="plat-etat">Desactiver</p>
                             </div>
                             <div class="plat-edit">
-                                <button class="btn btn-success">Modifier</button>
+                                <button class="btn btn-success" ng-click="selectProduct(p.idProduit)" select>Modifier</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<!-- Ajouter form -->        
+<div id="add-form" class="shadow-form">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span id="close" class="close-modal">&times;</span>
+			<h4 class="modal-title">Ajouter</h4>
+		</div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Description</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Description" id="description">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Prix</label>
+				<div class="col-sm-9">
+					<input type="number" class="form-control" placeholder="Prix" id="prix">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Quantite</label>
+				<div class="col-sm-9">
+					<input type="number" class="form-control" placeholder="Quantite" id="quantite">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Designation</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Designation" id="designation">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Categorie</label>
+				<div class="col-sm-9">
+					<select class="form-control" ng-model="selectedCat">
+						<option value="" disabled selected>Categorie</option>
+						<option ng-repeat="c in pageCategories" value="{{c.idCategorie}}" >{{c.nomCategorie}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Cuisine</label>
+				<div class="col-sm-9">
+					<select class="form-control" ng-model="selectedCui">
+						<option value="" disabled selected>Cuisine</option>
+						<option ng-repeat="c in pageCuisines" value="{{c.idCuisine}}" >{{c.nameCuisine}}</option>
+					</select>
+				</div>
+			</div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">Activer</label>
+				<div class="col-sm-9">
+					<input type="checkbox" id="selected" data-toggle="toggle" data-onstyle="success">
+				</div>
+			</div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">Photos</label>
+				<div class="col-sm-9">
+                    <div class=" img-field">
+                        <span id="close">&times;</span>
+                        <div class="getImg"><img src="img/b1.jpg"></div>
+                    </div>
+                    <div id="yourBtn" onclick="getFile()">Importer une photo</div>
+                    <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"  type="file" value="upload" file-model="file"/></div>
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-3 col-sm-9">
+			      <button type="button" class="btn btn-default save" ng-click="upload()">Enregistrer</button>
+			    </div>
+		  </div>
+		</form>
+	</div>
+</div>
+<div id="edit-form" class="shadow-form" style="display:none;">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span id="close" class="close-modal">&times;</span>
+			<h4 class="modal-title">Modifier</h4>
+		</div>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Description</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Description" ng-model="selectedProduct.description">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Prix</label>
+				<div class="col-sm-9">
+					<input type="number" class="form-control" placeholder="Prix" ng-model="selectedProduct.prix">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Quantite</label>
+				<div class="col-sm-9">
+					<input type="number" class="form-control" placeholder="Quantite" ng-model="selectedProduct.quantite">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Designation</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" placeholder="Designation" ng-model="selectedProduct.designation">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Categorie</label>
+				<div class="col-sm-9">
+					<select class="form-control" ng-options="c.idCategorie as c.nomCategorie for c in pageCategories track by c.idCategorie" ng-model="selectedCat">
+						<option value="" disabled selected>Categorie</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Cuisine</label>
+				<div class="col-sm-9">
+					<select class="form-control" ng-options="c.idCuisine as c.nameCuisine for c in pageCuisines track by c.idCuisine" ng-model="selectedCui">
+						<option value="" disabled selected>Cuisine</option>
+					</select>
+				</div>
+			</div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">Activer</label>
+				<div class="col-sm-9">
+					<input type="checkbox" data-toggle="toggle" data-onstyle="success" id="select" ng-model="selectedProduct.steleted" />
+				</div>
+			</div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">Photos</label>
+				<div class="col-sm-9">
+                    <div><img src=""></div>
+                    <div id="yourBtn" onclick="getFile()">Importer une photo</div>
+                    <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"  type="file" value="upload" file-model="file"/></div>
+				</div>
+			</div>
+			<div class="form-group">
+			    <div class="col-sm-offset-3 col-sm-9">
+			      <button type="button" class="btn btn-default save" ng-click="edit(selectedProduct.idProduit)">Enregistrer</button>
+			    </div>
+		  </div>
+		</form>
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="js/bootstrap-toggle.min.js"></script>
         <script>
+        function getFile(){
+        	   document.getElementById("upfile").click();
+        	 }
             $(document).ready(function(){
                 $("body").css("background","rgba(0,0,0,0.1)")
                 $(".check-all").click(function(){
@@ -126,5 +276,27 @@
                     $(".apropos").css("display","none");
                     $(".mesPlats").css("display","block");
                 });
+                $( ".getImg img" ).each( function() {
+                    var $img = $( this );
+                    $img.width( $img.width() * 0.8 );
+                });
+                function animate(){
+            		$(".modal-content").addClass("modal-close");
+            		setTimeout(() => {
+            			$(".modal-content").removeClass("modal-close");
+            		}, 355);
+               	}
+                $(".save,.close-modal").click(function(){
+            		animate();
+            		setTimeout(() => {
+            			$(".shadow-form").css("display","none");
+            		}, 350);
+            	});
+            	$("#add-product").click(function(){
+            		$("#add-form").css("display","block");
+            	});
+            	$("#modifier").click(function(){
+            		$("#edit-form").css("display","block");
+            	});
             });
         </script>

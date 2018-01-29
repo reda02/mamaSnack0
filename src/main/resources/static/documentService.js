@@ -1,29 +1,17 @@
 'use strict';
-var App = angular.module('uploadApp',[]);
+//var App = angular.module('uploadApp',[]);
 
-App.factory('docService', ['$http', '$q', 'urls', function ($http, $q, urls) {
-
+app.factory('docService', ['$http', '$q', 'urls', function ($http, $q, urls) {
             var factory = {
                 saveDoc: saveDoc,
-                findDoc: findDoc
+                findDoc: findDoc,
+                editDoc: editDoc
             };
 
             return factory;
 
-            function saveDoc(file) {
-                var deferred = $q.defer();
-                var dataObj={
-                	
-                		   "designation": "luul",
-                		    "description": "plat tajine poulet",
-                		    "prix": 15,
-                		    "steleted": false,
-                		    "photo1": "photo1",
-                		    "quantite": 27,
-                		    "categorie": {"idCategorie":1},
-                		    "cuisine":{"idCuisine":2}
-                		 
-            		};
+            function saveDoc(file,dataObj) {
+                var deferred = $q.defer();                
                 var formData = new FormData();
                 formData.append('file', file);
                 formData.append('json',JSON.stringify(dataObj));
@@ -42,7 +30,29 @@ App.factory('docService', ['$http', '$q', 'urls', function ($http, $q, urls) {
                         }
                     );
                 return deferred.promise;
-            };
+            }
+            function editDoc(file,dataObj) {
+            	alert("fact");
+                var deferred = $q.defer();                
+                var formData = new FormData();
+                formData.append('file', file);
+                formData.append('json',JSON.stringify(dataObj));
+                $http.post('http://localhost:8080/updateProduit', formData,{
+                    transformRequest : angular.identity,
+                    headers : {
+                        'Content-Type' : undefined
+                    }})
+                    .then(
+                        function (response) {
+                            deferred.resolve(response.data);
+                        },
+                        function (errResponse) {
+                            alert(errResponse.data.errorMessage);
+                            deferred.reject(errResponse);
+                        }
+                    );
+                return deferred.promise;
+            }
 
             function findDoc(docId) {
                 var deferred = $q.defer();

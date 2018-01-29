@@ -9,7 +9,7 @@
                         <div class="pag" id="pag-left" prev="{{u.produit.length}}"><span>&lsaquo;</span></div>
                         <div id="listPlat" style="display: inline-block;">
                             <div class="plat" ng-repeat="p in u.produit" ng-click="getProduit(p.idProduit)">
-                                <img src="img/plat.jpg">
+                                <img src="images/{{p.photo1}}.png">
                                 <p class="nom-plat">{{p.description}}</p>
                             </div>
                         </div>

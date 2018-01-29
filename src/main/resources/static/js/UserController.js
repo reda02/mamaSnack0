@@ -43,6 +43,18 @@ app.directive('prev', function(){
        }
     }
 });
+app.directive('select', function(){
+    return{
+       restrict: 'A',
+       link: function(scope, element, attrs){
+          element.on('click', function(e){
+        	  $(function(){
+        		 $("#edit-form").css("display","block"); 
+        	  });
+          });
+       }
+    }
+});
 
 app.controller("UserController",["$scope","$http","$routeParams","$cookies",function($scope,$http,$routeParams,$cookies){
 	$scope.selectUser=null;
@@ -54,7 +66,6 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 		$scope.selectUser=res.data.user;
 		$scope.nomComplet=$scope.selectUser.prenomUser+" "+$scope.selectUser.nomUser;
 	});
-	
 	
 	$scope.logIn=function(){
 		var dataObj={
@@ -76,10 +87,34 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 					if(res.data.role[0].roleName == "admin")
 						location.href="/app.html";
 					else{
-						//mama role page
+						location.href="/index.html#!/mamaProfil";
 					}
 				}
 			}
+		});
+	};
+	
+	$scope.editInfo=function(){
+		var active=false;
+		var e = document.getElementById("dispo");
+		if(e.value=="oui")
+			active=true;
+		else
+			active=false;
+		var dataObj={
+			mamaActived:active,
+			ville:document.getElementById("city").value,
+			adresse:document.getElementById("adresse").value
+			//description
+		};
+		var res=$http({
+			method:'POST',
+			url:'http://localhost:8080/updateuser',
+			data: JSON.stringify(dataObj),
+			headers:{'Content-Type':'application/json; charset=utf-8'}
+		})
+		res.then(function(res){
+			location.href="#!editProfil";
 		});
 	};
 	$http.get("http://localhost:8080/getProduit/"+$routeParams.id)
@@ -91,7 +126,41 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
        $scope.pageUsers=res.data;
     },function(err) {
 		console.log(err.status);
+	})
+	$http.get("http://localhost:8080/getCats")
+	.then(function(res) {
+		$scope.pageCategories=res.data;
 	});
+	$http.get("http://localhost:8080/getAllCuisines")
+	.then(function(res) {
+		$scope.pageCuisines=res.data;
+	});
+	
+	$scope.removeProduct=function(){
+		$(function() {
+			    $("input[name='checkPlat']:checked").each(function() {
+			    	$http.get("http://localhost:8080/deleteProduit/"+this.value)
+			    	.then(function(res){
+			    		$(function(){
+			    			alert();
+			    		});
+			    	});
+			    	$(this).parents('.get-plat').css("display","none");
+			    });
+			});
+		 
+	};
+	$scope.selectProduct=function(id){
+		$scope.select=true;
+		$http.get("http://localhost:8080/getProduit/"+id)
+		.then(function(res){
+			$scope.selectedProduct=res.data.produit;
+			if($scope.selectedProduct.steleted==true)
+				$('#select').bootstrapToggle('on');
+			else
+				$('#select').bootstrapToggle('off');
+		});
+	};
 	
 }]);
 
