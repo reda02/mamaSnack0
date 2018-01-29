@@ -40,6 +40,8 @@ public class ProduitRestService {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	
+	
+	
 	@RequestMapping(value="/addProduit",produces = "application/json",method=RequestMethod.POST)
 	public @ResponseBody String ajouterProduit(@RequestParam(value="file", required = false) MultipartFile file,
     		@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
@@ -48,8 +50,8 @@ public class ProduitRestService {
     	Produit p = mapper.readValue(json, Produit.class); ;
     	  if (file!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-			  int randomNum = (int)(Math.random()*100); 
-			   nomImg = "ImgProduit"+randomNum ;
+			  // int randomNum = (int)(Math.random()*100); 
+			  nomImg = "ImgProduit"+p.getPhoto1();
 			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
