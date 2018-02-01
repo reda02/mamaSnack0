@@ -52,7 +52,7 @@ public class ProduitRestService {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  // int randomNum = (int)(Math.random()*100); 
 			  nomImg = "ImgProduit"+p.getPhoto1();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 			  }
@@ -132,9 +132,9 @@ public class ProduitRestService {
 	    	Produit p = mapper.readValue(json, Produit.class); ;
 	    	if (file!=null) {
 				  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-				  int randomNum = (int)(Math.random()*100); 
-				   nomImg = "ImgProduit"+randomNum ;
-				  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+				  //int randomNum = (int)(Math.random()*100); 
+				   nomImg = "ImgProduit"+p.getPhoto1() ;
+				  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 				  ImageIO.write(src, "png", destination);
 				  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 		     }

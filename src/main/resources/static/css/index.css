@@ -101,6 +101,27 @@ header{
     margin-top: 10px;
     color: dimgray;
 }
+.search-mama{
+	width:230px;
+	background:white;
+	position:absolute;
+	z-index:10;
+	border:1px solid rgba(0,0,0,0.1);
+	height:auto;
+	max-height:172px;
+	display:none;
+}
+.search-mama p{
+	cursor:pointer;
+	width:100%;
+	padding: 5px 15px;
+	font-size: 17px;
+	font-weight: bold;
+	margin:0;
+}
+.search-mama p:hover{
+	background: rgba(0,0,0,0.1);
+}
 .search-data{
 	width:100%;
 	background:white;

@@ -21,7 +21,7 @@
         <script src="documentService.js"></script>
 		<script src="app.js"></script>
     </head>
-    <body ng-app="User">
+    <body ng-app="User" ng-Controller="UserController">
         <header class="container-fluid">
         	<div class="row">
 	        	<div class="col-sm-3">
@@ -32,7 +32,10 @@
 	        	</div>
 	        	<div class="col-sm-6">
                     <div style="width: 230px;margin: auto;">
-	        		     <input type="text" class="srch" placeholder="Rechercher">
+	        		     <input type="text" class="srch" placeholder="Rechercher" ng-model="srchmama">
+	        		     <div class="search-mama">
+				        	<p ng-repeat="u in pageUsers.users | filter : srchmama | limitTo:5">{{u.prenomUser}} {{u.nomUser}}</p>
+				        </div>
                     </div>
 		        </div>
 		        <div class="col-sm-3">
@@ -40,7 +43,7 @@
 		        </div>
 	        </div>
         </header>
-        <div class="compte-form" ng-Controller="UserController">
+        <div class="compte-form" >
             <div style="margin: auto;width: 66px;">
                 <img src="img/x.jpg" class="img-circle">
             </div>
@@ -54,6 +57,12 @@
         <script>
         	var socket = window.io('http://localhost:3000');
         	$(document).ready(function(){
+        		$(".srch").on("input",function(){
+        			if($(this).val()!="")
+        				$(".search-mama").css("display","block");
+        			else
+        				$(".search-mama").css("display","none");
+        		});
         		var compte=false;
         		$(".compte").click(function(){
         			if(!compte){

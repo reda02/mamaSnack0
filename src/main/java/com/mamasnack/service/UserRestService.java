@@ -98,7 +98,7 @@ public class UserRestService {
 		return resultat.toString();
 	}
 
-	@RequestMapping(value="/updateuser",method=RequestMethod.PUT)
+	@RequestMapping(value="/updateuser",method=RequestMethod.POST)
 	public String updateUser(@RequestBody User u) throws JSONException { 
 		String update = null;
 		JSONObject resultat = new JSONObject();
