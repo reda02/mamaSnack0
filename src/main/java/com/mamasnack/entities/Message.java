@@ -60,4 +60,6 @@ public class Message  implements Serializable {
 		this.dateEnregistrement = dateEnregistrement;
 	}
 	
+
+		
 }

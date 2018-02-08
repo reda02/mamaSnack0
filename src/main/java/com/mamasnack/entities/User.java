@@ -84,7 +84,7 @@ public class User implements Serializable{
 			@JoinColumn(name="idUserExp", referencedColumnName="idUser", nullable = false)},
 
 	inverseJoinColumns=@JoinColumn( name="idMsg"))
-	private Collection<Message>message;
+	private Collection<Message> message;
 
 
 	@ManyToMany
@@ -129,7 +129,7 @@ public class User implements Serializable{
 
 	public User(Long idUser, @NotNull @Size(min = 1, max = 10) String nomUser, String prenomUser, String email,
 			String photo, String adresse, int tel, String ville, int codePostale, Date dateNaissonce, String password,
-			boolean actived, boolean mamaActived, Collection<Commande> commande, Collection<Message> message) {
+			boolean actived, boolean mamaActived, Collection<Commande> commande) {
 		super();
 		this.idUser = idUser;
 		this.nomUser = nomUser;
@@ -145,7 +145,7 @@ public class User implements Serializable{
 		this.actived = actived;
 		this.mamaActived = mamaActived;
 		this.commande = commande;
-		this.message = message;
+		//this.message = message;
 	}
 
 
@@ -274,25 +274,25 @@ public class User implements Serializable{
 	}
 
 
-
+	@JsonIgnore
 	public Collection<Message> getMessage() {
-		return message;
-	}
+			return message;
+		}
 
 
-
+	@JsonIgnore
 	public void setMessage(Collection<Message> message) {
 		this.message = message;
 	}
 
 
-
+	@JsonIgnore
 	public Collection<User> getUsers() {
 		return users;
 	}
 
 
-
+	@JsonIgnore
 	public void setUsers(Collection<User> users) {
 		this.users = users;
 	}
