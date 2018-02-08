@@ -14,11 +14,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Message  implements Serializable {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -932642278553084089L;
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idMsg;
@@ -58,8 +55,5 @@ public class Message  implements Serializable {
 		super();
 		this.contenuMesg = contenuMesg;
 		this.dateEnregistrement = dateEnregistrement;
-	}
-	
-
-		
+	}	
 }
