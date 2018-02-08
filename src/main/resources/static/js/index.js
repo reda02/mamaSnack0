@@ -14,11 +14,14 @@ app.config(["$routeProvider",function($routeProvider){
     }).when("/Produit/:id",{
     	templateUrl: "view/oneProduct.html",
         controller: "UserController"
-    }).when("/mamaProfil",{
+    }).when("/mamaProfil/:mama",{
     	templateUrl: "view/mamaProfil.html",
         controller: "UserController"
     }).when("/editProfil",{
     	templateUrl: "view/editProfil.html",
+        controller: "UserController"
+    }).when("/Message/:mama",{
+    	templateUrl: "view/message.html",
         controller: "UserController"
     }).otherwise({
         redirectTo: "/Acceuil"

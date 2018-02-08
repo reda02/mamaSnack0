@@ -159,7 +159,7 @@ public class CommandeRestService  {
 				tab = new JSONArray(mapper.writeValueAsString(ligneCommandes).toString());
 				resultat.put("LigneCommande", tab);
 			}else{
-				resultat.put("LigneCommande", "tabVide");
+				resultat.put("LigneCommande", "");
 			}  
 		} catch (Exception e) {
 			resultat.put("errMess", e.getMessage());

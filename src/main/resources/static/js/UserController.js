@@ -55,8 +55,41 @@ app.directive('select', function(){
        }
     }
 });
-
+app.controller("msgController",["$scope","$http","$routeParams","$cookies",function($scope,$http,$routeParams,$cookies){
+	$(function(){
+        $('.formMessage').submit(function(){
+            socket.emit("chat message",$("#msg-sent").val());
+            $("#msg-sent").val('');
+            return false;
+        });
+        socket.on("new message",function(data){
+        	
+            if(data.des==$cookies.get("idUser")){
+            	$(".messages").append("<div class='msg-block'><div class='sent'>"+data.msg+"</div></div>");
+            }else{
+            	if($cookies.get("idUser")==data.rec && $routeParams.mama==data.des){
+            		$(".messages").append("<div class='msg-block'><div class='receive'>"+data.msg+"</div></div>");
+            	}
+            }
+        });
+        socket.emit("users",{des: $cookies.get("idUser"),rec:$routeParams.mama},function(){
+        	
+        });
+        socket.on("load message",function(rows,des){
+        	if($cookies.get("idUser")==des){
+        	for(var i=0;i<rows.length;i++){        	
+        		if(rows[i].id_user_dist==$cookies.get("idUser")){
+        			$(".messages").append("<div class='msg-block'><div class='sent'>"+rows[i].contenu_mesg+"</div></div>");
+        		}else{
+        			$(".messages").append("<div class='msg-block'><div class='receive'>"+rows[i].contenu_mesg+"</div></div>");
+        		}
+        	}
+        	}
+        });
+    });
+}]);
 app.controller("UserController",["$scope","$http","$routeParams","$cookies",function($scope,$http,$routeParams,$cookies){
+	
 	$scope.selectUser=null;
 	$scope.pageUsers=null;
 	$scope.nomComplet=null;
@@ -66,7 +99,14 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 		$scope.selectUser=res.data.user;
 		$scope.nomComplet=$scope.selectUser.prenomUser+" "+$scope.selectUser.nomUser;
 	});
-	
+	$http.get("http://localhost:8080/getuser/"+$routeParams.mama)
+	.then(function(res){
+		$scope.selectMama=res.data.user;
+		$scope.mamaComplet=$scope.selectMama.prenomUser+" "+$scope.selectMama.nomUser;
+	});
+	$scope.contacter=function(id){		
+		location.href="/index.html#!/Message/"+id;
+	};
 	$scope.logIn=function(){
 		var dataObj={
 			email: document.getElementById("email").value,
@@ -87,7 +127,7 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 					if(res.data.role[0].roleName == "admin")
 						location.href="/app.html";
 					else{
-						location.href="/index.html#!/mamaProfil";
+						location.href="/index.html#!/mamaProfil/"+$cookies.get("idUser");
 					}
 				}
 			}
@@ -116,6 +156,9 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 		res.then(function(res){
 			location.href="#!editProfil";
 		});
+	};
+	$scope.toProfil=function(id){
+		location.href="/index.html#!/mamaProfil/"+id;
 	};
 	$http.get("http://localhost:8080/getProduit/"+$routeParams.id)
 	.then(function(res){

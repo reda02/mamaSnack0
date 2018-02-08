@@ -79,9 +79,8 @@ public class LigneCommande   implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public LigneCommande(Double prix, int quantite, Commande commande) {
-		super();
-	
+	public LigneCommande(int quantite, Commande commande) {
+		super();	
 		this.quantite = quantite;
 		this.commande = commande;
 	}

@@ -1,4 +1,4 @@
-package com.mamasnack.entities;
+/*package com.mamasnack.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,9 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Message  implements Serializable {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -932642278553084089L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -59,4 +57,4 @@ public class Message  implements Serializable {
 		this.dateEnregistrement = dateEnregistrement;
 	}
 	
-}
+}*/

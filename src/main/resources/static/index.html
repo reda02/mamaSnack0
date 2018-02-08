@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/users.css" />
         <link rel="stylesheet" href="css/profil.css" />
+        <link rel="stylesheet" href="css/message.css" />
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-toggle.min.js"></script>
@@ -34,7 +35,7 @@
                     <div style="width: 230px;margin: auto;">
 	        		     <input type="text" class="srch" placeholder="Rechercher" ng-model="srchmama">
 	        		     <div class="search-mama">
-				        	<p ng-repeat="u in pageUsers.users | filter : srchmama | limitTo:5">{{u.prenomUser}} {{u.nomUser}}</p>
+				        	<p ng-repeat="u in pageUsers.users | filter : srchmama | limitTo:5" ng-click="toProfil(u.idUser)">{{u.prenomUser}} {{u.nomUser}}</p>
 				        </div>
                     </div>
 		        </div>
