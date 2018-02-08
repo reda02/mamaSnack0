@@ -1,4 +1,4 @@
-/*package com.mamasnack.entities;
+package com.mamasnack.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -55,6 +55,5 @@ public class Message  implements Serializable {
 		super();
 		this.contenuMesg = contenuMesg;
 		this.dateEnregistrement = dateEnregistrement;
-	}
-	
-}*/
+	}	
+}

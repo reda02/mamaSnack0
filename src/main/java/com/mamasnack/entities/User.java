@@ -78,13 +78,13 @@ public class User implements Serializable{
 	inverseJoinColumns=@JoinColumn(name="idRole"))
 	private Collection<Role> role;
 
-	/*@ManyToMany
+	@ManyToMany
 	@JoinTable(name="UsersAndMessage",
 	joinColumns={
 			@JoinColumn(name="idUserExp", referencedColumnName="idUser", nullable = false)},
 
-	//inverseJoinColumns=@JoinColumn( name="idMsg"))
-	//private Collection<Message>message;
+	inverseJoinColumns=@JoinColumn( name="idMsg"))
+	private Collection<Message> message;
 
 
 	@ManyToMany
@@ -94,7 +94,7 @@ public class User implements Serializable{
 	inverseJoinColumns = {
 			@JoinColumn(name = "idUserDist", referencedColumnName = "idUser", nullable = false)})
 	//	inverseJoinColumns=@JoinColumn( name="idMsg"))
-	private Collection<User>users;*/
+	private Collection<User>users;
 	
 	
 	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
@@ -274,28 +274,28 @@ public class User implements Serializable{
 	}
 
 
+	@JsonIgnore
+	public Collection<Message> getMessage() {
+			return message;
+		}
 
-	/*public Collection<Message> getMessage() {
-		return message;
+
+	@JsonIgnore
+	public void setMessage(Collection<Message> message) {
+		this.message = message;
 	}
 
 
-
-	public void setMessage(Collection<Message> message) {
-		this.message = message;
-	}*/
-
-
-
-	/*public Collection<User> getUsers() {
+	@JsonIgnore
+	public Collection<User> getUsers() {
 		return users;
 	}
 
 
-
+	@JsonIgnore
 	public void setUsers(Collection<User> users) {
 		this.users = users;
-	}*/
+	}
 
 	
 	
