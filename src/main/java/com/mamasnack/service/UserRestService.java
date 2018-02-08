@@ -376,5 +376,39 @@ public class UserRestService {
 		}
 		return resultat.toString();
 	}
+	
+/*************************** WS pour reinsialiser lE PASSWORD  **********************/	
+	@RequestMapping(value="/initEmail",method=RequestMethod.POST)
+	public String InitPwdVerifierEmail(@RequestBody User user) throws JSONException {
+		String init = null;
+		JSONObject resultat = new JSONObject();
+		try {
+
+			init =  userMetier.InitPwdVerifierEmail(user.getEmail());
+			resultat.put("errMess", init);
+		} catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service delete Role : " + e.getMessage());
+		}
+		return resultat.toString();
+	}
+	
+	
+	@RequestMapping(value="/updatePwd",method=RequestMethod.POST)
+	public String updatePwd(@RequestBody User user) throws JSONException {
+		String init = null;
+		JSONObject resultat = new JSONObject();
+		try {
+
+			init =  userMetier.updatePassword(user);
+			resultat.put("errMess", init);
+		} catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service delete Role : " + e.getMessage());
+		}
+		return resultat.toString();
+	}
 
 }

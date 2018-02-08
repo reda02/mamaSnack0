@@ -78,13 +78,13 @@ public class User implements Serializable{
 	inverseJoinColumns=@JoinColumn(name="idRole"))
 	private Collection<Role> role;
 
-	/*@ManyToMany
+	@ManyToMany
 	@JoinTable(name="UsersAndMessage",
 	joinColumns={
 			@JoinColumn(name="idUserExp", referencedColumnName="idUser", nullable = false)},
 
-	//inverseJoinColumns=@JoinColumn( name="idMsg"))
-	//private Collection<Message>message;
+	inverseJoinColumns=@JoinColumn( name="idMsg"))
+	private Collection<Message>message;
 
 
 	@ManyToMany
@@ -94,7 +94,7 @@ public class User implements Serializable{
 	inverseJoinColumns = {
 			@JoinColumn(name = "idUserDist", referencedColumnName = "idUser", nullable = false)})
 	//	inverseJoinColumns=@JoinColumn( name="idMsg"))
-	private Collection<User>users;*/
+	private Collection<User>users;
 	
 	
 	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
@@ -129,7 +129,7 @@ public class User implements Serializable{
 
 	public User(Long idUser, @NotNull @Size(min = 1, max = 10) String nomUser, String prenomUser, String email,
 			String photo, String adresse, int tel, String ville, int codePostale, Date dateNaissonce, String password,
-			boolean actived, boolean mamaActived, Collection<Commande> commande) {
+			boolean actived, boolean mamaActived, Collection<Commande> commande, Collection<Message> message) {
 		super();
 		this.idUser = idUser;
 		this.nomUser = nomUser;
@@ -145,7 +145,7 @@ public class User implements Serializable{
 		this.actived = actived;
 		this.mamaActived = mamaActived;
 		this.commande = commande;
-		//this.message = message;
+		this.message = message;
 	}
 
 
@@ -275,7 +275,7 @@ public class User implements Serializable{
 
 
 
-	/*public Collection<Message> getMessage() {
+	public Collection<Message> getMessage() {
 		return message;
 	}
 
@@ -283,11 +283,11 @@ public class User implements Serializable{
 
 	public void setMessage(Collection<Message> message) {
 		this.message = message;
-	}*/
+	}
 
 
 
-	/*public Collection<User> getUsers() {
+	public Collection<User> getUsers() {
 		return users;
 	}
 
@@ -295,7 +295,7 @@ public class User implements Serializable{
 
 	public void setUsers(Collection<User> users) {
 		this.users = users;
-	}*/
+	}
 
 	
 	

@@ -1,6 +1,10 @@
 package com.mamasnack.metier;
 
+import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +13,9 @@ import org.springframework.stereotype.Service;
 
 import com.mamasnack.dao.RoleRepository;
 import com.mamasnack.dao.UserRepository;
+import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.Role;
+import com.mamasnack.entities.SendEmail;
 import com.mamasnack.entities.User;
 
 
@@ -20,6 +26,7 @@ public class UserMetierImpl implements UserMetier{
 	private UserRepository userRepository ;
 	@Autowired
 	private RoleRepository roleRepository ;
+	
 	
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -265,6 +272,54 @@ public class UserMetierImpl implements UserMetier{
 		public List<Role> findRolebyUserEmail(String email) {
 			// TODO Auto-generated method stub
 			return roleRepository.findRolebyUser(email);
+		}
+
+		@Override
+		public String InitPwdVerifierEmail(String email) throws IOException {
+			// TODO Auto-generated method stub
+	    String  SendEmail;
+		User user = userRepository.findUsesbyEmail(email);
+		
+		 if(Objects.nonNull(user)) {
+			 SendEmail sendEmail = new SendEmail();
+			  SendEmail= sendEmail.sendmail(user.getEmail());
+			}else{
+				logger.error(getClass().getName()+
+					    "une erreur est produite lors de l'exécution du web service modifyLigneDeCommande : ");
+				return "NOK: user NON trouvable ";
+			}
+		return SendEmail;
+		}
+
+		@Override
+		public String updatePassword(User u) {
+			// TODO Auto-generated method stub
+			  User user =userRepository.findUsesbyEmail(u.getEmail()) ;
+				
+			  if(!Objects.nonNull(user)) {
+					
+					logger.error(getClass().getName()+
+						    "email n'est pas unique lors de l'exécution du web service updatePassword : ");
+
+					return "NOK:user non trouvable !";
+					
+				}
+				if (u.getIdUser() != null && !userRepository.existsById(u.getIdUser())) {
+				//	throw new EntityExistsException("There is already existing entity with such ID in the database.");
+					logger.error(getClass().getName()+
+						    "une erreur est produite lors de l'exécution du web service updatePassword : ");
+
+					return "NOK";
+				}
+				BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+			
+				
+				
+				if(u.getPassword()!=null){
+					u.setPassword(passwordEncoder.encode(u.getPassword()));
+					}
+				userRepository.updatePwd(u.getEmail(),u.getPassword());
+				return "OK";
 		}
 
 }

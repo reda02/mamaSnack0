@@ -49,4 +49,13 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	    
 	    @Query("SELECT o FROM User o WHERE  o.email like :x")
      	public User findOnebyemail(@Param("x") String email);
+	    
+	    @Modifying
+	    @Transactional
+		@Query("update User u set u.password = :xpwd"
+				+ " where u.email like :xemail")
+	    public void updatePwd(@Param("xemail")  String xemail ,@Param("xpwd")  String pwd);
+
+	    
+	    
 }

@@ -32,7 +32,7 @@ public interface ProduitMetier {
      List<Produit> findAll();*/
 	
 	// CRUD Categorie
-	public Long ajouterCategorie(Categorie c);
+	public String ajouterCategorie(Categorie c);
 	public Categorie getCategorie(Long idC);
 	public String supprimerCategorie(Long idCat) ;
 	public String modifierCategorie(Categorie c);

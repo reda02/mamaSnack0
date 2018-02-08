@@ -1,5 +1,6 @@
 package com.mamasnack.metier;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.mamasnack.entities.Role;
@@ -28,6 +29,9 @@ public interface UserMetier {
 	public User findUsesbyEmail(String email);
 	public List<Role> getRoles();
 	public String supprimerRole(Long idRole);
+	public String InitPwdVerifierEmail(String email) throws IOException;
+	public String updatePassword(User u);
+	
 	
 	
 	

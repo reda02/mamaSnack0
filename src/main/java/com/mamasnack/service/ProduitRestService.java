@@ -52,7 +52,7 @@ public class ProduitRestService {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  // int randomNum = (int)(Math.random()*100); 
 			  nomImg = "ImgProduit"+p.getPhoto1();
-			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 			  }
@@ -89,7 +89,7 @@ public class ProduitRestService {
 					"une erreur est produite lors de l'exécution du web service getProduit : " + e.getMessage());
 		}
 		return resultat.toString();
-	}	
+	}
 
 	@RequestMapping(value="/deleteProduit/{idPro}",method=RequestMethod.GET)
 	public String supprimerProduit(@PathVariable Long idPro) throws JSONException {
@@ -132,9 +132,9 @@ public class ProduitRestService {
 	    	Produit p = mapper.readValue(json, Produit.class); ;
 	    	if (file!=null) {
 				  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-				  //int randomNum = (int)(Math.random()*100); 
-				   nomImg = "ImgProduit"+p.getPhoto1() ;
-				  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+				  int randomNum = (int)(Math.random()*100); 
+				   nomImg = "ImgProduit"+randomNum ;
+				  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 				  ImageIO.write(src, "png", destination);
 				  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 		     }
@@ -142,7 +142,6 @@ public class ProduitRestService {
 		String update = null;
 		JSONObject resultat = new JSONObject();
 		try {
-			p.setPhoto1(nomImg);
 			update = produitMetier.modifierProduit(p);
 			resultat.put("updateMess", update);
 			resultat.put("errMess", "");
@@ -313,9 +312,20 @@ public class ProduitRestService {
 	}
 
 	@RequestMapping(value="/addCat",method=RequestMethod.POST)
-	public Long ajouterCategorie(@RequestBody Categorie c) {
+	public String ajouterCategorie(@RequestBody Categorie c) throws JSONException {
 	
-		return produitMetier.ajouterCategorie(c);
+		
+		String Addc = null;
+		JSONObject resultat = new JSONObject();
+		try {
+			Addc =   produitMetier.ajouterCategorie(c);;
+			resultat.put("errMess", Addc);
+		    } catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service ajouterCategorie : " + e.getMessage());
+		}
+		return resultat.toString();
 	}
 
 	@RequestMapping(value="/getCat/{idC}",method=RequestMethod.GET)

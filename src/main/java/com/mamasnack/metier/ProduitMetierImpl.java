@@ -170,13 +170,24 @@ public class ProduitMetierImpl implements ProduitMetier {
 	}
 
 	@Override
-	public Long ajouterCategorie(Categorie c) {
+	public String ajouterCategorie(Categorie c) {
+		Categorie existeName = categorieRepository.findOneByName(c.getNomCategorie());
 		
 		if (c.getIdCategorie() != null && categorieRepository.existsById(c.getIdCategorie())) {
 			throw new EntityExistsException("There is already existing entity with such ID in the database.");
 		}
+		  if(Objects.nonNull(existeName)){
+		if (c.getNomCategorie().equals(existeName.getNomCategorie())) {
+
+			logger.error(getClass().getName()+
+				    "le nom de categorie existe deja ! ");
+			return "NONOK: le nom de categorie existe deja !";
+		}
+		}
+		
+		
 		categorieRepository.save(c);
-		return c.getIdCategorie();
+		return  "OK";
 	}
 
 	@Override
@@ -221,12 +232,14 @@ public class ProduitMetierImpl implements ProduitMetier {
 
 	@Override
 	public String modifierCategorie(Categorie c) {
-		
+	
 		if (c.getIdCategorie() == null && !produitRepository.existsById(c.getIdCategorie())) {
 			logger.error(getClass().getName()+
 				    "une erreur est produite lors de l'exécution du web service modifierCategorie : ");
 			return "NOK";
 		}
+		  
+		  
 		categorieRepository.save(c);
     	return "OK";
 	}

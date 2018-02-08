@@ -1,0 +1,6 @@
+<html><head><title>Bonjour.</title></head>
+<body>Bonjour, 
+<br/><p>Vous pouvez réinitialiser votre mot de passe en cliquant sur ce lien <a href='http://localhost:8080/index.html'>ICI.. </a>.</p>
+Cordialement,<br/>
+L'equipe MamaSnack,
+</body></html>
