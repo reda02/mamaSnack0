@@ -149,7 +149,7 @@ public class Produit implements Serializable {
 
 
 
-	//@JsonIgnore
+	@JsonIgnore
 	public Collection<LigneCommande> getItems() {
 		return items;
 	}

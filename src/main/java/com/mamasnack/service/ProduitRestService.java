@@ -45,9 +45,9 @@ public class ProduitRestService {
 	@RequestMapping(value="/addProduit",produces = "application/json",method=RequestMethod.POST)
 	public @ResponseBody String ajouterProduit(@RequestParam(value="file", required = false) MultipartFile file,
     		@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
-		String nomImg = null ;
-		ObjectMapper mapper = new ObjectMapper(); 
-    	Produit p = mapper.readValue(json, Produit.class); ;
+		   String nomImg = null ;
+		   ObjectMapper mapper = new ObjectMapper(); 
+    	   Produit p = mapper.readValue(json, Produit.class); ;
     	  if (file!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  // int randomNum = (int)(Math.random()*100); 

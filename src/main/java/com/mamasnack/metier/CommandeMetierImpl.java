@@ -99,18 +99,25 @@ public class CommandeMetierImpl implements CommandeMetier{
 	        	
 	        }
 			return null;
-	      
-	        
-	        
-	        
-
 	       
 	}
 
 	@Override
 	public String addLigneDeCommande(LigneCommande ligneDeCommande) {
-
      
+		Commande commande = commandeRepository.findOne(ligneDeCommande.getCommande().getIdCommande()) ;
+		Produit p = produitMetier.getProduit(ligneDeCommande.getProduit().getIdProduit());
+		
+		if(Objects.isNull(commande)) {
+			logger.error(getClass().getName()+
+				    "une erreur est produite lors de l'exécution du web service addLigneDeCommande : ");
+			return "NOK: commande NON trouvable ";
+		}else if (Objects.isNull(p)) {
+			logger.error(getClass().getName()+
+				    "une erreur est produite lors de l'exécution du web service addLigneDeCommande : ");
+			return "NOK: produit NON trouvable ";
+		}
+		
 		if (ligneDeCommande.getIdLigneCommande() != null && !ligneCommandeRepository.existsById(ligneDeCommande.getIdLigneCommande())) {
 			logger.error(getClass().getName()+
 				    "idUser est null de l'exécution du web service addLigneDeCommande : ");
@@ -126,7 +133,7 @@ public class CommandeMetierImpl implements CommandeMetier{
 		
 		
 		Produit p = produitMetier.getProduit(l.getProduit().getIdProduit());
-		 if(!Objects.nonNull(p)) {
+		 if(Objects.isNull(p)) {
 			logger.error(getClass().getName()+
 				    "une erreur est produite lors de l'exécution du web service modifyLigneDeCommande : ");
 			return "NOK: produit NON trouvable ";
@@ -144,7 +151,6 @@ public class CommandeMetierImpl implements CommandeMetier{
 	public LigneCommande removeLigneDeCommande(long commandeId, long ligneDeCommandeId) {
 		    
 		Commande commande = getCommandeById(commandeId);
-
 
             Collection<LigneCommande> ligneDeCommandes =  commande.getItems();
             LigneCommande ligneCmdExiste = getLigneDeCommandeById(commandeId, ligneDeCommandeId);

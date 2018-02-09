@@ -296,7 +296,7 @@ public class UserMetierImpl implements UserMetier{
 			// TODO Auto-generated method stub
 			  User user =userRepository.findUsesbyEmail(u.getEmail()) ;
 				
-			  if(!Objects.nonNull(user)) {
+			  if(!Objects.isNull(user)) {
 					
 					logger.error(getClass().getName()+
 						    "email n'est pas unique lors de l'exécution du web service updatePassword : ");

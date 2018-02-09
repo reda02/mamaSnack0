@@ -44,17 +44,21 @@ public class Commande  implements Serializable {
 	private Date dateCommnade;
 	
 	//@JsonManagedReference("commande")
-	@OneToMany(mappedBy="commande",fetch=FetchType.LAZY)
+	//@OneToMany(mappedBy="commande",fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="commande" , fetch = FetchType.EAGER, cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE })
 	private List<LigneCommande> items ;
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "iduser", referencedColumnName = "idUser", nullable = true)
+	@JoinColumn(name = "idUser", referencedColumnName = "idUser", nullable = false)
 	private User user ;
 	
 	@ManyToOne
-	@JoinColumn(name = "idmama", referencedColumnName = "idUser", nullable = true)
+	@JoinColumn(name = "idmama", referencedColumnName = "idUser", nullable = false)
 	private User mama ;
+	
+	
+	
 	
 	@ManyToOne
 	@JoinColumn(name="idReglement")

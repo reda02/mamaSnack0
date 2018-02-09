@@ -11,8 +11,8 @@
 				</pattern>
 			</PatternLayout>
 		</Console>
-		 <RollingFile name="trace-log" fileName="${path}/mycuteblog-trace.log"
-                     filePattern="${log-path}/mycuteblog-trace-%d{yyyy-MM-dd}.log">
+		 <RollingFile name="trace-log" fileName="${path}/mamaSnack-trace.log"
+                     filePattern="${log-path}/mamaSnack-trace-%d{yyyy-MM-dd}.log">
             <PatternLayout>
                 <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
             </PatternLayout>
