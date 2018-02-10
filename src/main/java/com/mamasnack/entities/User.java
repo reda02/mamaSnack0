@@ -222,7 +222,6 @@ public class User implements Serializable{
 		return commande;
 	}
 	@JsonIgnore
-	@XmlTransient
 	public void setCommande(Collection<Commande> commande) {
 		this.commande = commande;
 	}
