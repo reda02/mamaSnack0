@@ -44,22 +44,56 @@ public class ProduitRestService {
 	
 	@RequestMapping(value="/addProduit",produces = "application/json",method=RequestMethod.POST)
 	public @ResponseBody String ajouterProduit(@RequestParam(value="file", required = false) MultipartFile file,
+			@RequestParam(value="file2", required = false) MultipartFile file2,
+			@RequestParam(value="file3", required = false) MultipartFile file3,
+			@RequestParam(value="file4", required = false) MultipartFile file4,
+			@RequestParam(value="file5", required = false) MultipartFile file5,
     		@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
-		   String nomImg = null ;
+		   String nomImg = "" ;
+		   String nomImg2 = "" ;
+		   String nomImg3 = "" ;
+		   String nomImg4 = "" ;
+		   String nomImg5 = "" ;
 		   ObjectMapper mapper = new ObjectMapper(); 
     	   Produit p = mapper.readValue(json, Produit.class); ;
     	  if (file!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-			  // int randomNum = (int)(Math.random()*100); 
 			  nomImg = "ImgProduit"+p.getPhoto1();
 			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
-			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 			  }
+    	  if (file2!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  nomImg2 = "ImgProduit"+p.getPhoto2();
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  ImageIO.write(src, "png", destination);
+			  }
+    	  if (file3!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  nomImg3 = "ImgProduit"+p.getPhoto3();
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  ImageIO.write(src, "png", destination);
+			  }
+    	  if (file4!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  nomImg4 = "ImgProduit"+p.getPhoto4();
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  ImageIO.write(src, "png", destination);
+			  }
+    	  if (file5!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  nomImg5 = "ImgProduit"+p.getPhoto4();
+			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  ImageIO.write(src, "png", destination);
+			  } 
 		String Add = null;
 		JSONObject resultat = new JSONObject();
 		try {
 			p.setPhoto1(nomImg);
+			p.setPhoto2(nomImg2);
+			p.setPhoto3(nomImg3);
+			p.setPhoto4(nomImg4);
+			p.setPhoto5(nomImg5);
 			Add =  produitMetier.ajouterProduit(p, IdCat);
 			resultat.put("errMess", Add);
 		    } catch (Exception e) {

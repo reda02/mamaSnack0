@@ -1,7 +1,13 @@
 package com.mamasnack.service;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,9 +19,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.Role;
 import com.mamasnack.entities.User;
 import com.mamasnack.metier.UserMetier;
@@ -63,11 +74,26 @@ public class UserRestService {
 	
 	
 	@RequestMapping(value="/adduser",method=RequestMethod.POST)
-	public String addUser(@RequestBody User u) throws JSONException { //@RequestBody les donneés de la req  il va les recupere dans le corp de la requte et il sont supposé au format jeson 
+	public String addUser(@RequestParam(value="file", required = false) MultipartFile file,
+    		@RequestParam(value="json") String userJson) throws JSONException, JsonParseException, JsonMappingException, IOException { //@RequestBody les donneés de la req  il va les recupere dans le corp de la requte et il sont supposé au format jeson 
+		
+		String nomImg = "" ;
+		ObjectMapper mapper = new ObjectMapper(); 
+ 	    User u = mapper.readValue(userJson, User.class); ;
 		String Add = null;
 		JSONObject resultat = new JSONObject();
+		
+		
+		 if (file!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  // int randomNum = (int)(Math.random()*100); 
+			  nomImg = "ImgProduit"+u.getPhoto();
+			  File destination = new File("src/main/resources/imageProfil/"+nomImg+".png");
+			  ImageIO.write(src, "png", destination);
+			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
+			  }
 		try {
-
+            u.setPhoto(nomImg);
 			Add =  userMetier.addUser(u);
 			resultat.put("errMess", Add);
 		} catch (Exception e) {
