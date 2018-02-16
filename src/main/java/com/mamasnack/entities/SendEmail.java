@@ -27,8 +27,8 @@ public class SendEmail implements Serializable {
 	 * @throws IOException 
 	 */
 	public  String sendmail(String mail) throws IOException {
-		final String fromEmail = "reda.bok@gmail.com"; //requires valid gmail id
-		final String password = ""; // correct password for gmail id
+		final String fromEmail = "bks.ayb@gmail.com"; //requires valid gmail id
+		final String password = "ab<13.ayb"; // correct password for gmail id
 		final String toEmail = mail; // can be any email id 
 		
 		System.out.println("TLSEmail Start");

@@ -89,7 +89,6 @@ app.controller("msgController",["$scope","$http","$routeParams","$cookies",funct
     });
 }]);
 app.controller("UserController",["$scope","$http","$routeParams","$cookies",function($scope,$http,$routeParams,$cookies){
-	
 	$scope.selectUser=null;
 	$scope.pageUsers=null;
 	$scope.nomComplet=null;
@@ -106,6 +105,60 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 	});
 	$scope.contacter=function(id){		
 		location.href="/index.html#!/Message/"+id;
+	};
+	$scope.verifierEmail=function(){
+		var dataObj={
+				email:$scope.email
+		}
+		var res=$http({
+			method:'POST',
+			url:"http://localhost:8080/initEmail",
+			data:JSON.stringify(dataObj),
+			headers:{'Content-Type':'application/json; charset=utf-8'}
+		})
+		res.then(function(res){
+			document.getElementById("emailError").style.display="block";			
+			if(res.data.errMess=="OK"){
+				document.getElementById("emailError").innerHTML="on a envoyé un message a votre email";
+				document.getElementById("emailError").style.color="green";				
+			}else{
+				document.getElementById("emailError").style.color="red";
+				document.getElementById("emailError").innerHTML="Cet Email n'existe pas au cet site web";
+				}
+		})
+	};
+	$scope.editPassword=function(){
+		if($scope.pwd==$scope.confirm){
+			var dataObj={
+					idUser: $routeParams.idPwd,
+					pwd:$scope.pwd
+			}
+			var res=$http({
+				method:'POST',
+				url:'http://localhost:8080/updatePwd',
+				data:JSON.stringify(dataObj),
+				headers:{'Content-Type':'application/json;charset=utf-8'}
+			})
+			res.then(function(res){
+				if(res.data.errMess=="OK"){
+					$http.get("http://localhost:8080/rolebyUserId/"+$routeParams.idPwd)
+					.then(function(res){
+						if(res.data.users[0].roleName == "user")
+							location.href="/index.html";
+						else{
+							if(res.data.users[0].roleName == "admin")
+								location.href="/app.html";
+							else{
+								location.href="/index.html#!/mamaProfil/"+$cookies.get("idUser");
+							}
+						}
+					});
+				}
+			});
+		}else{
+			document.getElementById("emailError").style.color="red";
+			document.getElementById("emailError").innerHTML="le mot de passe n'est pas identique avec la comfirmation";
+		}
 	};
 	$scope.logIn=function(){
 		var dataObj={

@@ -115,7 +115,7 @@ public class ProduitMetierImpl implements ProduitMetier {
 		        }
 		        
 		        if(produit.getPhoto1()!=null){
-		        File file = new File("src/main/resources/images/"+produit.getPhoto1()+".png");
+		        File file = new File("src/main/resources/static/images/"+produit.getPhoto1()+".png");
 	    		if(file.delete()){
 	    			System.out.println(file.getName() + " is deleted!");
 	    		}else{

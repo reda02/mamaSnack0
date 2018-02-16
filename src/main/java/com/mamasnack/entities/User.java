@@ -295,7 +295,4 @@ public class User implements Serializable{
 	public void setUsers(Collection<User> users) {
 		this.users = users;
 	}
-
-	
-	
 }
