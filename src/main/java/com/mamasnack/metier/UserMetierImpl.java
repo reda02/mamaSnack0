@@ -106,7 +106,7 @@ public class UserMetierImpl implements UserMetier{
 			u.setPassword(passwordEncoder.encode(u.getPassword()));
 			}
 		userRepository.update(u.getIdUser(),u.getNomUser(),u.getPrenomUser(),u.getAdresse()
-				,u.getCodePostale(),u.getDateNaissonce(),u.getPhoto(),u.getEmail(),u.getTel());
+				,u.getCodePostale(),u.getDateNaissonce(),u.getEmail(),u.getTel());
 		return "OK";
 	}
 
@@ -321,5 +321,23 @@ public class UserMetierImpl implements UserMetier{
 				userRepository.updatePwd(u.getEmail(),u.getPassword());
 				return "OK";
 		}
+		
+		
+		@Override
+		public String modifierphotoPhUser(User u) {
+			
+			 
+				if (u.getIdUser() != null && !userRepository.existsById(u.getIdUser())) {
+				//	throw new EntityExistsException("There is already existing entity with such ID in the database.");
+					logger.error(getClass().getName()+
+						    "une erreur est produite lors de l'exécution du web service modifierphotoPhUser : ");
+
+					return "NOK";
+				}
+				
+				userRepository.updatePhoto(u.getIdUser(),u.getPhoto());
+				return "OK";
+			}
+		
 
 }

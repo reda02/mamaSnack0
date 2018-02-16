@@ -50,16 +50,13 @@ public class Commande  implements Serializable {
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "idUser")
+	@JoinColumn(name ="idUser")
 	private User user ;
 	
 	@ManyToOne
 	@JoinColumn(name = "idmama", referencedColumnName = "idUser", nullable = false)
 	private User mama ;
-	
-	
-	
-	
+
 	@ManyToOne
 	@JoinColumn(name="idReglement")
 	private Reglement reglement;

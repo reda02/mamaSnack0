@@ -36,7 +36,7 @@ public class User implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idUser;
-	@NotNull
+
 	@Size(min=1,max=10)
 	private String nomUser;
 	private String prenomUser;
@@ -64,8 +64,6 @@ public class User implements Serializable{
 	public Collection<Produit> getProduit() {
 		return produit;
 	}
-
-
 
 	public void setProduit(Collection<Produit> produit) {
 		this.produit = produit;

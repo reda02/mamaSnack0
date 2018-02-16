@@ -40,12 +40,12 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	    @Transactional
 		@Query("update User u set u.nomUser = :xnom ,u.prenomUser = :xprenom"
 				+ ",u.adresse = :xadress,u.codePostale = :xcodePostal"
-				+ ",u.dateNaissonce = :xdatenaiss,u.photo = :xphoto"
+				+ ",u.dateNaissonce = :xdatenaiss"
 				+ ",u.email = :xemail,u.tel = :xtel"
 				+ " where u.idUser like :xid")
 	    public void update(@Param("xid")  Long xid ,@Param("xnom")  String nom, @Param("xprenom")  String prenom
 	    		,@Param("xadress")  String nadress,@Param("xcodePostal")  int codePostal,@Param("xdatenaiss")  Date datenaiss
-	    		,@Param("xphoto")  String photo,@Param("xemail")  String email,@Param("xtel")  int tel);
+	    		,@Param("xemail")  String email,@Param("xtel")  int tel);
 	    
 	    @Query("SELECT o FROM User o WHERE  o.email like :x")
      	public User findOnebyemail(@Param("x") String email);
@@ -56,6 +56,13 @@ public interface UserRepository extends JpaRepository<User, Long>{
 				+ " where u.email like :xemail")
 	    public void updatePwd(@Param("xemail")  String xemail ,@Param("xpwd")  String pwd);
 
+	    
+	    @Modifying
+	    @Transactional
+		@Query("update User u set u.nomUser = :xphoto "
+				+ " where u.idUser like :xid")
+	    public void updatePhoto(@Param("xid")  Long xid ,@Param("xphoto")  String photo);
+	    
 	    
 	    
 }

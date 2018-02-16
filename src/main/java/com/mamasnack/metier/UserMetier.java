@@ -11,6 +11,7 @@ public interface UserMetier {
 	public String addUser(User u);
 	public String supprimerUser(Long idUser) ;
 	public String modifierUser(User u);
+	public String modifierphotoPhUser(User u);
 	public User getUser(Long idUser); 
 	
 	public List<User> listUsers();

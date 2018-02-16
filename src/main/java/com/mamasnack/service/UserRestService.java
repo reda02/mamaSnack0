@@ -23,10 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mamasnack.entities.Produit;
 import com.mamasnack.entities.Role;
 import com.mamasnack.entities.User;
 import com.mamasnack.metier.UserMetier;
@@ -74,26 +71,11 @@ public class UserRestService {
 	
 	
 	@RequestMapping(value="/adduser",method=RequestMethod.POST)
-	public String addUser(@RequestParam(value="file", required = false) MultipartFile file,
-    		@RequestParam(value="json") String userJson) throws JSONException, JsonParseException, JsonMappingException, IOException { //@RequestBody les donneés de la req  il va les recupere dans le corp de la requte et il sont supposé au format jeson 
-		
-		String nomImg = "" ;
-		ObjectMapper mapper = new ObjectMapper(); 
- 	    User u = mapper.readValue(userJson, User.class); ;
+	public String addUser(@RequestBody User u) throws JSONException { //@RequestBody les donneés de la req  il va les recupere dans le corp de la requte et il sont supposé au format jeson 
 		String Add = null;
 		JSONObject resultat = new JSONObject();
-		
-		
-		 if (file!=null) {
-			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-			  // int randomNum = (int)(Math.random()*100); 
-			  nomImg = "ImgProduit"+u.getPhoto();
-			  File destination = new File("src/main/resources/imageProfil/"+nomImg+".png");
-			  ImageIO.write(src, "png", destination);
-			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
-			  }
 		try {
-            u.setPhoto(nomImg);
+
 			Add =  userMetier.addUser(u);
 			resultat.put("errMess", Add);
 		} catch (Exception e) {
@@ -435,6 +417,38 @@ public class UserRestService {
 					"une erreur est produite lors de l'exécution du web service delete Role : " + e.getMessage());
 		}
 		return resultat.toString();
+	}
+	
+	
+	@RequestMapping(value="/addPhotoToUser",method=RequestMethod.POST)
+	public String addPhotoToUser(@RequestParam(value="file", required = false) MultipartFile file ,@RequestParam(value="json") String userJson) throws JSONException, IOException {
+		
+		String nomImg = "" ;
+		ObjectMapper mapper = new ObjectMapper(); 
+ 	    User u = mapper.readValue(userJson, User.class); ;
+		String Add = null;
+		JSONObject resultat = new JSONObject();
+		
+		
+		 if (file!=null) {
+			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
+			  // int randomNum = (int)(Math.random()*100); 
+			  nomImg = "ImgProduit"+u.getPhoto();
+			  File destination = new File("src/main/resources/imageProfil/"+nomImg+".png");
+			  ImageIO.write(src, "png", destination);
+			  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
+			  }
+		try {
+            u.setPhoto(nomImg);
+			Add =  userMetier.modifierUser(u);
+			resultat.put("errMess", Add);
+		} catch (Exception e) {
+			resultat.put("errMess", e.getMessage());
+			logger.error(getClass().getName()+
+					"une erreur est produite lors de l'exécution du web service adduser : " + e.getMessage());
+		}
+		return resultat.toString();
+	
 	}
 
 }
