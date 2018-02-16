@@ -16,14 +16,17 @@ app.controller('docController',
          		    "description": document.getElementById("description").value,
          		    "prix": document.getElementById("prix").value,
          		    "steleted": select,
-         		    "photo1": "photo1",
+         		    "photo1": $cookies.get("idUser")+"2",
+         		   "photo2": "photo2",
+        		    "photo3": "photo3",
+        		    "photo4": "photo4",
+        		   "photo5": "photo5",
          		    "quantite": document.getElementById("quantite").value,
          		    "categorie": {"idCategorie":$scope.selectedCat},
          		    "cuisine":{"idCuisine":$scope.selectedCui},
          		    "user":{"idUser":$cookies.get("idUser")}
      		};
-            alert(file);
-            docService.saveDoc(file,dataObj)
+            docService.saveDoc(file,null,null,null,null,dataObj)
                 .then(
                     function (response) {
                         alert("file uploaded successfully.");
@@ -40,6 +43,7 @@ app.controller('docController',
         };
         
         $scope.edit = function(id){
+        	alert($scope.selectedProduct.prix);
             var file = $scope.file;
             var select=false
      		if(document.getElementById("select").checked)
@@ -53,13 +57,16 @@ app.controller('docController',
          		    "description": $scope.selectedProduct.description,
          		    "prix": $scope.selectedProduct.prix,
          		    "steleted": select,
-         		    "photo1": "photo1",
+         		    "photo1": $scope.selectedProduct.photo1,
+         		    "photo2": "photo2",
+         		    "photo3": "photo3",
+         		    "photo4": "photo4",
+         		    "photo5": "photo5",
          		    "quantite": $scope.selectedProduct.quantite,
          		   // "categorie": {"idCategorie":$scope.selectedCat},
          		    "cuisine":{"idCuisine":$scope.selectedCui},
          		    "user":{"idUser":$cookies.get("idUser")}
      		};
-            alert(file);
             docService.editDoc(file,dataObj)
                 .then(
                     function (response) {

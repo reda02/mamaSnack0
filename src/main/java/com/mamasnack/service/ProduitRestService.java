@@ -59,31 +59,31 @@ public class ProduitRestService {
     	  if (file!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  nomImg = "ImgProduit"+p.getPhoto1();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  }
     	  if (file2!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  nomImg2 = "ImgProduit"+p.getPhoto2();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  }
     	  if (file3!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  nomImg3 = "ImgProduit"+p.getPhoto3();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  }
     	  if (file4!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  nomImg4 = "ImgProduit"+p.getPhoto4();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  }
     	  if (file5!=null) {
 			  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			  nomImg5 = "ImgProduit"+p.getPhoto4();
-			  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
 			  } 
 		String Add = null;
@@ -168,7 +168,7 @@ public class ProduitRestService {
 				  BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 				  int randomNum = (int)(Math.random()*100); 
 				   nomImg = "ImgProduit"+randomNum ;
-				  File destination = new File("src/main/resources/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
+				  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 				  ImageIO.write(src, "png", destination);
 				  //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
 		     }

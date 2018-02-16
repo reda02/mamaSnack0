@@ -4,27 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/login.css" />        
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-cookies.js"></script>
         <script type="text/javascript" src="js/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/angular-cookies.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
 		<script type="text/javascript" src="js/logIn.js"></script>
         <script type="text/javascript" src="js/UserController.js"></script>
     </head>
-    <body ng-app="User">
-    	<div class="container-fluid" ng-Controller="UserController">
-            <div class="login-modal">
-                <h1>mamaSnack</h1>
-                <div class="login-form">
-                    <form>
-                        <input type="text" id="email" placeholder="Email" />
-                        <input type="password" id="password" placeholder="Password" />
-                        <input type="button" value="Connect" id="connect" ng-click="logIn()"/>
-                    </form>
-                </div>
-            </div>
+    <body ng-app="User" ng-Controller="UserController">
+    	<div class="container-fluid">            
+            <div ng-view></div>
         </div>
     </body>
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
