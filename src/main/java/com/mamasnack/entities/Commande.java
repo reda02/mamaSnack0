@@ -74,7 +74,7 @@ public class Commande  implements Serializable {
 	public void setDateCommnade(Date dateCommnade) {
 		this.dateCommnade = dateCommnade;
 	}
-	@JsonIgnore
+	//@JsonIgnore
 	public List<LigneCommande> getItems() {
 		return items;
 	}
@@ -116,7 +116,7 @@ public class Commande  implements Serializable {
 		this.total = d;
 	}
 	
-	@JsonIgnore
+	//@JsonIgnore
 	public User getMama() {
 		return mama;
 	}
