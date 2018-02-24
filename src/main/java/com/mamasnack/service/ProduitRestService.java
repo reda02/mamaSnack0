@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 import org.json.JSONArray;
@@ -43,13 +44,21 @@ public class ProduitRestService {
 	
 	
 	@RequestMapping(value="/addProduit",produces = "application/json",method=RequestMethod.POST)
-	public @ResponseBody String ajouterProduit(@RequestParam(value="file", required = false) MultipartFile file,
-			@RequestParam(value="file2", required = false) MultipartFile file2,
-			@RequestParam(value="file3", required = false) MultipartFile file3,
-			@RequestParam(value="file4", required = false) MultipartFile file4,
-			@RequestParam(value="file5", required = false) MultipartFile file5,
-    		@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {
-		   String nomImg = "" ;
+	public @ResponseBody String ajouterProduit(@RequestParam(value="files", required = false) MultipartFile[] files,
+			
+	@RequestParam(value="json") String json, Long IdCat) throws JSONException, JsonParseException, JsonMappingException, IOException {    			
+		/*for (Map<String, MultipartFile> map : file) {
+		    for (Map.Entry<String, MultipartFile> entry : map.entrySet()) {		       
+		        System.out.println(entry.getKey() + " - " + entry.getValue());
+		    }
+		}*/
+		ObjectMapper mapper = new ObjectMapper();
+		Produit p = mapper.readValue(json, Produit.class); 
+		/*@RequestParam(value="file2", required = false) MultipartFile file2,
+		@RequestParam(value="file3", required = false) MultipartFile file3,
+		@RequestParam(value="file4", required = false) MultipartFile file4,
+		@RequestParam(value="file5", required = false) MultipartFile file5,   
+		String nomImg = "" ;
 		   String nomImg2 = "" ;
 		   String nomImg3 = "" ;
 		   String nomImg4 = "" ;
@@ -85,15 +94,15 @@ public class ProduitRestService {
 			  nomImg5 = "ImgProduit"+p.getPhoto4();
 			  File destination = new File("src/main/resources/static/images/"+nomImg+".png");// something like C:/Users/tom/Documents/nameBasedOnSomeId.png
 			  ImageIO.write(src, "png", destination);
-			  } 
+			  } */
 		String Add = null;
 		JSONObject resultat = new JSONObject();
 		try {
-			p.setPhoto1(nomImg);
+			/*p.setPhoto1(nomImg);
 			p.setPhoto2(nomImg2);
 			p.setPhoto3(nomImg3);
 			p.setPhoto4(nomImg4);
-			p.setPhoto5(nomImg5);
+			p.setPhoto5(nomImg5);*/
 			Add =  produitMetier.ajouterProduit(p, IdCat);
 			resultat.put("errMess", Add);
 		    } catch (Exception e) {

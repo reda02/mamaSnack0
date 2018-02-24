@@ -3,14 +3,14 @@ app.controller('docController',
 
         $scope.file = '';
 
-       $scope.upload = function(){      
-            var file = $scope.file;
+       $scope.upload = function(){
+            var fimport = $scope.file;
             var select=false
      		if(document.getElementById("selected").checked)
      			select=true;
      		else
      			select=false;
-            
+                        
             var dataObj={
          		   "designation": document.getElementById("designation").value,
          		    "description": document.getElementById("description").value,
@@ -25,8 +25,10 @@ app.controller('docController',
          		    "categorie": {"idCategorie":$scope.selectedCat},
          		    "cuisine":{"idCuisine":$scope.selectedCui},
          		    "user":{"idUser":$cookies.get("idUser")}
-     		};
-            docService.saveDoc(file,null,null,null,null,dataObj)
+     		};          
+            var files=[fimport,null,null,null,null];
+            alert(files);
+            docService.saveDoc(files,dataObj)
                 .then(
                     function (response) {
                         alert("file uploaded successfully.");

@@ -257,12 +257,20 @@ app.controller("UserController",["$scope","$http","$routeParams","$cookies",func
 				$('#select').bootstrapToggle('off');
 		});
 	};
-	
+		$http.get("http://localhost:8080/listCommandesParUser/"+$cookies.get("idUser"))
+		.then(function(res){
+			$scope.Commandes=res.data.commandes;
+		});
+	$scope.ligneCommande=function(id){
+		$http.get("http://localhost:8080/getAllLigneDeCommande/"+id)
+		.then(function(res){
+			return res.data.LigneCommande;			
+		});
+	};
 }]);
 
 app.controller("mapController",["$scope","$http","$routeParams",function($scope,$http,$routeParams){
 	$scope.usersCity=null;
-
 	var map,geocoder;
 	var infoWindow = new google.maps.InfoWindow();
 	function clearAll(tb) {

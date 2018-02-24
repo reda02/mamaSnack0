@@ -28,7 +28,7 @@ public class CommandeRestService  {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	private CommandeMetier commandeMetier ;
+	private CommandeMetier commandeMetier;
 
 	//to DO
 	public Commande enrigistrerCommande(Panier p, User u) {
@@ -69,9 +69,9 @@ public class CommandeRestService  {
 			resultat.put("errMess", "");
 			if (commandes != null && !commandes.isEmpty()) {
 				tab = new JSONArray(mapper.writeValueAsString(commandes).toString());
-				resultat.put("produits", tab);
+				resultat.put("commandes", tab);
 			}else{
-				resultat.put("produits", "");
+				resultat.put("commandes", "");
 			}  
 
 		} catch (Exception e) {

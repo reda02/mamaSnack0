@@ -23,6 +23,9 @@ app.config(["$routeProvider",function($routeProvider){
     }).when("/Message/:mama",{
     	templateUrl: "view/message.html",
         controller: "UserController"
+    }).when("/Panier",{
+    	templateUrl: "view/Panier.html",
+        controller: "UserController"
     }).otherwise({
         redirectTo: "/Acceuil"
     });

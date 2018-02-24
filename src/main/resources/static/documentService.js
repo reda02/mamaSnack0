@@ -10,15 +10,19 @@ app.factory('docService', ['$http', '$q', 'urls', function ($http, $q, urls) {
 
             return factory;
 
-            function saveDoc(file,file2,file3,file4,file5,dataObj) {
+            function saveDoc(files,dataObj) {
                 var deferred = $q.defer();                
                 var formData = new FormData();
-                formData.append('file', file);
-                formData.append('file', file2);
-                formData.append('file', file3);
-                formData.append('file', file4);
-                formData.append('file', file5);
+                
+                for(var i = 0; i < files.length; i++){
+                	formData.append('files', files[i]);
+                }
+                alert("yees");
+                //formData.append('file', file3);
+                //formData.append('file', file4);
+                //formData.append('file', file5);
                 formData.append('json',JSON.stringify(dataObj));
+                console.log(formData);
                 $http.post('http://localhost:8080/addProduit', formData,{
                     transformRequest : angular.identity,
                     headers : {
