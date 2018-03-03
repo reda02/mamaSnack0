@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Bean;
 
 //commit ayoub 
 @SpringBootApplication(exclude = org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class)
-public class MamasnackWsApplication extends SpringBootServletInitializer {
+public class ClientServerWsApplication extends SpringBootServletInitializer {
 	@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(MamasnackWsApplication.class);
+        return application.sources(ClientServerWsApplication.class);
     }
 	
 	
@@ -27,7 +27,7 @@ public class MamasnackWsApplication extends SpringBootServletInitializer {
     }
 
 	public static void main(String[] args) {
-		SpringApplication.run(MamasnackWsApplication.class, args);
+		SpringApplication.run(ClientServerWsApplication.class, args);
 	}
 }
 
